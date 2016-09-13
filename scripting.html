@@ -1,0 +1,1028 @@
+<html>
+<head>
+<link rel="stylesheet" href="theme/style.css">
+</head>
+<style type="text/css">
+			<!--
+				body {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				font-weight: normal;
+				color: 4C5E73;
+			
+				margin-top: 5px;
+				margin-left: 10px;
+				padding: 0;
+				
+				text-decoration: none;
+				scrollbar-face-color: #EFEFEF;
+				scrollbar-shadow-color: #B0B0B0;
+				scrollbar-highlight-color: #FFFFFF;
+				scrollbar-3dlight-color: #B0B0B0;
+				scrollbar-darkshadow-color: #B0B0B0;
+				scrollbar-track-color: #F4F4F4;
+				scrollbar-arrow-color: #6D6D6D;
+				}
+			-->
+			</style>
+			</head>
+			<body background="theme/images/blockcontenufond.jpg" style="background-attachment: fixed;"><p><strong>Attention!!</strong> Certaines seta ne fonctionnent pas sur toutes 
+  les configs des servers, en effet, des seta sont rendus obsol&egrave;tes ou 
+  sont considérées comme "cheat", donc non modifiables. Si jamais vous connaissez 
+  d’autres variables ou astuces n’hésitez pas à nous contacter </p>
+<p><font size="+1"><strong><a name="faq" id="faq"></a>I : FAQ</strong></font><br>
+  <a href="scripting.html#script">a) Qu'est-ce qu'un script?</a><br>
+  <a href="scripting.html#fichier">b) Quel fichier dois-je modifier pour insérer des scripts?</a><br>
+  <a href="scripting.html#ouvrircreer">c) Comment ouvrir/cr&eacute;er ces fichiers?</a> <br>
+  <a href="scripting.html#jemensorsplus">d ) Je ne m'en sors plus dans mon fichier autoexec.cfg, 
+  c'est un vrai bordel, au secours!</a><br>
+  <br>
+  <br>
+  <font size="+1"><strong><a name="scripting" id="scripting"></a>II : Scripting</strong></font><br>
+  <a href="scripting.html#voc">a ) Vocabulaire</a><br>
+  <a href="scripting.html#bases">b ) Les commandes pour faire un script</a> <br>
+  <a href="scripting.html#bind">c ) Touches "bindables"</a> <a href="scripting.html#pratique"><br>
+  d ) Analyse de scripts</a> <br>
+</p>
+
+<br>
+<p><font size="+1"><strong>I : FAQ</strong></font> <br>
+  <b><a name="script" id="script"></a>a ) Qu'est-ce qu'un script?</b><br>
+  Un script est une serie de commandes. Ici nous parlerons donc de scripts ET 
+  qui contiendront des commandes déstinées à être interpretées par le jeu W:ET.<br>
+  <a href="scripting.html#faq">Retour au menu</a><br>
+  <br>
+  <br>
+  <a name="fichier"></a><b>b) Quel fichier dois-je modifier pour insérer des scripts?</b><br>
+  Le fichier 'etconfig.cfg' sauvegarde votre configuration du jeu, c'est-&agrave; 
+  dire les touches et les graphismes. Ce fichier est situ&eacute; dans les repertoirs 
+  'profiles' de chaque mod.<br>
+  Exemple: etmain/profil/pseudo/etconfig.cfg<br>
+  Vous pourriez donc mettre vos scripts dans ce fichier mais nous vous conseillons 
+  fortement de modifier votre configuration &agrave; travers des fichiers &agrave; 
+  part car les pertes de donn&eacute;es sur les etconfig.cfg sont fr&eacute;quentes 
+  (lorsque le jeu r&eacute;initialise votre confg apr&egrave;s une erreur par 
+  exemple). Il est m&ecirc;me compliqu&eacute; de relire un script fait apr&egrave;s 
+  l'initialisation du jeu car W:ET classe le contenu du fichier etconfig. A la 
+  deuxi&egrave;me utilisation vous ne retrouverez plus vos seta ou autres au m&ecirc;me 
+  endroit. C'est pourquoi il faut effectuer les changements dans des fichiers 
+  .cfg &agrave; part, que vous placerez dans le repertoir etmain. Il vous suffira 
+  alors de taper dans la console du jeu '<span class="func">/exec</span> <span class="str">nom_du_fichier.cfg</span>' 
+  pour que ces modifications s'inscrivent dans le fichier etconfig.cfg!<br>
+  Un fichier bien util est 'autoexec.cfg' situé dans le repertoir /etmain. Ce 
+  fichier est éxécuté (normalement) à chaque lancement du jeu. Néanmoins on ne 
+  peut y mettre tous ses scripts car sa taille est limit&eacute;e. Lorsqu'elle 
+  est atteinte, ET plante (c'est valable pour tout les scripts trop gros).<br>
+  <a href="scripting.html#faq">Retour au menu</a><br>
+  <br>
+  <br>
+  <a name="ouvrircreer" id="ouvrircreer"></a><b>c) Comment ouvrir/cr&eacute;er 
+  ces fichiers?</b><br>
+  Vous pouvez ouvrir &amp; cr&eacute;er les fichier '.cfg' avec WordPad.<br>
+  <b>Attention:</b><br>
+  Un probl&egrave;me fr&eacute;quent arrive lors de l'utilisation de WordPad, 
+  en effet, lors de l'enregistrement, celui-ci garde un format particulier, ce 
+  qui causera des erreurs lors de l'&eacute;x&eacute;cution du script avec des 
+  messages tels que 'Unknow ...'!<br>
+  <a href="scripting.html#faq">Retour au menu</a><br>
+  <br>
+  <br>
+  <a name="jemensorsplus"></a><b>d)Je ne m'en sors plus dans mes scripts, c'est 
+  un vrai bordel, au secours!</b><br>
+  Pas de panique, il existe une méthode assez simple pour avoir une config "propre", 
+  même si on utilise beaucoup de scripts. Il faut créer des fichier *.cfg pour 
+  chaque script ou famille de commandes, tout en utilisant les commentaires correctement 
+  pour mieux s'y retrouver ult&eacute;rieurement.<br>
+  Ensuite il suffira de lancer le(s) script(s) à travers la console ET en tappant 
+  '<span class="func">/exec</span> <span class="str">nom_du_fichier.cfg</span>'. 
+  Le contenu s'inscrira dans 'etconfig.cfg' et vous n'aurez plus besoin de le(s) 
+  r&eacute;éxécuter, mais seulement lorsque vous le(s) modifirez. Utilisez les 
+  commentaires pour bien s&eacute;parer et d&eacute;tailler vos scripts.<br>
+  Exemple: un fichier pour les bind, un autre pour le graphisme, un autre pour 
+  le changement de class/spawn, etc.<br>
+  <a href="scripting.html#faq">Retour au menu</a><br>
+  <br>
+  <br>
+  <strong><font size="+1">II : Scripting</font></strong><br>
+  <b>Attention:</b><br>
+  On ne peut pas parler d'un language de programmation pour ET! Les conditions, 
+  boucles, etc. n'éxistent pas! On peut simuler des boucles avec les binds mais 
+  c'est tout.<br>
+  <br>
+  <b><a name="voc" id="voc"></a>a) Vocabulaire</b><br>
+  <font style="color: rgb(255, 102, 0);">FPS</font> - "Frames par Second". Si 
+  ET affiche par exemple 50 FPS chez vous , c'est que votre machine est en mesure 
+  d'afficher 50 images par seconde. On dit que 25 FPS suffisent pour jouer aisément 
+  , "Parce qu'une télévision rafraîchie l'écran 25 fois par secondes" "... Oui, 
+  une image de télé à seulement 25 FPS , mais la technologie utilisé pour les 
+  moniteurs de PC est complètement différente et permet d'afficher des résolutions 
+  supérieures a celle d'une télévision (640*480/25fps en théorie). Dès 45 FPS, 
+  on peut parler d'un jeu suffisamment fluide pour jouer. Plus le FPS est élevé, 
+  plus votre machine traitera aisément les données, au détriment de la qualité 
+  graphique sur certaines configurations ( quantité de RAM , puissance du processeur 
+  et de la carte graphique déterminant ). Les paliers de FPS étant 45, 76, 125 
+  et 333.<br>
+  Pour voir vos FPS, tapez '<span class="func">/cg_drawfps</span> <span class="str">2</span>' 
+  dans la console ET.<br>
+  Pour mettre une limite à vos FPS tapez '<span class="func">/cg_maxfps</span> 
+  <i><span class="str">nombre de fps max</span></i>' dans la console ET. <br>
+  La notion de FPS est très complexe, elle est liée au moteur physique du jeu. 
+  C'est pourquoi on retient seulement "plus j'en ai, mieux c'est!!". C'est tellement 
+  plus simple :) Vous trouverez plus d'informations ici: <a href="http://www.nofrag.com/2004/oct/23/14529/" target="_blank">http://www.nofrag.com/2004/oct/23/14529/</a>
+  <br>
+  <br>
+  <br>
+  <font style="color: rgb(255, 102, 0);">Script</font> - un script est un ensemble 
+  de commandes exécutées dans un ordre bien précis (pour imager dans le cadre 
+  de ET, c'est comme si j'affectais l'allumage automatique de ma télé et la fermeture 
+  des volets sur le bouton qui me sert a allumer la lumière de mon salon, ce qui 
+  serait bien pratique et me permettrai de gagner quelques minutes le soir quand 
+  je rentre tard, vivement le script-binding-domestique...). Dans un script , 
+  nous avons la possibilité de configurer une touche pour effectuer plusieurs 
+  événements ( lancer une grenade, prévenir mes équipiers de dégager le secteur 
+  et revenir à l'arme principal , le tout sur une seul touche, d'o&ugrave; l'exemple 
+  du bouton de lumière de mon salon). Avec cela , beaucoup de manipulations (par 
+  exemple le changement d'arme) deviennent plus facile.<br>
+  <br>
+  <br>
+  <font style="color: rgb(255, 102, 0);">Variable</font> - Emplacement stockant 
+  une donn&eacute;e, elle peut varier au cours de l'ex&eacute;cution du script.<br>
+  Sur ET on les ecrit sous la forme: <span class="func">set</span> <span class="var">nom_de_la_variable</span> 
+  <span class="str">"<i>données enregistrés</i>"</span><br>
+  Bien entendu il faut que les données enregistrées soient compréhensible par 
+  le jeu! Ceci sera trait&eacute; plus bas :)<br>
+  Pour appeler une variable sur ET on &eacute;crit: <span class="func">vstr</span> 
+  <span class="var">nom_de_la_variable</span><br><br>
+  <br>
+  <font style="color: rgb(255, 102, 0);">bind</font> - signifie &quot;lier &agrave;&quot;.<br>
+  <br><br>
+  <font style="color: rgb(255, 102, 0);">set</font> - signifie &quot;fixer&quot;.<br><br>
+  <br>
+  <font style="color: rgb(255, 102, 0);">str</font> - abr&eacute;viation du mot 
+  &quot;string&quot; qui signifie en programmation &quot;chaine de caract&egrave;res&quot;.<br>
+  <a href="scripting.html#scripting">Retour au menu</a> <br>
+  <br>
+  <br>
+  <b><a name="bases" id="bases"></a> b)Les commandes pour faire un script</b><br>
+  <font style="color: rgb(255, 102, 0);">Commentaires</font> - Les commentaires 
+  sont tr&egrave;s utils pour d&eacute;crire un script. Ainsi on s'y retrouve 
+  lorsqu'on revois ses chers scripts apr&egrave;s 2 mois d'abscence :)<br>
+  Les commentaires ne seront pas interprétés par le jeu.<br>
+  Syntaxe:<br>
+<div id="script_block"><span class="comment">// commentaires ......</span></div><br>
+  Tout ce qui suit les doubles slashs '//' ne sera pas "lu" par le jeu. Les commentaires 
+permettent aussi de classer le contenu de ses scripts et de faire de belles signatures 
+pour faire de la pub :o)<br>
+  Exemple: 
+<div id="script_block"> 
+  <div align="left"> 
+    <p><span class="comment">// Ceci est un commentaire</span><br>
+      Ceci n'est pas un commentaire <span class="comment">//Ceci est un commentaire</span><br>
+      -----------------<br>
+      <br>
+      <span class="comment">//*************************************<br />
+      //*        SSSSSS  BBBBBBBBBBBBB      *<br />
+      //*     SSSSSSSS  BBBBBBBBBBBBBBBB    *<br />
+      //*    SSSSSSSSS  BBBBBBBBBBBBBBBBBB  *<br />
+      //*   SSSSSSS                 BBBBBB  *<br />
+      //*   SSSSSS                  BBBBBB  *<br />
+      //*   SSSSSS                  BBBBBB  *<br />
+      //*   SSSSSSS     BBBBBBBBBBBBBBBBBB  *<br />
+      //*    SSSSSSSSS  BBBBBBBBBBBBBBB     *<br />
+      //*      SSSSSSSSSBBBBBBBBBBBBBBBBBB  *<br />
+      //*        SSSSSSSIIBBBBBBBBBBBBBBBB  *<br />
+      //*           SSSSIIIIBB      BBBBBB  *<br />
+      //*             SSIIIIII      BBBBBB  *<br />
+      //*   SSSSSS      IIIIII      BBBBBB  *<br />
+      //*   SSSSSS      IIIIII      BBBBBB  *<br />
+      //*   SSSSSSS    SIIIIIIBBBBBBBBBBBB  *<br />
+      //*   SSSSSSSSSSSSIIIIIBBBBBBBBBBBBB  *<br />
+      //*     SSSSSSSSSSIIIBBBBBBBBBBBBB    *<br />
+      //*        SSSSSSSIBBBBBBBBBBBB       *<br />
+      //*************************************<br />
+      <br />
+      //SCRIPT BY  SmireBoule Production<br />
+      //CODED BY Nemesis`R3<br />
+      //www.r3-team.com <br />
+      </span> <br>
+      <span class="comment">////////////////////////// Axis ////////////////////////</span><br>
+      .... script axe ....<br>
+      <span class="comment">//////////////////////// Fin Axis //////////////////////</span> 
+      <br>
+      <br>
+      <br>
+      <span class="comment">//////////////////////// Allied ////////////////////////</span><br>
+      ....script allies....<br>
+      <span class="comment">////////////////////// Fin Allied //////////////////////</span> 
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class="comment">////////////////////////// Bind ///////////////////////</span><br>
+	  ....vos binds....<br>
+      <span class="comment">//////////////////////// Fin Bind /////////////////////</span><br>
+	  etc, etc...</div>
+</div><br>
+  <br>
+<font style="color: rgb(255, 102, 0);">bind</font> - Permet d'associer une touche 
+&agrave; une action/commande. Il &eacute;xiste beaucoup d'actions, par &eacute;xemple, 
+tirer : +attack, se tuer: kill, etc.<br>
+Syntaxe:<br>
+<div id="script_block"><span class="func">bind</span> <span class="var">&lt;touche&gt;</span> 
+  <span class="str">&quot;&lt;action&gt;&quot;</span></div><br>
+Exemple:<br>
+<div id="script_block"><span class="comment">//On veut dire bonjour en appuyant sur la touche x</span><br>
+<span class="func">bind</span> <span class="var">x</span> <span class="str">"say Bonjouur!"</span></div>
+Cf. plus bas pour les actions.<br>
+<b>Remarque:</b><br>
+Les touches sont celles des claviers qwerty! Le 'a' d'un clavier azerty, par exemple, 
+sera 'q' dans le jeu. Cf. plus bas pour avoir les équivalents azerty/qwerty.<br><br>
+<font style="color: rgb(255, 102, 0);">unbind x</font> - libère la touche "x".<br>
+<font style="color: rgb(255, 102, 0);">unbindall</font> - libère toutes les touches.<br><br><br>
+<font style="color: rgb(255, 102, 0);">Wait</font> - Cettre &quot;fonction&quot; 
+est relativement complexe, mais indispensable dans beaucoup de scripts.<br>
+Syntaxe:<br>
+<div id="script_block"><span class="func">wait</span> <span class="str">&lt;num&gt;</span></div><br>
+Lors de l'exécution d'un script, l'ordinateur exécute les différentes variables à une 
+vitesse généralement trop rapide pour qu’elles s’enchaînent normalement. Par exemple 
+si vous faites un script pour, a l'aide d'une touche, passer de votre arme a votre 
+pack d'ammo, prendre des munitions et revenir à son arme sans utiliser "wait" 
+: '<span class="func">bind</span> <span class="var">x</span> <span class="str">"weaponbank 
+6; +attack; -attack; weaponbank 3"</span>'.<br>
+Le jeu exécutera l'action à la voler, ce qui fera que le temps de sortir le pack 
+d'ammo dans le jeu, le script sera déjà fini et vous vous retrouvez avec votre 
+pack en mains. Il faut donc marquer une pause entre chaque action pour laisser 
+le temps au jeu de l'exécuter. L&agrave; ou ça se complique, c'est que la durée 
+du "wait" est dépendante des performances de votre machine. Si vous utilisez par 
+exemple "wait 120", et que votre ordinateur est capable d'afficher 60 FPS ( 60 
+images secondes), le system va se mettre en pause pendant 2 secondes (120/60). 
+C'est donc le rapport entre l'argument qui suit 'wait' et votre nombre de FPS 
+au moment pr&eacute;cis o&ugrave; vous appuyez sur votre touche. Si vous &ecirc;tes 
+trop gourement avec les wait vous serez bloqu&eacute; durant l'&eacute;x&eacute;cution, 
+mais des wait suivient de petites valeurs ne genent pas du tout.<br>
+<br>
+<font style="color: rgb(255, 102, 0);">set</font> - premet de d&eacute;clarer 
+une variable contenant une/des action(s)/commande(s).<br>
+Syntaxe:<br>
+<div id="script_block"><span class="func">set</span> <span class="var">&lt;nom&gt;</span> 
+  <span class="str">"&lt;commande/action&gt;"</span></div><br>
+  Ceci va donc garder en m&eacute;moire/stocker le contenu &lt;commande/action&gt;, 
+assign&eacute; &agrave; &lt;nom&gt;.<br>
+Pour redéclarer un nom déjà utilisé, il suffit de réécrire la déclaration de la 
+variable. Si il y a plusieurs actions pour une m&ecirc;me variable, utilisez le 
+point-virgule ';' pour les s&eacute;parer.<br>
+Pour appeler le contenu d'une variable (dans un bind ou un seta) on utilise 'vstr'.<br><br>
+Exemple:<br>
+<div id="script_block"><span class="comment">// on va déclarer la variable 'nemesis' qui va remettre mon pseudo<br>
+// La variable contenant notre pseudo est 'name'</span><br>
+<span class="func">set</span> <span class="var">nemesis</span> <span class="str">"set name ^7Nemesis^3`^bR3"</span><br>
+<span class="func">bind</span> <span class="var">x</span> <span class="str">"vstr nemesis"</span> <span class="comment">// En fait on a bind x "set name ^7Nemesis^3`^bR3"</span><br>
+<br><span class="comment">// Autre exemple<br>
+// On va associer à la touche x l'alternance entre Nemesis`R3 et n3mS.s`R3 comme pseudo<br>
+  // Pour cela on va créer 2 set, dans chaqune d'elles, on aura le<br>
+  // changement du nom et la redéclaration du bind x pour appeler l'autre variable contenant l'autre nom</span><br>
+  <span class="func">set</span> <span class="var">nemesis1</span> <span class="str">"set name ^7Nemesis^3`^bR3; wait; bind x vstr nemesis2"</span><br>
+  <span class="func">set</span> <span class="var">nemesis2</span> <span class="str">"set name ^7n3mS.s^3`^bR3; wait; bind x vstr nemesis1"</span><br>
+  <span class="func">bind</span> <span class="var">x</span> <span class="str">"vstr 
+  nemesis1"</span></div>
+<br>
+  <br>
+  <br>
+<font style="color: rgb(255, 102, 0);">toggle</font> - avec toggle on permute 
+entre 2 valeurs binaires (0 &amp; 1). Ceci se r&eacute;v&egrave;le donc tr&egrave;s 
+utile si l'on souhaite faire des scripts simples, sans faire de set, etc.<br>
+Exemple:<br>
+<div id="script_block"><span class="comment">// A l'aide de la touche x, je veux afficher ou pas mon arme<br>
+  // On utilise donc cg_drawgun (0 = FALSE = Inactiv&eacute; | 1 = TRUE = Activ&eacute;)</span><br>
+  <span class="func">bind</span> <span class="var">x</span> <span class="str">"toggle cg_drawgun"</span></div><br><br>
+<font style="color: rgb(255, 102, 0);">echo</font> - le texte qui suis est seulement 
+affich&eacute; chez vous, au niveau des messages o&ugrave; vous voyez qui est 
+mort ect.. <br>
+Exemple:<br>
+<div id="script_block"><span class="func">bind</span> <span class="var">x</span> 
+  <span class="str"> "set com_maxfps 125; echo &lt;FPS 125&gt;"</span></div>
+R&eacute;sultat:<br>
+<img src="images/fps125.jpg" width="114" height="26"><br><br><br>
+<font style="color: rgb(255, 102, 0);">vsay/say</font> - vsay permet d'appeler 
+un son du menu 'v' (par défaut). say permet d'afficher un message. Il éxiste deux 
+variantes pour chacunes d'elles: vsay_team et say_team. Seul les membres de votre 
+équipe (axe/alliés) pourront le voir. Si vous mettez un texte apres un vsay, le 
+texte appara&icirc;tra accompagn&eacute; du son.<br>
+Syntaxe:<br>
+<div id="script_block"><span class="func">bind</span> <span class="var">x</span> <span class="str">"say bonjour"</span> <span class="comment">// Affichera bonjour et sera envoyé à tous les joueurs</span><br>
+<span class="func">bind</span> <span class="var">x</span> <span class="str">"say_team bonjour"</span> <span class="comment">// Affichera bonjour et sera envoyé à tous les joueurs</span><br><br><br>
+  <span class="func">bind</span> <span class="var">x</span> <span class="str">"vsay 
+  Hi"</span> <span class="comment">// Ex&eacute;cutera le son 'Hi' (v52)</span><br>
+  <span class="func">bind</span> <span class="var">x</span> <span class="str">"vsay_team 
+  Hi"</span> <span class="comment">// Ex&eacute;cutera le son 'Hi' et ne sera 
+  entendu que par vos co&eacute;quipiers<br>
+  </span><span class="func">bind</span> <span class="var">x</span> <span class="str">"vsay_team 
+  Hi bonjour"</span> <span class="comment">// Au lieu d'afficher Hi, affichera 
+  bonjour avec le son 'Hi'</span></div>
+<a href="scripting.html#scripting">Retour au menu</a><br>
+  <br>
+  <br>
+<b><a name="bind" id="bind"></a>c ) Touches "bindables"</b> <br>
+  Chaque touche de votre clavier porte un nom bien pr&eacute;cis sur W:ET. Les 
+  minuscules/majuscules ne changent rien :)<br></strong>
+  Voici donc les &eacute;quivalents Azerty/Qwerty:<br>
+<table align="center" width="225" border="0">
+  <tr> 
+    <td width="110" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><font color="#FFFFFF"><strong>Azerty</strong></font></div></td>
+    <td width="105" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><font color="#FFFFFF"><strong>Qwerty</strong></font></div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Touches 
+        fonctions </font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F1</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F1</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F2</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F2</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F3</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F3</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F4</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F4</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F5</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F5</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F6</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F6</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F7</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F7</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F8</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F8</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F9</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F9</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F10</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F10</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F11</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F11</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F12</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">F12</div></td>
+  </tr>
+  <tr> 
+  <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Touches de navigation</font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Inser</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">ins</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Home</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">home</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Page Up</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">pgup</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Page 
+        Down </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">pgdn</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Suppr</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">del</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Fin</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">end</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">haut</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">uparrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">bas</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">downarrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">gauche</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">leftarrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">droite</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">rightarrow</div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Clavier 
+        num&eacute;rique </font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">0</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_ins</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">1</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_end</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">2</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_downarrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">3</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_pgdn</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">4</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_leftarrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">5</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_5</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">6</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_rightarrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">7</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_home</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">8</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_uparrow</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">9</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_pgup</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Point 
+        (.) </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_del</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Entrer</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_enter</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Plus 
+        (+) </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_plus</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Moins 
+        (-) </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_minus</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Multiplication 
+        (*) </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">*</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Division 
+        (/) </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">kp_slash</div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Souris</font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Bouton 
+        gauche </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">mouse1</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Bouton 
+        droit </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">mouse2</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Bouton 
+        milieu</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">mouse3</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Roulette 
+        ScrollUp</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">mwheelup</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Roulette 
+        ScrollDown </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">mwheeldown</div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Touches 
+        alphab&eacute;tiques </font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">a</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">q</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">b</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">b</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">c</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">c</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">d</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">d</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">e</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">e</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">f</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">f</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">g</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">g</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">h</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">h</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">i</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">i</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">j</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">j</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">k</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">k</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">l</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">l</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">m</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">;</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">n</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">n</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">o</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">o</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">p</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">p</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">q</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">a</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">r</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">r</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">s</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">s</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">t</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">t</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">u</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">u</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">v</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">v</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">w</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">z</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">x</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">x</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">y</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">y</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">z</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">w</div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Touches 
+        num&eacute;riques </font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">0</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">0</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">1</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">1</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">2</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">2</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">3</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">3</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">4</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">4</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">5</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">5</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">6</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">6</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">7</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">7</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">8</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">8</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">9</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">9</div></td>
+  </tr>
+  <tr> 
+    <td colspan="2" style="border-style=solid; border-width:2px; border-color=black; background-color=#999999"><div align="center"><strong><font color="#FFFFFF">Autres</font></strong></div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">&sup2;</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">`</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Retour 
+        Arri&egrave;re </div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">backspace</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Tabulation</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">tab</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Verr. 
+        Maj.</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">capslock</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Maj.</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">shift</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Ctrl</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">ctrl</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Alt</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">alt</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">Espace</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">space</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">,</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">m</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">;</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">,</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">:</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">.</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">!</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">/</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">&ugrave;</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">'</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">*</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">\</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">^</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">[</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">$</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">]</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">)</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">-</div></td>
+  </tr>
+  <tr> 
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">=</div></td>
+    <td style="border-style=solid; border-width:2px; border-color=black;"><div align="center">=</div></td>
+  </tr>
+</table>
+  <a href="scripting.html#menu">Retour au menu</a><br><br>
+<br>
+<b><a name="pratique" id="pratique"></a>d ) Analyse de script</b>s<br>
+Voici ici la meilleur fa&ccedil;on de comprendre. Vous trouverez dans cette partie 
+l'analyse de scripts pour tous les niveaux, du simple (changement de FPS grace 
+&agrave; une touche) au hard (spawntimer) :)<br>
+Je vous conseil fortement (pour mieux comprendre), de faire ces scripts par vous 
+même et ensuite regarder la solution. Ou seulement r&eacute;fl&eacute;chir &agrave; 
+la mani&egrave;re de le faire.<br>
+Voici donc la liste de ce qui va être traité ici:<br>
+- bind pour changer de FPS (43, 76, 125) tout en affichant un 'echo'<br>
+- script pour changer de classe<br>
+- spawntimer<br>
+<br>
+<b>Remarque:</b><br>
+Même si vous trouvez ces scripts complètements inutils, ils sont ici à titre d'éxemple 
+d'application!<br>
+<br>
+<b>Conseils:</b><br>
+Pensez pratique, cherchez toujours la solution la plus simple et classez correctement 
+vos scripts.<br>
+Utilisez des noms éxplicites pour vos variables, et non des noms tels que des lettres ou des chiffres qui n'ont aucune signification.<br><br><br><br>
+<b>Changer de FPS &agrave; l'aide d'un bouton</b><br>
+Objectif:<br>
+Je souhaite associer à ma touche 'n' le changement de FPS entre 46, 76 et 125, 
+tout en affichant un message me prévenant que j'ai changé de FPS.<br>
+<br>
+Démarche:<br>
+On va créer 3 variables contenant le changement de FPS et la redéclaration de la touche n.<br><br>
+Script:<br>
+<div id="script_block"><span class="func">set</span> <span class="var">fps46</span> 
+  <span class="str">"set com_maxfps 46; echo ^3&lt;FPS ^146^3&gt;; bind n vstr 
+  fps76"</span><br>
+  <span class="comment">// Change le fps max à 46 et rebind n avec le contenu de fps76</span><br>
+  <span class="func">set</span> <span class="var">fps76</span> <span class="str">"set com_maxfps 76; echo ^3&lt;FPS ^176^3&gt;; bind n vstr fps125"</span><br>
+  <span class="comment">// Change le fps max à 76 et rebind n avec le contenu de fps125</span><br>
+  <span class="func">set</span> <span class="var">fps125</span> <span class="str">"set 
+  com_maxfps 125; echo ^3&lt;FPS ^1125^3&gt;; bind n vstr fps46"</span><br>
+  <span class="comment">// Change le fps max à 125 et rebind n avec le contenu de fps46</span><br>
+<span class="func">bind</span> <span class="var">n</span> <span class="str">"vstr fps46"</span></div>
+<br>
+Résultat après trois pressions consécutives:<br>
+<img src="images/fpstoggle.jpg" width="116" height="64"><br><br><br>
+<b>Script pour changer de classe</b>:<br>
+Objectif:<br>
+Changer par l'intermédiaire des touches F5~F11 pour changer de classe/team et 
+l'annoncer aux coéquipiers.<br><br>
+Démarche:<br>
+Il éxiste deux méthodes pour changer de classe: la fonction 'team' et 'class'.<br>
+'team' permet de changer de classe et de team en meme temps.<br>
+Syntaxe:<br>
+<div id="script_block"><span class="func">team</span> <span class="var">&lt;equipe&gt; 
+  &lt;classe&gt; &lt;arme&gt;</span><br>
+  <span class="comment">// equipe : r = axe, b = allies<br>
+// classe:  0 = soldat, 1 = medecin, 2 = ingenieur, 3 = fieldops, 4 = covertops<br>
+// arme: de 3 à 35 (cf. le lien plus bas pour plus de détails)
+</span></div>
+Pour plus de d&eacute;tails cf. ce tableau tr&egrave;s bien fait (pas de plagiat 
+chez nous :p) <a href="http://www.planetwolfenstein.com/4newbies/images/weapontable.jpg" target="_blank">http://www.planetwolfenstein.com/4newbies/images/weapontable.jpg</a><br>
+'class' permet seulement de changer de classe.<br>
+Syntaxe:<br>
+<div id="script_block"><span class="func">class</span> <span class="var">&lt;classe&gt; 
+  &lt;arme&gt;</span><br>
+  <span class="comment">// classe : m = medecin, s = soldat, f = fieldops, e = 
+  ingenieur, c = coverops<br>
+  // arme: d&eacute;pend des classes: pour soldat, 2 = panzer, pour un ingenieur 
+  2 = rifle. C'est dans l'ordre</span></div>
+<br><br>
+<strong>Script avec 'team':</strong><br>
+On va créer un menu sur F5 (Axe) et F6 (Alliés). Ces menus vont "binder" les touches F7(soldat), F8(fieldops), F9(ingénieur), F10(médecin), F11(coverops).<br>
+Si une classe a plusieurs armes, on cré aussi un "sous-menu" qui va binder les touches F7~F11 pour la classe donnée.<br>
+Apres chaque séléction, on "rebind" les touches F7~F11 avec les classes.<br>
+A cela s'ajoute le son skill_up(celui que vous entendez quand vous gagnez un étoile 
+en skill et que l'on appelle grace à l'instruction 'play') et une annonce pour 
+dire que l'on change de classe.<br>
+La déscription est faite pour la partie Axe, la partie allié est faite de la même 
+façon, seul les nom, et les arguments de l'instruction 'team' changent.<br>
+<div id="script_block"> <span class="comment">/////////////////////////// Axe</span><span class="comment"> 
+  /////////////////////////// </span><br>
+  <span class="comment">// la variable axis_menu contient la déclaration des bind et appelle <br>
+  // la variable axis_menu_msg qui contient le texte</span><br>
+<span class="func">set</span> <span class="var">axis_menu</span> <span class="str">&quot;bind F7 vstr axis_soldat; wait; bind F8 vstr axis_fdop; wait; 
+bind F9 vstr axis_ing; wait; bind F10 vstr axis_medic; wait; bind F11 vstr axis_cvop; wait; vstr axis_menu_msg&quot;</span> <br>
+<span class="func">set</span> <span class="var">axis_menu_msg</span> <span class="str">&quot;echo ^9[^3Axis Team ^1F7: ^7Soldat ^1| F8: ^7Fieldops 
+^1| F9: ^7Ingenieur ^1| F10: ^7Medic ^1| F11: ^7CoverOps^9]&quot;</span><br><br><br>
+<span class="comment">//Soldat</span><br>
+<span class="comment">//axis_soldat bind les touches F7 F8 F9 F10 pour les armes et affiche un message</span><br>
+  <span class="func">set</span> <span class="var">axis_soldat</span> <span class="str">&quot;bind F7 vstr axis_panzer; wait; bind F8 vstr axis_mg42; 
+  wait; bind F9 vstr axis_flamer; wait; bind F10 vstr axis_mortar; wait; echo ^9[^3Soldat ^1F7: ^7Panzer ^1| F8: ^7MG42 ^1| F9: ^7 Flamer ^1| F10: ^7Mortar^9]&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_mg42</span> <span class="str">&quot;team r 0 31; wait; say_team ^9[^7s^30^7ldat^1/^7MG42^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_flamer</span> <span class="str">&quot;team r 0 6; wait; say_team ^9[^7s^30^7ldat^1/^7Flamm^33^7r^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_panzer</span> <span class="str">&quot;team r 0 5; wait; say_team ^9[^7s^30^7ldat^1/^7Pan^3Z^7er^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_mortar</span> <span class="str">&quot;team r 0 35; wait; say_team ^9[^7s^30^7ldat^1/^7m^30^7rt^3A^7r^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br><br><br>
+<span class="comment">//Fieldops<br>
+// Le fieldops n'ayant aucune autre arme, on change directement de classe sans passer par un sous-menu</span><br>
+  <span class="func">set</span> <span class="var">axis_fdop</span> <span class="str">&quot;team r 3 8; wait; say_team ^9[^7F^3.^7eld^30^7ps^9]; wait; 
+  play sound/misc/skill_up;&quot;</span><br><br><br>
+<span class="comment">//Ing&eacute;nieur<br>
+// Comme pour le soldat, on affiche un sous-menu</span><br>
+  <span class="func">set</span> <span class="var">axis_ing</span> <span class="str">&quot;echo ^9[^3Ingenieur ^1F7: ^7Thomson ^1| F8: ^7Rifle^9]; wait; 
+  bind F7 vstr axis_ing_mp40; bind F8 vstr axis_ing_rifle&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_ing_mp40</span> <span class="str">&quot;team r 2 8; wait; say_team ^9[^7Ing^33^7n^3.^7eur^1/^7MP40^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br>
+ <span class="func">set</span> <span class="var">axis_ing_rifle</span> <span class="str">&quot;team r 2 23; say_team ^9[^7Ing^33^7n^3.^7eur^1/^7Rifle^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br><br><br>
+<span class="comment">//Medecin</span><br>
+  <span class="func">set</span> <span class="var">axis_medic</span> <span class="str">&quot;team r 1 8; wait; say_team ^9[^7Toub^3.^7B^9]; wait; play 
+  sound/misc/skill_up&quot;</span><br><br><br>
+<span class="comment">//CoverOps</span><br>
+  <span class="func">set</span> <span class="var">axis_cvop</span> <span class="str">&quot;echo ^9[^3Cov3r0ps ^1F7: ^7Sten ^1| F8: ^7Sniper^9]; wait; 
+  bind F7 vstr axis_cvop_sten; wait; wait; bind F8 vstr axis_cvop_sniper&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_cvop_sten</span> <span class="str">&quot;team r 4 10; wait; say_team ^9[^7Cov^33^7r^30^7ps^1/^7St^33^7n^9]; 
+  wait; play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br>
+  <span class="func">set</span> <span class="var">axis_cvop_sniper</span> <span class="str">&quot;team r 4 32; wait; say_team ^9[^7Cov^33^7r^30^7ps^1/^7Sn^3.^7p3r^9]; 
+  play sound/misc/skill_up; wait; vstr axis_menu&quot;</span><br>
+  <span class="comment">/////////////////////////// Fin Axe </span><span class="comment">///////////////////////// 
+  </span><br>
+  <br><br><br>
+  <span class="comment">/////////////////////////// Alli&eacute;s ////////////////////////// 
+  <br>
+  //Meme principe pour les alliés :)<br>
+  //////////////////////// Fin Alli&eacute;s </span><span class="comment">///////////////////////// 
+  </span><br>
+  <br><br>
+  <span class="func">bind</span> <span class="var">F5</span> <span class="str">"vstr axis_menu"</span><br>
+  <span class="func">bind</span> <span class="var">F6</span> <span class="str">"vstr 
+  allies_menu"</span></div>
+<p><br>
+  <br>
+  <br>
+  <strong> SpawnTimer:</strong><br>
+  Qu'est-ce qu'un spawntimer ?<br>
+  Un spawntimer vous annonce les temps de respawn de vos adversaires.<br>
+  A ma connaissance, il n'y a pas de spawntimer &quot;connu&quot; sur ET. J'éxpliquerais 
+  donc le principe du miens.<br>
+  <br>
+  Un problème se pose quand à la conception de ce genre d'outils car (les spawntimer 
+  devant être internes) les boucles, les verifications de conditions, les calculs 
+  numériques, etc. n'éxistent pas pour nos cfg!<br>
+  De plus, le temps de respawn des ennemis diffère selon les maps/config du serveur!<br>
+  <br>
+  Principe:<br>
+  A l'aide du clavier numérique, on tapera tout d'abord le temps de respawn des 
+  ennemis (ex: 30sec sur Oasis en config ClanBase).<br>
+  Ensuite il faudra attendre de voir les ennemis "respawner" pour connaître un 
+  moment où ils "respawnent", et le tapper sur le clavier numérique.<br>
+  On comprend tout de suite comment connaître les autres temps puisque le temps 
+  est cyclique.<br>
+  Prenons par éxemple un temps de respawn toutes les 30sec. On les voit sortir 
+  du spawn à 00sec. On obtient alors un respawn tous les 00sec et 00+30=30sec 
+  (30+30=60, et 60sec=1min00sec, on retrouve bien nos 00sec du début =)).<br>
+  On doit donc créer toutes les conditions possibles! <br>
+  <br>
+  Démarche:<br>
+  La touche 'kp_enter' servira &agrave; r&eacute;initialiser le spawntimer, il 
+  &eacute;x&eacute;cutera le fichier 'timer.cfg' qui bind les touches 1 &agrave; 
+  3 pour le premier digit du temps de respawn des ennemis (ex: l'ennemi a 20 sec 
+  de respawn, on tappe sur 2 pour avoir 2*).<br>
+  La touche 1 correspond au fichier 1.cfg, 2 au fichier 2.cfg, 3 au fichier 3.cfg. 
+  Chacun de ces fichiers bind les touches 0 &agrave; 9 pour le second digit pour 
+  &eacute;x&eacute;cuter les fichiers [premier digit][second digit].cfg (ex: si 
+  on a tap&eacute; 23, on &eacute;x&eacute;cutera le fichier 23.cfg).<br>
+  A ce stade, le spawntimer est configuré pour afficher les temps, il suffit alors 
+  de taper le temps où vous voyez vos ennmis respawn et le tour est joué.<br>
+  C'est donc le même principe pour la secondes phase du spawntimer, on entre le 
+  premier et second digit, ce qui éxécutera un fichier qui affichera les temps 
+  et "bindera" la touche 'x' pour les réafficher.<br>
+  Ce fichier est sous la forme [premier digit][second digit]_[premier digit'][second 
+  digit'] (ex: si on a tap&eacute; 15sec de respawn et on les a vu respawn &agrave; 
+  00, le fichier 15_00.cfg sera &eacute;x&eacute;cut&eacute;.<br>
+  Pour mieux comprendre voici des screenshots.<br><br>
+  Exécution du fichier timer.cfg, lié à la touche kp_enter:<br>
+  <img src="images/timer_kp_enter.jpg" border="0"><br><br>
+  Premier digit du temps de respawn adverse, ici '1', qui va éxécuter le fichier 
+  1.cfg:<br>
+  <img src="images/timer_premierdigit.jpg" border="0" width="49" height="26"><br><br>
+  Second digit du temps de respawn adverse, ici '5', qui va éxécuter le fichier 
+  15.cfg:<br>
+  <img src="images/timer_deuxiemedigit.jpg" width="80" height="24"><br><br>
+  Premier digit du temps d'observation de leur respawn, ici '0', qui va éxécuter le fichier 15_0.cfg:<br>
+  <img src="images/timer_tpsspawn1.jpg" width="40" height="22" border="0"><br><br>
+  Second digit du temps d'observation du leur respawn, ici '0', qui va éxécuter le fichier 15_00.cfg:<br><img src="images/timer_tpsspawn2.jpg"><br>
+  <br>
+  Script:<br>
+  On va prendre l'exemple ci dessus.<br><br>
+  <strong>timer.cfg</strong>
+<div id="script_block"><span class="comment">//Cette partie concerne l'initialisation du temps du respawn<br>
+//Quand on aura choisi son temps, le fichier correspondant sera executé<br>
+//Il faut l'ecrire avec deux digits, 02, 30, 25 ...<br>
+//Le temps que l'on pourra entrer sera compris entre 15 et 35 sec</span><br>
+<span class="func">echo</span> <span class="str">^7Timer^3`^bR3</span><br>
+<span class="func">echo</span> <span class="str">^7Entrez le temps de respawn de votre adversaire a l'aide du clavier numerique</span><br>
+<span class="func">echo</span> <span class="str">^7Pour annuler votre saisie, appuyez sur la touche Entr de votre clavier numerique</span><br>
+<br>
+<span class="comment">//**************************** BIND PREMIER DIGIT ******************************//</span><br>
+<span class="func">bind</span> <span class="var">kp_end</span> <span class="str">"exec r3timer/1.cfg; echo ^71*"</span><br>
+<span class="func">bind</span> <span class="var">kp_downarrow</span> <span class="str">"exec r3timer/2.cfg; echo ^72*"</span><br>
+<span class="func">bind</span> <span class="var">kp_pgdn</span> <span class="str">"exec r3timer/3.cfg; echo ^73*"</span><br>
+<br>
+<span class="func">unbind</span> <span class="var">x</span><br>
+<span class="func">unbind</span> <span class="var">kp_ins</span><br>
+<span class="func">unbind</span> <span class="var">kp_leftarrow</span><br>
+<span class="func">unbind</span> <span class="var">kp_5</span><br>
+<span class="func">unbind</span> <span class="var">kp_rightarrow</span><br>
+<span class="func">unbind</span> <span class="var">kp_home</span><br>
+<span class="func">unbind</span> <span class="var">kp_uparrow</span><br>
+<span class="func">unbind</span> <span class="var">kp_pgup</span></div><br><br>
+<strong>1.cfg </strong>
+<div id="script_block"><span class="comment">//Premier digit: 1</span><br>
+<span class="func">bind</span> <span class="var">kp_5</span> <span class="str">"exec r3timer/15.cfg; echo ^715 sec"</span><br>
+<span class="func">bind</span> <span class="var">kp_rightarrow</span> <span class="str">"exec r3timer/16.cfg; echo ^716 sec"</span><br>
+<span class="func">bind</span> <span class="var">kp_home</span> <span class="str">"exec r3timer/17.cfg; echo ^717 sec"</span><br>
+<span class="func">bind</span> <span class="var">kp_uparrow</span> <span class="str">"exec r3timer/18.cfg; echo ^718 sec"</span><br>
+<span class="func">bind</span> <span class="var">kp_pgup</span> <span class="str">"exec r3timer/19.cfg; echo ^719 sec"</span>
+</div><br><br>
+<strong>15.cfg </strong>
+<div id="script_block"><span class="comment">//Second digit: 5</span><br>
+<span class="func">bind</span> <span class="var">kp_end</span> <span class="str">"exec r3timer/15_1.cfg; echo ^71*"</span><br>
+<span class="func">bind</span> <span class="var">kp_downarrow</span> <span class="str">"exec r3timer/15_2.cfg; echo ^72*"</span><br>
+<span class="func">bind</span> <span class="var">kp_pgdn</span> <span class="str">"exec r3timer/15_3.cfg; echo ^73*"</span><br>
+<span class="func">bind</span> <span class="var">kp_leftarrow</span> <span class="str">"exec r3timer/15_4.cfg; echo ^74*"</span><br>
+<span class="func">bind</span> <span class="var">kp_5</span> <span class="str">"exec r3timer/15_5.cfg; echo ^75*"</span><br>
+<span class="func">bind</span> <span class="var">kp_ins</span> <span class="str">"exec r3timer/15_0.cfg; echo ^70*"</span>
+</div><br><br>
+<strong>15_0.cfg </strong>
+<div id="script_block"><span class="func">bind</span> <span class="var">kp_ins</span> <span class="str">"exec r3timer/15_00.cfg"</span><br> 
+<span class="func">bind</span> <span class="var">kp_end</span> <span class="str">"exec r3timer/15_01.cfg"</span><br>
+<span class="func">bind</span> <span class="var">kp_downarrow</span> <span class="str">"exec r3timer/15_02.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_pgdn</span> <span class="str">"exec r3timer/15_03.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_leftarrow</span> <span class="str">"exec r3timer/15_04.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_5</span> <span class="str">"exec r3timer/15_05.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_rightarrow</span> <span class="str">"exec r3timer/15_06.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_home</span> <span class="str">"exec r3timer/15_07.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_uparrow</span> <span class="str">"exec r3timer/15_08.cfg" </span><br>
+<span class="func">bind</span> <span class="var">kp_pgup</span> <span class="str">"exec r3timer/15_09.cfg"</span></div><br><br>
+<strong>15_00.cfg:</strong>
+<div id="script_block">
+<span class="func">say_team</span> <span class="str">^9[^7Timer^3`^bR3^7: Enemy Respawn @ ^330 45 00 15^9]</span><br>
+<span class="func">echo</span> <span class="str">^70 sec, appuyez sur la touche ^3x ^7pour afficher les temps </span><br>
+<span class="func">set</span> <span class="var">msg</span> <span class="str">"say_team ^9[^7Timer^3`^bR3^7: Enemy Respawns @ ^330 45 00 15^9]"</span><br>
+<span class="func">bind</span> <span class="var">x</span> <span class="str">"vstr msg"</span><br>
+ <br>
+  <span class="comment">// Comme il arrive que l on se trompe ou bien que l'on 
+  ait pas un temps précis au début,<br>
+  // on rebind les touches avec le contenu de 15.cfg,<br>
+  // on peut donc rerentrer un temps sans tout refaire</span><br>
+  <span class="func">bind</span> <span class="var">kp_end</span> 
+  <span class="str">"exec r3timer/15_1.cfg; echo ^71*"</span><br>
+<span class="func">bind</span> <span class="var">kp_downarrow</span> <span class="str">"exec r3timer/15_2.cfg; echo ^72*"</span><br>
+<span class="func">bind</span> <span class="var">kp_pgdn</span> <span class="str">"exec r3timer/15_3.cfg; echo ^73*"</span><br>
+<span class="func">bind</span> <span class="var">kp_leftarrow</span> <span class="str">"exec r3timer/15_4.cfg; echo ^74*"</span><br>
+<span class="func">bind</span> <span class="var">kp_5</span> <span class="str">"exec r3timer/15_5.cfg; echo ^75*"</span><br>
+<span class="func">bind</span> <span class="var">kp_ins</span> <span class="str">"exec r3timer/15_0.cfg; echo ^70*"</span>
+ <br><br>
+<span class="func">unbind</span> <span class="var">kp_rightarrow</span><br>
+<span class="func">unbind</span> <span class="var">kp_home</span><br>
+<span class="func">unbind</span> <span class="var">kp_uparrow</span><br>
+<span class="func">unbind</span> <span class="var">kp_pgup</span>
+</div>
+Le principe reste le meme pour tous les fichiers.<br>
+Sur un intervalle de 15 à 35sec, on a en tout 1412 fichiers :]<br>
+<a href="scripting.html#scripting">Retour au menu</a> 
+</body>
+</html>

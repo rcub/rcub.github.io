@@ -1,0 +1,163 @@
+.body 
+{
+	margin: 0;
+	padding: 0;
+	background-color: F4F4F4;
+	scrollbar-face-color: EFEFEF;
+	scrollbar-shadow-color: B0B0B0;
+	scrollbar-highlight-color: FFFFFF;
+	scrollbar-3dlight-color: B0B0B0;
+	scrollbar-darkshadow-color: B0B0B0;
+	scrollbar-track-color: F4F4F4;
+	scrollbar-arrow-color: 6D6D6D;
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+}
+
+.texte {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+}
+
+.titre
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: 3A5F8A;
+	font-weight: bold;
+}
+
+A:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: 516276;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+A:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: 516276;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+A:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: 99A4B0;
+	border-bottom: 2px dotted #516276;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: none;
+}
+
+A:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: 99A4B0;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#script_block
+{
+	background-color:#F5F5F5;
+	border-style:dashed; 
+	border-width:1px; 
+	border-color:#CCCCCC; 
+	font-family: Courier, 'Courier New', sans-serif;
+	font-size: 12px;
+}
+
+.func
+{
+	color:#339900;
+}
+
+.var
+{
+	color:#0033FF;
+}
+
+.str
+{
+	color:#FF0000;
+}
+
+.comment
+{
+	color:#FF6600;
+}
+
+input
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: F4F4F4;
+	border: dotted #7B7A7A 1pt;
+}
+
+textarea
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: F4F4F4;
+	border: dotted #7B7A7A 1pt;
+}
+
+select
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: F4F4F4;
+	border: dotted #7B7A7A 1pt;
+}
+
+.inputsolid
+{
+	ont-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: F4F4F4;
+	border-color: 7B7A7A;
+	border-width: 1pt;
+	border-style: solid;
+}
+
+table
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: 4C5E73;
+	text-decoration: none;
+}
+
+hr
+{
+	color: 7B7A7A;
+}
