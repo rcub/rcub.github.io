@@ -1,6 +1,1 @@
-julio.jpg
-julio.jpeg
-julio.gif
-julio.GIF
-julio.tiff
-julio.png
+OnClick="document.location.href = 'matchs.php%3Fop=details&id=11.html';" OnMouse
