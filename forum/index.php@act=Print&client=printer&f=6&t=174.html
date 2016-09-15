@@ -1,0 +1,2468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<title>Rond Comme Un Ballon [Propuls&eacute; par Invision Power Board]</title>
+		<style type="text/css">
+	/*  
+ * Cascading Style Sheet(CSS 467), for Invision Power Board 2.2.0
+ * Author: James A. Mathias, admin@leihu.com, http://www.1lotus.com 
+ * Copyright: 2005 Invision Power Services, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+	
+body{ 
+	background: #F0F1F3 url(style_images/ambience11/back.gif) repeat-x top left;
+	color: #26353F;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 10px;
+	line-height: 135%;
+	margin: 0;
+	padding: 0; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #26353F;
+	font-size: 10px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+/* Safari... */
+th
+{
+	text-align: left;
+}
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+img{
+	border:0;
+}
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #26353F;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #4F5459;
+}
+
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+.tablebg{
+	width: 779px;
+	background: #F7F7F7;
+	border-left: 1px solid #26353F;
+	border-right: 1px solid #26353F;
+}
+
+#ipbwrapper{ 
+	margin: 0 auto 0 auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background:#F7F7F7;
+	width: 779px;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #F7F7F7;
+}
+
+
+.round{
+	background: #EDEDED;
+
+}
+
+.round2{
+	background: #EDEDED;
+	padding: 0px 25px 0px 25px;
+}
+
+
+.pagecurrent{
+	background: #C7CED3;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #181B16;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* fake button effect for some links */
+.fauxbutton{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #26353F !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #26353F;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	color: #26353F;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/ambience11/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #181B16;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F7F7F7;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #EFEFEF;
+	border: 0 !important;
+	border-bottom: 1px solid #4F5459 !important;
+	color: #4F5459; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #F7F7F7 !important;
+	border: 0 !important;
+	border-top: 1px solid #4F5459 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #F7F7F7 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #000 url(style_images/ambience11/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #181B16;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 10px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #26353F; 
+	font-size: 10px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #F7F7F7;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #26353F; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 10px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 11px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 11px;
+}
+
+.post1,
+.bg1{ 
+	background: #F7F7F7;
+	padding: 5px;
+}
+
+.post2,
+.bg3{ 
+	background: #F7F7F7;
+	padding: 5px;
+}
+
+.row2shaded,
+.post1shaded { background-color: #FDFDFD;padding: 5px; }
+.row4shaded,
+.post2shaded { background-color: #FDFDFD;padding: 5px; }
+
+.row3{ 
+	background: #F7F7F7; 
+}
+
+.row1{ 
+	background: #F7F7F7; 
+	padding: 5px;
+}
+.info {
+	padding-left: 3px;
+	padding-right: 0px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #F1F1F1;
+	border-top: 1px solid #505050;
+	border-right: 2px solid #505050;
+	border-left: 1px solid #505050;
+	border-bottom: 2px solid #505050;
+	margin-bottom: 3px;
+}
+.row2{ 
+	background: #FDFDFD; 
+	padding: 5px;
+}
+
+.rowhighlight{
+	background-color: #FFF9BA;
+}
+.darkrow1{ 
+	background: #F7F7F7;
+	color: #26353F; 
+	padding: 5px;
+}
+
+.darkrow3{ 
+	background: #FDFDFD; 
+	color: #26353F; 
+	padding: 5px;
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+}
+
+.tablefill,
+
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: .5em;
+	width: 25%;
+}
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 10px; 
+	color: #26353F;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #26353F;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FDFDFD;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	font-size: 10px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #F7F7F7;
+	color: #26353F;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #26353F;
+	font-size: 10px;
+	padding: 6px;
+	text-align: center;
+}
+
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #F7F7F7;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #FDFDFD;
+}
+
+.celltoday,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+celldateshaded{
+	vertical-align:middle;
+	background:#DBDBDB;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+.input-warn,
+.input-green,
+.input-checkbox,
+input,
+textarea,
+select{
+	background: #FDFDFD;
+	border: 1px solid #585C66;
+	color: #26353F;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+select
+{
+	margin: 0px;
+}
+
+.input-checkbox
+{
+	border: none;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+	cursor: hand;
+	cursor: pointer;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #FDFDFD;
+	border: 1px solid #475B6B;
+	color: #4F5459;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #F7F7F7;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #181B16;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+	background: transparent;
+}
+
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#F7F7F7;
+	border: 1px solid #181B16;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #26353F;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+
+
+
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	/*background: #E4EAF2 url(style_images/ambience11/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;*/
+	color: #26353F;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 2px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #EAEAEA;
+	border: 1px dotted #26353F;
+	color: #26353F;
+	padding: 4px;
+	margin: 0 auto 0 auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	/*background: #FDDBCC url(style_images/ambience11/css_img_code.gif) no-repeat right;*/
+	color: #26353F;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #EAEAEA;
+	border: 1px dotted #26353F;
+	color: #26353F;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+    background: #181B16; 
+    border: 1px solid #CCCCCC;
+    padding: 0; 
+    margin: 0; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: #FFF url(style_images/ambience11/tile_cat.gif) repeat-x 0 0;
+	border: 1px solid #F7F7F7;
+	color: #000; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 8px;
+}
+
+.maintitlecollapse{
+	border: 1px solid #181B16
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #000;
+	text-decoration: none; 
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #26353F;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	
+	color: #26353F; 
+	font-size: 9px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	border: 1px solid #FDFDFD;
+	
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover{ 
+	background: transparent;
+      	color: #26353F;
+	text-decoration: underline; 
+}
+
+.borderwrap h4{
+	background: #EFEFEF;
+
+	border: 1px solid #FDFDFD;
+	
+	border-top: 1px solid #585C66;
+	color: #4F5459; 
+	font-size: 9px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #181B16;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.pformstrip,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #FDFDFD !important; 
+	border: 1px solid #FDFDFD;
+	border-top: 1px solid #585C66;
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+td.formbuttonrow{
+	border-top:0;
+}
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #F7F7F7;
+	border: 1px solid #FDFDFD;
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	font-size: 10px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #F7F7F7;
+	color: #26353F;
+	font-size: 1px;
+	height: 5px;
+}
+.catend_3{
+	background:url(style_images/ambience11/catend.gif) repeat-x;
+	height:12px;
+	padding:0;
+	margin:0;
+}
+.catend_3_l{
+	background:url(style_images/ambience11/catend_l.gif) no-repeat 0 0;
+	height:100%;
+}
+.catend_3_r{
+	background:url(style_images/ambience11/catend_r.gif) no-repeat 100% 0;
+	height:100%;
+}
+.newslink{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #26353F;
+	font-size: 10px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #26353F;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #FDFDFD;
+	border: 1px solid #999;
+	color: #26353F;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #181B16;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #DEDEDE;
+	border: 1px solid #181B16;
+	border-left: 0;
+	border-right: 0;
+	color: #4F5459; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap,
+#pmnotewrap{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+#pmnotewrap{
+	line-height: 135%;
+	margin: 0 0 5px 0;
+}
+
+.errorwrap h4,
+#pmnotewrap h4{
+	background: #E5E5E5;
+	border: 1px solid #181B16;
+	border-left: 0;
+	border-right: 0;
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+.errorwrap p,
+#pmnotewrap p{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	margin: 0;
+	padding: 8px;
+}
+
+#pmnotewrap p.pmavatar{
+	float: left;
+}
+
+#pmnotewrap p.pmnotefoot{
+	background: #E5E5E5;
+	border-top: 1px solid #26353F;
+	text-align: right;
+}
+
+#pmnotewrap a:link, 
+#pmnotewrap  a:visited{ 
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: underline;
+}
+
+#pmnotewrap a:hover, 
+#pmnotewrap a:active{
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+.ruleswrap{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	color: #26353F; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #EFEFEF;
+	border-bottom: 1px solid #181B16;
+	color: #26353F;
+	font-size: 10px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #F7F7F7;
+	border-top: 1px solid #181B16;
+	text-align: center;
+}
+
+#gfooter{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #000;
+	font-size: 10px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #000;
+}
+
+#logostrip{ 
+	background: #0D2B45 url(style_images/ambience11/banner.jpg) no-repeat 0 0;
+	height: 131px;
+	margin: 0;
+	padding: 0;
+}
+#banner_top{
+	height:6px;
+	background:url(style_images/ambience11/banner_top.gif) repeat-x;
+	font-size: 1px;
+	padding:0;
+}
+#banner_bottom{
+	background:url(style_images/ambience11/banner_bg.gif) repeat-x;
+	height:22px;
+	text-align:center;
+}
+#nav_bar{
+	height:25px;
+	background:url(style_images/ambience11/nav_bg.gif) repeat-x;
+	text-align:center;
+}
+#nav_bar img{
+	border:0;
+}
+#submenu{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border: 1px solid #FFF;
+	border-top: 0;
+	color: #26353F; 
+	margin: 0;
+	height: 28px;
+	text-align: right;
+}
+
+.ipb-top-left-link,
+.ipb-top-right-link
+{
+	background: transparent url(style_images/ambience11/tile_sub-lite.gif);
+	float: right;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 0.5px;
+	margin: 0px;
+	padding: 7px 0 7px 0;
+	width: auto;
+	border-left:  1px solid #dce3ee;
+}
+
+.ipb-top-left-link
+{
+	float: left;
+	border-left: 0px;
+	border-right: 1px solid #dce3ee;
+}
+
+.ipb-top-left-link a:link, 
+.ipb-top-left-link a:visited,
+.ipb-top-right-link a:link, 
+.ipb-top-right-link a:visited
+{ 
+	background: transparent; 
+	color: #26353F;
+	padding: 0 6px 0 6px;
+	text-decoration: none;
+}
+
+.ipb-top-left-link a:hover, 
+.ipb-top-left-link a:active,
+.ipb-top-right-link a:hover, 
+.ipb-top-right-link a:active
+{
+	background: transparent; 
+	color: #000; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#navstrip{ 
+	background: transparent;
+	color: #999;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 8px 0 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #4F5459; 
+}
+
+.toplinks{
+	background: transparent;
+	color: #26353F;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #26353F;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 5px;
+}
+
+.copyright{ 
+	font-size: 10px; 
+             color: #000;
+}
+
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+        color: #CCC;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+color: #CCC;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 10px;
+	font-weight: normal;
+color: #CCC;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+color: #CCC;
+}
+#print h4{
+	background: #F9F9F9;
+	font-size: 10px;
+color: #CCC;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+color: #CCC;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #CCC;
+	text-align: center;
+}
+.dny-edit-title
+{
+	padding:3px;
+	margin:0px;
+	background: #FBFBFB;
+	border: 1px solid #4F535B;
+	color: #61686E;
+}
+
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	background-color:#FFF;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff
+{
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	background-color: #B5C3D9;
+	color: #333;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+	color: #333;
+}
+
+.mya-back
+{
+	background: #EDEDED;
+	margin:1px;
+	padding: 1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin: 1px;
+	border: 1px solid #777;
+}
+
+.mya-content-tbl
+{
+   background: #F9F9F9;
+   border: 1px solid #777;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   margin:1px;
+}
+
+.mya-fieldwrap
+{
+	background: transparent;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 4px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+.popupmenu,
+.popupmenu-new
+{
+   background: #F9F9F9;
+   border: 1px solid #26353F;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #E4E4E4;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popmenubutton-new,
+.popmenubutton
+{
+	width:120px;
+	white-space:nowrap;
+	/*background-color: #E4E4E4;
+	border:1px solid #26353F;*/
+	color: #26353F;
+	font-weight:bold;
+	float:right;
+	height:18px;
+	text-align:center;
+	margin:0px;
+	padding:1px 3px;
+}
+
+.popmenubutton-new
+{
+	float:none;
+	width:auto;
+	text-align:left;
+	height:auto;
+	padding:3px;
+	font-weight:normal;
+	background-color:#F7F7F7;
+	background-image: url(style_images/ambience11/menu_action_down-padded.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.popmenubutton-new-out
+{
+	padding:3px;
+}
+
+.popupmenu-new
+{
+	background-color: #F7F7F7;
+}
+
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popmenubutton-new a:link, 
+.popmenubutton-new a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+.popmenubutton a:hover,
+.popmenubutton-new a:hover,
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{ 
+	color: #000; 
+	text-decoration: none;
+}
+
+.popupmenu-category
+{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+/* -------------------------------- */
+/* Loading box
+/* -------------------------------- */
+
+#loading-layer-inner
+{
+	width:220px;
+	height:28px;
+	padding:18px 10px 10px 10px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#CCC #666 #666 #CCC;
+	background-color: #FCF8C7;
+}
+
+/* -------------------------------- */
+/* Message in a bo(x|ttle)
+/* -------------------------------- */
+
+#ipd-msg-wrapper
+{
+	display: none;
+	width: 220px;
+}
+
+#ipd-msg-inner
+{
+	width:100%;
+	height:45px;
+	padding: 6px 4px 4px 4px;
+	margin: 0px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#ccc #666 #666 #ccc;
+	background-color: #FCF8C7;
+	filter:alpha(opacity=75);
+	opacity:.75
+}
+
+#ipd-msg-title
+{
+	width: 100%;
+	height:20px;
+	margin: 0px;
+	padding: 6px 4px 4px 4px;
+	background: transparent url(style_images/ambience11/css_pp_header.gif);
+	border: 1px solid #26353F;
+	border-bottom: 0px;
+	color: #FFF;
+}
+
+.linked-image
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.resized-linked-image
+{
+	margin: 4px 0px 0px 0px;
+	padding: 0px;
+	background-color: #000;
+	border: 0px;
+	color: #FFF;
+	width: auto;
+}
+
+.resized-linked-image-zoom
+{
+	width: 200px;
+	height: 30px;
+	filter:alpha(opacity=85);
+	opacity:.85;
+	background-color: #FFF;
+	padding-top: 6px;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	display: none;
+
+}
+
+/* -------------------------------- */
+/* Edit post reason
+/* -------------------------------- */
+
+.post-edit-reason
+{
+	background: #E7EAEF;
+	margin-top: 9px;
+	margin-bottom: 0px;
+	padding: 4px;
+	color: #333;
+	font-size: 10px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Personal Profile
+/* -------------------------------- */
+
+.pp-name
+{ 
+	background: #F7F7F7;
+	border: 1px solid #000;
+	margin: 0px;
+	padding: 10px;
+}
+
+.pp-name h3
+{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	font-size:24px;
+}
+
+.pp-header
+{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0px 0px 1px 0px; 
+	padding: 5px; 
+}
+
+.pp-title
+{
+	background: url(style_images/ambience11/css_pp_header.gif);
+	border-bottom: 1px solid #000;
+	color: #000; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-datebox
+{
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+	font-size:24px;
+	font-weight:bold;
+	line-height: 100%;
+	letter-spacing: -1px;
+	float:right;
+	width: 80px;
+}
+
+.pp-datebox em
+{
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pp-contentbox-back
+{
+	/*background-image: url(style_images/ambience11/folder_profile_portal/pp-css-contentblock.gif);
+	background-repeat: repeat-x;*/
+	background-color: #F7F7F7;
+	padding: 6px;
+}
+
+.pp-contentbox-entry,
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	background-color: #F7F7F7;
+	border: 1px solid #888888;
+	line-height: 140%;
+	padding: 12px;
+	margin-bottom: 6px;
+	height: 200px;
+	overflow: auto;
+	overflow-x: auto;
+}
+
+.pp-contentbox-entry-noheight-sel
+{
+	background-color:#FCECCD;
+}
+
+.pp-contentbox-entry-noheight-mod
+{
+	background-color:#FDF1DA;
+}
+
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	height: auto;
+	margin-bottom: 1px;
+}
+
+.pp-image-thumb-wrap,
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 27px;
+	height: 27px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap-floatright
+{
+	float:right;
+}
+
+.pp-tiny-text
+{
+	color: gray;
+	font-size: 10px;
+}
+
+.pp-mini-content-entry,
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #F7F7F7;
+	padding: 6px;
+	border-bottom: 1px dotted #555555;
+	clear:both;
+	width: auto;
+	height: 60px;
+}
+
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #E3DFE7;
+}
+
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	height: auto;
+}
+
+.pp-tabclear,
+.pp-maintitle
+{
+	background: url(style_images/ambience11/css_pp_header.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #000;
+	color: #000; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+
+.pp-tabclear
+{
+	border:0px;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+.pp-tabon
+{
+	border-top:1px solid #2A2A2A;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background-color:#C2CBD0;
+	color:#000;
+	padding:8px;
+	float:left;
+	width:auto;
+	background-image: url(style_images/ambience11/css_pp_tab_on.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-taboff,
+.pp-tabshaded
+{
+	border-top: 1px solid #6F6F6F;
+	border-left: 1px solid #6F6F6F;
+	border-right: 1px solid #6F6F6F;
+	background-color: #FFF;
+	color: #000;
+	padding:8px;
+	float: left;
+	width: auto;
+	background-image: url(style_images/ambience11/css_pp_tab_off.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-tabshaded
+{
+	background-image: url(style_images/ambience11/css_pp_tab_shaded.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #000;
+	border-top: 1px solid #6F6F6F;
+	border-left: 1px solid #6F6F6F;
+	border-right: 1px solid #6F6F6F;
+}
+
+.pp-tabon a:link, 
+.pp-tabon a:visited, 
+.pp-tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.pp-taboff a:link, 
+.pp-taboff a:visited, 
+.pp-taboff a:active,
+.pp-tabshaded a:link, 
+.pp-tabshaded a:visited, 
+.pp-tabshaded a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.pp-tabwrap
+{
+	height: 34px;
+	margin:0px;
+	padding:0px;
+}
+/* Left and right images */
+.left{
+	padding:0;
+	margin:0;
+	background: url(style_images/ambience11/cat_left.gif) 0 0 no-repeat;
+	height:26px;
+}
+.right{
+	padding:0;
+	margin:0;
+	background: url(style_images/ambience11/cat_right.gif) 100% 0 no-repeat;
+	height:26px;
+}
+/* Main title text class */
+.main_text{
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0px;
+	padding:8px 130px 8px 130px;
+	background:transparent;
+	border:0;
+	text-align:center;
+}
+/* Our new maintitle classes */
+.maintitle_3,
+.maintitlecollapse_3{
+	background: url(style_images/ambience11/cat_back.gif);
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0px;
+}
+.maintitle_3 p.expand,
+.maintitle_3 p.goto,
+.maintitlecollapse_3 p.expand{
+	float: right;
+	width: auto !important;
+}
+.maintitle_3 a:link,
+.maintitle_3 a:visited,
+.maintitlecollapse_3 a:link,
+.maintitlecollapse_3 a:visited{
+	background: transparent;
+	color: #000;
+	text-decoration: none;
+}
+
+.maintitle_3 a:hover,
+.maintitle_3 a:active,
+.maintitlecollapse_3 a:hover,
+.maintitlecollapse_3 a:active{
+	background: transparent;
+	color: #000;
+	text-decoration:underline;
+}
+.maintitle_3 p,
+.maintitlecollapse_3 p{
+	margin:0;
+	padding:0;
+	background:transparent;
+	border:0;
+	text-align:center;
+}
+.maintitle_3 td {
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+}
+#forum_table{
+	margin:10px;
+	background:#EDEDED;
+}
+#ft_tl{
+	background:url(style_images/ambience11/table_tl.gif) no-repeat 0 0;
+	height:100%;
+}
+#ft_tr{
+	background:url(style_images/ambience11/table_tr.gif) no-repeat 100% 0;
+	height:100%;
+}
+#ft_bl{
+	background:url(style_images/ambience11/table_bl.gif) no-repeat 0 100%;
+	height:100%;
+}
+#ft_br{
+	background:url(style_images/ambience11/table_br.gif) no-repeat 100% 100%;
+	height:100%;
+}
+#forum{
+	padding:12px 10px 12px 10px;
+}
+#copy_footer{
+	background:url(style_images/ambience11/footer_bg.gif) repeat-x;
+	height:49px;
+	padding:0;
+}
+legend{
+	color:#26353F;
+}
+</style>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Version imprimable du sujet</h1>
+		<h2><a href="index.php@showtopic=164&amp;view=new.html" title="Cliquez pour voir le sujet">Cliquez ici pour voir ce sujet dans son format original</a></h2>
+		<h3>Rond Comme Un Ballon _ LAN _ LAN RCUB 2013</h3><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  30/01/2013 - 11:34</h4>
+			<p>Salut,<br /><br />je vous propose une lan pour le mois d&#39;avril.<br /><br />Pour trouver une date, je partage un fichier excel à cette url:<br /><br />https://docs.google.com/spreadsheet/ccc?key=0AtRg4YOqODDadDdCOEdSbHdFSkxSWmhuZlhLeHhxd1E
+			<br />
+			<!--IBF.ATTACHMENT_1965-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  31/01/2013 - 23:02</h4>
+			<p>Oh yeah&#33;<br /><br />préparez vos comptes lol xD
+			<br />
+			<!--IBF.ATTACHMENT_1966-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  01/02/2013 - 08:46</h4>
+			<p>PLop, je regarde avec mon aganda, mais normalement, pas trop de soucis pour le mois d&#39;avril xD
+			<br />
+			<!--IBF.ATTACHMENT_1967-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  04/02/2013 - 21:21</h4>
+			<p>En voilà une idée quelle est bonne <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /> <br /><br />Faut que je regarde...mes jours de congé fondent comme neige sur un volcan :-s
+			<br />
+			<!--IBF.ATTACHMENT_1968-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  05/02/2013 - 00:03</h4>
+			<p>A priori ok pour moi. Ca se ferait ou ?
+			<br />
+			<!--IBF.ATTACHMENT_1969-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  05/02/2013 - 13:21</h4>
+			<p>Salut la foule, j&#39;y peux pas cette année&#33;&#33;<br />Avec le fiston et les buts que nous nous sommes fixés ma femme et moi, nous devons consacrer notre temps libre pour la construction.<br />Du coup, dès qu&#39;il y a possibilité, on vous proposera une chtite lan chez nous. Fondue oblige&#33;
+			<br />
+			<!--IBF.ATTACHMENT_1970-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  09/02/2013 - 11:27</h4>
+			<p>L&#39;émotion de participer à nouveau à une Lan a été trop forte pour ma tour qui a rendu l&#39;âme jeudi... <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" /> <br /><br />Vais aller chercher sa remplaçante de suite, va savoir, peut-être que le micro fonctionnera cette fois  <img src="style_emoticons/default/wink.gif" style="vertical-align:middle" emoid=";)" border="0" alt="wink.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1971-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  09/02/2013 - 13:52</h4>
+			<p>xD
+			<br />
+			<!--IBF.ATTACHMENT_1972-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  11/02/2013 - 14:07</h4>
+			<p>Salut,<br /><br />Bon ça sera pour le dernier weekend d&#39;avril (26 au 28).<br /><br />J&#39;ai prévu de le faire à la maison.<br /><br />Mais peut être que de le faire au local arrangerai bele ? (sans vouloir s&#39;invité bien sur  <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />  ).
+			<br />
+			<!--IBF.ATTACHMENT_1973-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  12/02/2013 - 07:51</h4>
+			<p><img src="style_emoticons/default/wink.gif" style="vertical-align:middle" emoid=";)" border="0" alt="wink.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1974-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  12/02/2013 - 10:06</h4>
+			<p>Vous êtes toujours les bienvenue&#33; <br />Le problème du local, c&#39;est que plus internet...a voir si on arrive a s&#39;arranger avec le voisin du dessus...<br /><br />@Bele: ça veux dire oui ou non? <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1975-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  12/02/2013 - 13:05</h4>
+			<p>Alors non si c&#39;est en France. En revanche, si c&#39;est chez nous, il y aura une présence, pas à 100% certes, mais une présence quand même...
+			<br />
+			<!--IBF.ATTACHMENT_1976-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  13/02/2013 - 14:46</h4>
+			<p>Perso, pas de problème pour le local.
+			<br />
+			<!--IBF.ATTACHMENT_1977-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  13/02/2013 - 15:23</h4>
+			<p>Vais voir comment s&#39;arranger pour le net...<br />Pour les autres ca joue aussi si on fais en Suisse?  <img src="style_emoticons/default/ph34r.gif" style="vertical-align:middle" emoid=":ph34r:" border="0" alt="ph34r.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1978-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  13/02/2013 - 15:54</h4>
+			<p>ok pour Eveuh et moi, sachant que tout va dépendre de son travail.<br />Si elle boss le samedi on pourrat pas venir.<br />Si elle termine la semaine le vendredi soir, soit on arrive tard dans la nuit soit le samedi matin.<br /><br />Si pas de net: pas grave , on ferrat ça à l&#39;ancienne =)
+			<br />
+			<!--IBF.ATTACHMENT_1979-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  13/02/2013 - 18:31</h4>
+			<p>Pas de soucis pour moi, j&#39;ai un gps maintenant xD.
+			<br />
+			<!--IBF.ATTACHMENT_1980-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  16/02/2013 - 17:51</h4>
+			<p>Ptit update, remise de diplome le 19 avril pour moi donc plus dispo. Et pour la Suisse, ca va dependre de ma motivation le moment voulu du coup xD ...
+			<br />
+			<!--IBF.ATTACHMENT_1981-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  17/02/2013 - 14:35</h4>
+			<p>Egal pour moi où que ce soit
+			<br />
+			<!--IBF.ATTACHMENT_1982-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  19/02/2013 - 18:45</h4>
+			<p>Je serai là où il faudra que je sois au moment où il faudra &#33; <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1983-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  19/02/2013 - 20:06</h4>
+			<p>Faut décidé 1 date...savoir qui sera pas la <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" />(((
+			<br />
+			<!--IBF.ATTACHMENT_1984-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  19/02/2013 - 20:25</h4>
+			<p><!--quoteo(post=1973:date=11/02/2013 &#045; 14&#58;07:name=evicta)--><div class='quotetop'>Citation (evicta &#064; 11/02/2013 &#045; 14&#58;07) <a href="index.php@act=findpost&amp;pid=1973.html"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Salut,<br /><br />Bon ça sera pour le dernier weekend d&#39;avril (26 au 28).<br /><br />J&#39;ai prévu de le faire à la maison.<br /><br />Mais peut être que de le faire au local arrangerai bele ? (sans vouloir s&#39;invité bien sur  <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />  ).<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Dernier week-end d&#39;avril. Au local.
+			<br />
+			<!--IBF.ATTACHMENT_1985-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  20/02/2013 - 19:27</h4>
+			<p>pas de raison que je sera pas la mais je me tâte entre le train et l&#39;auto.<br />l&#39;auto c&#39;est bien pratique pour les horaires et caser le pc mais si je peut troquer mes 5 à 6 h de bagnole contre le confort d&#39;une première classe...<br />faut juste que je trouve une grosse valoche pour l&#39;UC parce que même un harnais, dans le train, c&#39;est pas top.
+			<br />
+			<!--IBF.ATTACHMENT_1986-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  21/02/2013 - 10:19</h4>
+			<p>Oups, effectivement, la date est fixée&#33;<br /><br />Pour les présences:<br /><br />France:<br />Antheas <br /><strike>Belegorod</strike><br />Dox<br />Dumak<br />Eveuh<br />Evicta<br />Maynaard<br />Miguel<br /><strike>Muche</strike><br />Nash<br />Remedie<br />Skwelh<br />Nemesis<br /><br />11 personnes / manque 2<br /><br />Suisse:<br />Antheas - pas sûr<br />Belegorod - là un moment<br />Dox<br />Dumak<br />Eveuh - pas sûr<br />Evicta<br />Maynaard<br />Miguel<br /><strike>Muche</strike><br />Nash<br />Remedie<br />Skwelh<br />Nemesis - pas sûr<br /><br />9 personnes / manque 1 / 3 pas sûr<br /><br />J&#39;ai bon?
+			<br />
+			<!--IBF.ATTACHMENT_1987-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  21/02/2013 - 13:34</h4>
+			<p>Je confirme pour moi.
+			<br />
+			<!--IBF.ATTACHMENT_1988-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  21/02/2013 - 23:13</h4>
+			<p>pas sûr non plus pour nous pour la france.<br />tout dépendra du travail d&#39;Eveuh.<br />
+			<br />
+			<!--IBF.ATTACHMENT_1989-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  27/02/2013 - 19:32</h4>
+			<p>Au final c&#39;est ou? car la je m&#39;y perd un peu.
+			<br />
+			<!--IBF.ATTACHMENT_1995-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  06/03/2013 - 18:44</h4>
+			<p>la question de Rem est toujours en suspens...on fait ou?<br /><br />Pour  moi c&#39;est egal et je fais volontiers le deplacement en france et j&#39;ai assez de place chez moi pour faire dormir plein de monde...
+			<br />
+			<!--IBF.ATTACHMENT_1998-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  07/03/2013 - 12:52</h4>
+			<p>DATE: Ca sera pour le dernier weekend d&#39;avril (26 au 28).<br /><br />LIEU: Au local (en Suisse).<br /><br /><br /><!--quoteo(post=1985:date=19/02/2013 &#045; 20&#58;25:name=evicta)--><div class='quotetop'>Citation (evicta &#064; 19/02/2013 &#045; 20&#58;25) <a href="index.php@act=findpost&amp;pid=1985.html"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Dernier week-end d&#39;avril. Au local.<!--QuoteEnd--></div><!--QuoteEEnd-->
+			<br />
+			<!--IBF.ATTACHMENT_2002-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  12/03/2013 - 19:49</h4>
+			<p>Perso, sans internet, ca le fais pas&#33; j&#39;ai des heures à rattraper&#33; <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /><br /><br />Je regarde si on arrive à avoir une ligne ce w-e la, sinon je préfère en France <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /><br /><br />Ouais, ca complique mais bon&#33; :x
+			<br />
+			<!--IBF.ATTACHMENT_2003-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  21/03/2013 - 10:16</h4>
+			<p>Coucou,<br /><br />Tu as eu une réponse ce week-end pour le net mon Dudu ?<br /><br />Sinon, pas de prb pour le faire à la maison.
+			<br />
+			<!--IBF.ATTACHMENT_2004-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  21/03/2013 - 16:51</h4>
+			<p>Je  te redis au plus tard ce w-e&#33;<br />
+			<br />
+			<!--IBF.ATTACHMENT_2005-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  24/03/2013 - 21:48</h4>
+			<p><!--quoteo(post=2004:date=21/03/2013 &#045; 10&#58;16:name=evicta)--><div class='quotetop'>Citation (evicta &#064; 21/03/2013 &#045; 10&#58;16) <a href="index.php@act=findpost&amp;pid=2004.html"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Coucou,<br /><br />Tu as eu une réponse ce week-end pour le net mon Dudu ?<br /><br />Sinon, pas de prb pour le faire à la maison.<!--QuoteEnd--></div><!--QuoteEEnd-->Le net au local, c&#39;est mort...<br />Si ca te dérange pas, mieux faire chez toi...
+			<br />
+			<!--IBF.ATTACHMENT_2008-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  24/03/2013 - 23:29</h4>
+			<p>Ok, pour le faire à la maison.  <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_2009-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  26/03/2013 - 09:27</h4>
+			<p>Eveuh travail.<br />C&#39;est donc mort pour nous.<br /><br />On passerat vous faire un coucou le samedi soir =)
+			<br />
+			<!--IBF.ATTACHMENT_2010-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  27/03/2013 - 10:15</h4>
+			<p><u>Donc pour résumer<br /></u><br />Date: Ca sera le dernier weekend d&#39;avril (26 au 28).<br /><br />Lieu: chez moi &quot;Dans la belle commune de Blanzy&quot;.<br /><br />Pour les présences:<br /><br />Dox<br />Dumak<br />Evicta<br />Maynaard<br />Miguel<br />Nemesis<br />Nash<br />Remedie<br />Skwelh<br /><br />09 personnes
+			<br />
+			<!--IBF.ATTACHMENT_2012-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  27/03/2013 - 10:28</h4>
+			<p><!--quoteo(post=2010:date=26/03/2013 &#045; 09&#58;27:name=antheas)--><div class='quotetop'>Citation (antheas &#064; 26/03/2013 &#045; 09&#58;27) <a href="index.php@act=findpost&amp;pid=2010.html"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Eveuh travail.<br />C&#39;est donc mort pour nous.<br /><br />On passerat vous faire un coucou le samedi soir =)<!--QuoteEnd--></div><!--QuoteEEnd--> <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" />  <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" />  <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_2013-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  27/03/2013 - 10:48</h4>
+			<p>Ben oui  <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" /> <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" /> <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" /> <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" /> <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_2014-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  02/04/2013 - 21:43</h4>
+			<p>ce sera sans moi les amis. dommage, en plus c&#39;était pas loin de Paris, parfait donc... mais non <br /><br />comme tous les ans, je le redis: l&#39;année prochaine sans faute&#33;
+			<br />
+			<!--IBF.ATTACHMENT_2015-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  03/04/2013 - 16:18</h4>
+			<p>&#39;Tcheu, c&#39;est la crise partout&#33; <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_2016-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  10/04/2013 - 12:14</h4>
+			<p>http://www.youtube.com/user/gabriel1989tanger?feature=g-high-rec
+			<br />
+			<!--IBF.ATTACHMENT_2017-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  19/04/2013 - 19:14</h4>
+			<p>A dans une semaine les coupaings <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_2018-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  19/04/2013 - 21:38</h4>
+			<p>Je m’entraîne a me coucher plus tard ces dernier jours xD
+			<br />
+			<!--IBF.ATTACHMENT_2019-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  20/04/2013 - 22:02</h4>
+			<p>Je test les machines à hot-dog &amp; panini.
+			<br />
+			<!--IBF.ATTACHMENT_2020-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  24/04/2013 - 19:43</h4>
+			<p>La saucisse me monte au nez <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" /> ...ça va chauffer
+			<br />
+			<!--IBF.ATTACHMENT_2022-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  24/04/2013 - 19:58</h4>
+			<p>A quelle heure pensez-vous arriver ? (Pour que je m&quot;organise).<br /><br />Les tables sont réservés, est j&#39;ai les chaises...
+			<br />
+			<!--IBF.ATTACHMENT_2023-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/04/2013 - 08:46</h4>
+			<p>Tout dépend de l&#39;heure a laquelle je part,<br /><br />tu preferes qu&#39;on arrive vers quelle heure?<br />Je peux arriver plus tot pour t&#39;aider a installer si tu veux<br />
+			<br />
+			<!--IBF.ATTACHMENT_2024-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  25/04/2013 - 16:16</h4>
+			<p>On part autour des 13h, donc arrivée autour des 18h00 je pense <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br /><br />++ a demain xD
+			<br />
+			<!--IBF.ATTACHMENT_2025-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  26/04/2013 - 18:56</h4>
+			<p>j&#39;avais préparé un ptit jeu avec KSP mais https://www.youtube.com/watch?NR=1&amp;v=tJDLGY7La1k&amp;feature=endscreen <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" /><br /><br />hf
+			<br />
+			<!--IBF.ATTACHMENT_2026-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  27/04/2013 - 20:24</h4>
+			<p>on va manger tous les chocoly du coup... :&#39;(<br />
+			<br />
+			<!--IBF.ATTACHMENT_2027-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  28/04/2013 - 20:11</h4>
+			<p>Voila je suis rentré<br /><br />Merci a Evicta et toute sa famille pour l’accueil.<br />Merci a tous pour cet excellent weekend<br />Merci a Redbull pour m&#39;avoir permis de rentrer dans de bonnes conditions.<br />Merci a fnatic et GG d&#39;avoir fait 2-2 exprès que je puisse voir la dernière.<br /><br />A bientôt =)<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_2028-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  28/04/2013 - 21:41</h4>
+			<p>Tout pareil, bien rentrés.<br /><br />Merci beaucou à l&#39;organisation et à tous pour cet excellent week-end <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <br />
+			<br />
+			<!--IBF.ATTACHMENT_2029-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>skwelh</b>  29/04/2013 - 18:19</h4>
+			<p>Merci Evicta pou l&#39;acceuil et tout le reste.<br /><br />Bonne ambiance et rigolade donc vivement la prochaine <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_2030-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  01/05/2013 - 19:20</h4>
+			<p>yep merci aux hotes pour l&#39;accueil. <br />Merci à tout le monde pour l&#39;ambiance<br />Merci à Shen pour avoir sauvé la peau à Rem <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /> <br />Merci à tout sauf à mon bide qui a décidé de se rebeller le matin de la LAN et m&#39;empêcher de battre un record de hot-dog 100x mérité <img src="style_emoticons/default/wacko.gif" style="vertical-align:middle" emoid=":wacko:" border="0" alt="wacko.gif" /> <br /><br />Ce n&#39;est que partie remise.
+			<br />
+			<!--IBF.ATTACHMENT_2031-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>evicta</b>  14/05/2013 - 16:52</h4>
+			<p>Salut,<br /><br />Merci de votre présence.<br /><br />Ci-joint le lien pour dwld les photos du rezo : https://docs.google.com/file/d/0B9Rg4YOqODDaTzU5REdSOEptZkE/edit?usp=sharing<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_2046-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/05/2013 - 19:27</h4>
+			<p>Yeah merci beaucoup&#33;&#33;
+			<br />
+			<!--IBF.ATTACHMENT_2047-->
+			</p>
+		</div><!--Copyright-->
+
+<p class="printcopy">Propuls&eacute; par Invision Power Board (http://www.invisionboard.com)<br />&copy; Invision Power Services (http://www.invisionpower.com)</p>
+
+	</div>
+</html>

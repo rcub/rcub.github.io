@@ -1,0 +1,2300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<title>Rond Comme Un Ballon [Propuls&eacute; par Invision Power Board]</title>
+		<style type="text/css">
+	/*  
+ * Cascading Style Sheet(CSS 467), for Invision Power Board 2.2.0
+ * Author: James A. Mathias, admin@leihu.com, http://www.1lotus.com 
+ * Copyright: 2005 Invision Power Services, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+	
+body{ 
+	background: #F0F1F3 url(style_images/ambience11/back.gif) repeat-x top left;
+	color: #26353F;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 10px;
+	line-height: 135%;
+	margin: 0;
+	padding: 0; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #26353F;
+	font-size: 10px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+/* Safari... */
+th
+{
+	text-align: left;
+}
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+img{
+	border:0;
+}
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #26353F;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #4F5459;
+}
+
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+.tablebg{
+	width: 779px;
+	background: #F7F7F7;
+	border-left: 1px solid #26353F;
+	border-right: 1px solid #26353F;
+}
+
+#ipbwrapper{ 
+	margin: 0 auto 0 auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background:#F7F7F7;
+	width: 779px;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #F7F7F7;
+}
+
+
+.round{
+	background: #EDEDED;
+
+}
+
+.round2{
+	background: #EDEDED;
+	padding: 0px 25px 0px 25px;
+}
+
+
+.pagecurrent{
+	background: #C7CED3;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #181B16;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* fake button effect for some links */
+.fauxbutton{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #26353F !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #26353F;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	color: #26353F;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/ambience11/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #181B16;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F7F7F7;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #EFEFEF;
+	border: 0 !important;
+	border-bottom: 1px solid #4F5459 !important;
+	color: #4F5459; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #F7F7F7 !important;
+	border: 0 !important;
+	border-top: 1px solid #4F5459 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #F7F7F7 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #000 url(style_images/ambience11/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #181B16;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 10px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #26353F; 
+	font-size: 10px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #F7F7F7;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #26353F; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 10px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 11px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 11px;
+}
+
+.post1,
+.bg1{ 
+	background: #F7F7F7;
+	padding: 5px;
+}
+
+.post2,
+.bg3{ 
+	background: #F7F7F7;
+	padding: 5px;
+}
+
+.row2shaded,
+.post1shaded { background-color: #FDFDFD;padding: 5px; }
+.row4shaded,
+.post2shaded { background-color: #FDFDFD;padding: 5px; }
+
+.row3{ 
+	background: #F7F7F7; 
+}
+
+.row1{ 
+	background: #F7F7F7; 
+	padding: 5px;
+}
+.info {
+	padding-left: 3px;
+	padding-right: 0px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #F1F1F1;
+	border-top: 1px solid #505050;
+	border-right: 2px solid #505050;
+	border-left: 1px solid #505050;
+	border-bottom: 2px solid #505050;
+	margin-bottom: 3px;
+}
+.row2{ 
+	background: #FDFDFD; 
+	padding: 5px;
+}
+
+.rowhighlight{
+	background-color: #FFF9BA;
+}
+.darkrow1{ 
+	background: #F7F7F7;
+	color: #26353F; 
+	padding: 5px;
+}
+
+.darkrow3{ 
+	background: #FDFDFD; 
+	color: #26353F; 
+	padding: 5px;
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+}
+
+.tablefill,
+
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: .5em;
+	width: 25%;
+}
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 10px; 
+	color: #26353F;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #26353F;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FDFDFD;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	font-size: 10px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #F7F7F7;
+	color: #26353F;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #26353F;
+	font-size: 10px;
+	padding: 6px;
+	text-align: center;
+}
+
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #F7F7F7;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #FDFDFD;
+}
+
+.celltoday,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+celldateshaded{
+	vertical-align:middle;
+	background:#DBDBDB;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+.input-warn,
+.input-green,
+.input-checkbox,
+input,
+textarea,
+select{
+	background: #FDFDFD;
+	border: 1px solid #585C66;
+	color: #26353F;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+select
+{
+	margin: 0px;
+}
+
+.input-checkbox
+{
+	border: none;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+	cursor: hand;
+	cursor: pointer;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #FDFDFD;
+	border: 1px solid #475B6B;
+	color: #4F5459;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #F7F7F7;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #181B16;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+	background: transparent;
+}
+
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#F7F7F7;
+	border: 1px solid #181B16;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #26353F;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+
+
+
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	/*background: #E4EAF2 url(style_images/ambience11/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;*/
+	color: #26353F;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 2px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #EAEAEA;
+	border: 1px dotted #26353F;
+	color: #26353F;
+	padding: 4px;
+	margin: 0 auto 0 auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	/*background: #FDDBCC url(style_images/ambience11/css_img_code.gif) no-repeat right;*/
+	color: #26353F;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #EAEAEA;
+	border: 1px dotted #26353F;
+	color: #26353F;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+    background: #181B16; 
+    border: 1px solid #CCCCCC;
+    padding: 0; 
+    margin: 0; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: #FFF url(style_images/ambience11/tile_cat.gif) repeat-x 0 0;
+	border: 1px solid #F7F7F7;
+	color: #000; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 8px;
+}
+
+.maintitlecollapse{
+	border: 1px solid #181B16
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #000;
+	text-decoration: none; 
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #26353F;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	
+	color: #26353F; 
+	font-size: 9px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	border: 1px solid #FDFDFD;
+	
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover{ 
+	background: transparent;
+      	color: #26353F;
+	text-decoration: underline; 
+}
+
+.borderwrap h4{
+	background: #EFEFEF;
+
+	border: 1px solid #FDFDFD;
+	
+	border-top: 1px solid #585C66;
+	color: #4F5459; 
+	font-size: 9px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #181B16;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.pformstrip,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #FDFDFD !important; 
+	border: 1px solid #FDFDFD;
+	border-top: 1px solid #585C66;
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+td.formbuttonrow{
+	border-top:0;
+}
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #F7F7F7;
+	border: 1px solid #FDFDFD;
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	font-size: 10px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #F7F7F7;
+	color: #26353F;
+	font-size: 1px;
+	height: 5px;
+}
+.catend_3{
+	background:url(style_images/ambience11/catend.gif) repeat-x;
+	height:12px;
+	padding:0;
+	margin:0;
+}
+.catend_3_l{
+	background:url(style_images/ambience11/catend_l.gif) no-repeat 0 0;
+	height:100%;
+}
+.catend_3_r{
+	background:url(style_images/ambience11/catend_r.gif) no-repeat 100% 0;
+	height:100%;
+}
+.newslink{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #26353F;
+	font-size: 10px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #26353F;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #FDFDFD;
+	border: 1px solid #999;
+	color: #26353F;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #181B16;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #DEDEDE;
+	border: 1px solid #181B16;
+	border-left: 0;
+	border-right: 0;
+	color: #4F5459; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap,
+#pmnotewrap{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+#pmnotewrap{
+	line-height: 135%;
+	margin: 0 0 5px 0;
+}
+
+.errorwrap h4,
+#pmnotewrap h4{
+	background: #E5E5E5;
+	border: 1px solid #181B16;
+	border-left: 0;
+	border-right: 0;
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+.errorwrap p,
+#pmnotewrap p{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	margin: 0;
+	padding: 8px;
+}
+
+#pmnotewrap p.pmavatar{
+	float: left;
+}
+
+#pmnotewrap p.pmnotefoot{
+	background: #E5E5E5;
+	border-top: 1px solid #26353F;
+	text-align: right;
+}
+
+#pmnotewrap a:link, 
+#pmnotewrap  a:visited{ 
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: underline;
+}
+
+#pmnotewrap a:hover, 
+#pmnotewrap a:active{
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+.ruleswrap{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	color: #26353F; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #EFEFEF;
+	border-bottom: 1px solid #181B16;
+	color: #26353F;
+	font-size: 10px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #F7F7F7;
+	border-top: 1px solid #181B16;
+	text-align: center;
+}
+
+#gfooter{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #000;
+	font-size: 10px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #000;
+}
+
+#logostrip{ 
+	background: #0D2B45 url(style_images/ambience11/banner.jpg) no-repeat 0 0;
+	height: 131px;
+	margin: 0;
+	padding: 0;
+}
+#banner_top{
+	height:6px;
+	background:url(style_images/ambience11/banner_top.gif) repeat-x;
+	font-size: 1px;
+	padding:0;
+}
+#banner_bottom{
+	background:url(style_images/ambience11/banner_bg.gif) repeat-x;
+	height:22px;
+	text-align:center;
+}
+#nav_bar{
+	height:25px;
+	background:url(style_images/ambience11/nav_bg.gif) repeat-x;
+	text-align:center;
+}
+#nav_bar img{
+	border:0;
+}
+#submenu{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border: 1px solid #FFF;
+	border-top: 0;
+	color: #26353F; 
+	margin: 0;
+	height: 28px;
+	text-align: right;
+}
+
+.ipb-top-left-link,
+.ipb-top-right-link
+{
+	background: transparent url(style_images/ambience11/tile_sub-lite.gif);
+	float: right;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 0.5px;
+	margin: 0px;
+	padding: 7px 0 7px 0;
+	width: auto;
+	border-left:  1px solid #dce3ee;
+}
+
+.ipb-top-left-link
+{
+	float: left;
+	border-left: 0px;
+	border-right: 1px solid #dce3ee;
+}
+
+.ipb-top-left-link a:link, 
+.ipb-top-left-link a:visited,
+.ipb-top-right-link a:link, 
+.ipb-top-right-link a:visited
+{ 
+	background: transparent; 
+	color: #26353F;
+	padding: 0 6px 0 6px;
+	text-decoration: none;
+}
+
+.ipb-top-left-link a:hover, 
+.ipb-top-left-link a:active,
+.ipb-top-right-link a:hover, 
+.ipb-top-right-link a:active
+{
+	background: transparent; 
+	color: #000; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#navstrip{ 
+	background: transparent;
+	color: #999;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 8px 0 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #4F5459; 
+}
+
+.toplinks{
+	background: transparent;
+	color: #26353F;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #26353F;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 5px;
+}
+
+.copyright{ 
+	font-size: 10px; 
+             color: #000;
+}
+
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+        color: #CCC;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+color: #CCC;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 10px;
+	font-weight: normal;
+color: #CCC;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+color: #CCC;
+}
+#print h4{
+	background: #F9F9F9;
+	font-size: 10px;
+color: #CCC;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+color: #CCC;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #CCC;
+	text-align: center;
+}
+.dny-edit-title
+{
+	padding:3px;
+	margin:0px;
+	background: #FBFBFB;
+	border: 1px solid #4F535B;
+	color: #61686E;
+}
+
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	background-color:#FFF;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff
+{
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	background-color: #B5C3D9;
+	color: #333;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+	color: #333;
+}
+
+.mya-back
+{
+	background: #EDEDED;
+	margin:1px;
+	padding: 1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin: 1px;
+	border: 1px solid #777;
+}
+
+.mya-content-tbl
+{
+   background: #F9F9F9;
+   border: 1px solid #777;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   margin:1px;
+}
+
+.mya-fieldwrap
+{
+	background: transparent;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 4px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+.popupmenu,
+.popupmenu-new
+{
+   background: #F9F9F9;
+   border: 1px solid #26353F;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #E4E4E4;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popmenubutton-new,
+.popmenubutton
+{
+	width:120px;
+	white-space:nowrap;
+	/*background-color: #E4E4E4;
+	border:1px solid #26353F;*/
+	color: #26353F;
+	font-weight:bold;
+	float:right;
+	height:18px;
+	text-align:center;
+	margin:0px;
+	padding:1px 3px;
+}
+
+.popmenubutton-new
+{
+	float:none;
+	width:auto;
+	text-align:left;
+	height:auto;
+	padding:3px;
+	font-weight:normal;
+	background-color:#F7F7F7;
+	background-image: url(style_images/ambience11/menu_action_down-padded.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.popmenubutton-new-out
+{
+	padding:3px;
+}
+
+.popupmenu-new
+{
+	background-color: #F7F7F7;
+}
+
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popmenubutton-new a:link, 
+.popmenubutton-new a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+.popmenubutton a:hover,
+.popmenubutton-new a:hover,
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{ 
+	color: #000; 
+	text-decoration: none;
+}
+
+.popupmenu-category
+{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+/* -------------------------------- */
+/* Loading box
+/* -------------------------------- */
+
+#loading-layer-inner
+{
+	width:220px;
+	height:28px;
+	padding:18px 10px 10px 10px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#CCC #666 #666 #CCC;
+	background-color: #FCF8C7;
+}
+
+/* -------------------------------- */
+/* Message in a bo(x|ttle)
+/* -------------------------------- */
+
+#ipd-msg-wrapper
+{
+	display: none;
+	width: 220px;
+}
+
+#ipd-msg-inner
+{
+	width:100%;
+	height:45px;
+	padding: 6px 4px 4px 4px;
+	margin: 0px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#ccc #666 #666 #ccc;
+	background-color: #FCF8C7;
+	filter:alpha(opacity=75);
+	opacity:.75
+}
+
+#ipd-msg-title
+{
+	width: 100%;
+	height:20px;
+	margin: 0px;
+	padding: 6px 4px 4px 4px;
+	background: transparent url(style_images/ambience11/css_pp_header.gif);
+	border: 1px solid #26353F;
+	border-bottom: 0px;
+	color: #FFF;
+}
+
+.linked-image
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.resized-linked-image
+{
+	margin: 4px 0px 0px 0px;
+	padding: 0px;
+	background-color: #000;
+	border: 0px;
+	color: #FFF;
+	width: auto;
+}
+
+.resized-linked-image-zoom
+{
+	width: 200px;
+	height: 30px;
+	filter:alpha(opacity=85);
+	opacity:.85;
+	background-color: #FFF;
+	padding-top: 6px;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	display: none;
+
+}
+
+/* -------------------------------- */
+/* Edit post reason
+/* -------------------------------- */
+
+.post-edit-reason
+{
+	background: #E7EAEF;
+	margin-top: 9px;
+	margin-bottom: 0px;
+	padding: 4px;
+	color: #333;
+	font-size: 10px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Personal Profile
+/* -------------------------------- */
+
+.pp-name
+{ 
+	background: #F7F7F7;
+	border: 1px solid #000;
+	margin: 0px;
+	padding: 10px;
+}
+
+.pp-name h3
+{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	font-size:24px;
+}
+
+.pp-header
+{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0px 0px 1px 0px; 
+	padding: 5px; 
+}
+
+.pp-title
+{
+	background: url(style_images/ambience11/css_pp_header.gif);
+	border-bottom: 1px solid #000;
+	color: #000; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-datebox
+{
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+	font-size:24px;
+	font-weight:bold;
+	line-height: 100%;
+	letter-spacing: -1px;
+	float:right;
+	width: 80px;
+}
+
+.pp-datebox em
+{
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pp-contentbox-back
+{
+	/*background-image: url(style_images/ambience11/folder_profile_portal/pp-css-contentblock.gif);
+	background-repeat: repeat-x;*/
+	background-color: #F7F7F7;
+	padding: 6px;
+}
+
+.pp-contentbox-entry,
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	background-color: #F7F7F7;
+	border: 1px solid #888888;
+	line-height: 140%;
+	padding: 12px;
+	margin-bottom: 6px;
+	height: 200px;
+	overflow: auto;
+	overflow-x: auto;
+}
+
+.pp-contentbox-entry-noheight-sel
+{
+	background-color:#FCECCD;
+}
+
+.pp-contentbox-entry-noheight-mod
+{
+	background-color:#FDF1DA;
+}
+
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	height: auto;
+	margin-bottom: 1px;
+}
+
+.pp-image-thumb-wrap,
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 27px;
+	height: 27px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap-floatright
+{
+	float:right;
+}
+
+.pp-tiny-text
+{
+	color: gray;
+	font-size: 10px;
+}
+
+.pp-mini-content-entry,
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #F7F7F7;
+	padding: 6px;
+	border-bottom: 1px dotted #555555;
+	clear:both;
+	width: auto;
+	height: 60px;
+}
+
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #E3DFE7;
+}
+
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	height: auto;
+}
+
+.pp-tabclear,
+.pp-maintitle
+{
+	background: url(style_images/ambience11/css_pp_header.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #000;
+	color: #000; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+
+.pp-tabclear
+{
+	border:0px;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+.pp-tabon
+{
+	border-top:1px solid #2A2A2A;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background-color:#C2CBD0;
+	color:#000;
+	padding:8px;
+	float:left;
+	width:auto;
+	background-image: url(style_images/ambience11/css_pp_tab_on.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-taboff,
+.pp-tabshaded
+{
+	border-top: 1px solid #6F6F6F;
+	border-left: 1px solid #6F6F6F;
+	border-right: 1px solid #6F6F6F;
+	background-color: #FFF;
+	color: #000;
+	padding:8px;
+	float: left;
+	width: auto;
+	background-image: url(style_images/ambience11/css_pp_tab_off.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-tabshaded
+{
+	background-image: url(style_images/ambience11/css_pp_tab_shaded.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #000;
+	border-top: 1px solid #6F6F6F;
+	border-left: 1px solid #6F6F6F;
+	border-right: 1px solid #6F6F6F;
+}
+
+.pp-tabon a:link, 
+.pp-tabon a:visited, 
+.pp-tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.pp-taboff a:link, 
+.pp-taboff a:visited, 
+.pp-taboff a:active,
+.pp-tabshaded a:link, 
+.pp-tabshaded a:visited, 
+.pp-tabshaded a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.pp-tabwrap
+{
+	height: 34px;
+	margin:0px;
+	padding:0px;
+}
+/* Left and right images */
+.left{
+	padding:0;
+	margin:0;
+	background: url(style_images/ambience11/cat_left.gif) 0 0 no-repeat;
+	height:26px;
+}
+.right{
+	padding:0;
+	margin:0;
+	background: url(style_images/ambience11/cat_right.gif) 100% 0 no-repeat;
+	height:26px;
+}
+/* Main title text class */
+.main_text{
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0px;
+	padding:8px 130px 8px 130px;
+	background:transparent;
+	border:0;
+	text-align:center;
+}
+/* Our new maintitle classes */
+.maintitle_3,
+.maintitlecollapse_3{
+	background: url(style_images/ambience11/cat_back.gif);
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0px;
+}
+.maintitle_3 p.expand,
+.maintitle_3 p.goto,
+.maintitlecollapse_3 p.expand{
+	float: right;
+	width: auto !important;
+}
+.maintitle_3 a:link,
+.maintitle_3 a:visited,
+.maintitlecollapse_3 a:link,
+.maintitlecollapse_3 a:visited{
+	background: transparent;
+	color: #000;
+	text-decoration: none;
+}
+
+.maintitle_3 a:hover,
+.maintitle_3 a:active,
+.maintitlecollapse_3 a:hover,
+.maintitlecollapse_3 a:active{
+	background: transparent;
+	color: #000;
+	text-decoration:underline;
+}
+.maintitle_3 p,
+.maintitlecollapse_3 p{
+	margin:0;
+	padding:0;
+	background:transparent;
+	border:0;
+	text-align:center;
+}
+.maintitle_3 td {
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+}
+#forum_table{
+	margin:10px;
+	background:#EDEDED;
+}
+#ft_tl{
+	background:url(style_images/ambience11/table_tl.gif) no-repeat 0 0;
+	height:100%;
+}
+#ft_tr{
+	background:url(style_images/ambience11/table_tr.gif) no-repeat 100% 0;
+	height:100%;
+}
+#ft_bl{
+	background:url(style_images/ambience11/table_bl.gif) no-repeat 0 100%;
+	height:100%;
+}
+#ft_br{
+	background:url(style_images/ambience11/table_br.gif) no-repeat 100% 100%;
+	height:100%;
+}
+#forum{
+	padding:12px 10px 12px 10px;
+}
+#copy_footer{
+	background:url(style_images/ambience11/footer_bg.gif) repeat-x;
+	height:49px;
+	padding:0;
+}
+legend{
+	color:#26353F;
+}
+</style>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Version imprimable du sujet</h1>
+		<h2><a href="index.php@showtopic=16&amp;view=old.html" title="Cliquez pour voir le sujet">Cliquez ici pour voir ce sujet dans son format original</a></h2>
+		<h3>Rond Comme Un Ballon _ Jeux vidÃ©os _ MMOGBG</h3><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  08/02/2008 - 17:47</h4>
+			<p>Hein?&#33; des gens sur un mmo sans trop de RP ? j&#39;ai envie de m&#39;y remettre, mais je sais pas a quoi...et tout seul c&#39;est chiant <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_26-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  08/02/2008 - 18:41</h4>
+			<p>bha on était sur Domo avec Dox and co ...<br /><br />mais bon .... j&#39;y joue plus trop ces temps
+			<br />
+			<!--IBF.ATTACHMENT_27-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  08/02/2008 - 20:10</h4>
+			<p>Domo? oO<br /><br />c&#39;est le fils a qui ?&#33;
+			<br />
+			<!--IBF.ATTACHMENT_28-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  08/02/2008 - 22:09</h4>
+			<p>http://www.gametribe.com/gt/domo.do<br /><br /><br />apu de ts?&#33; <img src="style_emoticons/default/sad.gif" style="vertical-align:middle" emoid=":(" border="0" alt="sad.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_29-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  09/02/2008 - 03:42</h4>
+			<p>Ras est sur un server L2, moo-age. C&#39;est un server où tu peux rp et/ou faire le gros bill. Ya plus de 200 joueurs, c&#39;est du lourd quoi.<br />Je dis ça au cas où tu voudrais retrouver L2.
+			<br />
+			<!--IBF.ATTACHMENT_30-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  09/02/2008 - 14:19</h4>
+			<p>je dirais même en moyenne 500 joueur et 800 le soir, mais je me rend compte que c&#39;est de plus en plus GB je trouve ... bref, wait and see  comme dirais l&#39;autre <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_32-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  09/02/2008 - 17:04</h4>
+			<p>url? <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" /><br /><br />Vais tester rappelz voir ce que sa donne now&#33;
+			<br />
+			<!--IBF.ATTACHMENT_34-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  09/02/2008 - 19:07</h4>
+			<p>http://www.m0o.eu je sais pas si ils sont sous kamael
+			<br />
+			<!--IBF.ATTACHMENT_36-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  09/02/2008 - 22:14</h4>
+			<p>ok merci xD<br /><br />La je test Rappelz et ca m&#39;a pas l&#39;air trop mal...je vais continuer un peu dessus voir ce que ca donne plus haut niveau <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_38-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  10/02/2008 - 14:31</h4>
+			<p>sisi, ils sont passés sous kamael ^^
+			<br />
+			<!--IBF.ATTACHMENT_39-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Eltha</b>  10/02/2008 - 14:33</h4>
+			<p>Tiens vais allez squatter la ou est ras pour voir comment c&#39;est, vais peut etre bien m&#39;amuser <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_40-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  10/02/2008 - 14:39</h4>
+			<p>arrêtez de me tenter &gt;&lt;
+			<br />
+			<!--IBF.ATTACHMENT_41-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Eltha</b>  10/02/2008 - 19:05</h4>
+			<p>Au faites, vous etes sur quelle Ts maintenant? Vue que Tirna est off maintenant
+			<br />
+			<!--IBF.ATTACHMENT_43-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  10/02/2008 - 21:52</h4>
+			<p>sur le LNA (mais bon)<br /><br />on va essayer de demander un chan R3 ...<br /><br />on vous tiens au jus ...<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_45-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  11/02/2008 - 08:26</h4>
+			<p>Le Trilo fonctionne tjrs pour ceux qui aiment pas (faut juste mettre a jour) <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_48-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  11/02/2008 - 13:55</h4>
+			<p>j&#39;ai plus ip du trilo :s
+			<br />
+			<!--IBF.ATTACHMENT_49-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  11/02/2008 - 14:21</h4>
+			<p>Ventrilo:<br />IP: 80.93.82.135<br />Port: 3793<br />Chan: r3<br />Sans mot de passe
+			<br />
+			<!--IBF.ATTACHMENT_50-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  11/02/2008 - 14:59</h4>
+			<p>Mmh je verrai bien ça en post-it pour les membres du forum, nan ?
+			<br />
+			<!--IBF.ATTACHMENT_51-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  11/02/2008 - 17:46</h4>
+			<p><!--quoteo(post=50:date=11/02/2008 &#045; 13&#58;21:name=Nemesis)--><div class='quotetop'>Citation (Nemesis &#064; 11/02/2008 &#045; 13&#58;21) <a href="http://www.rcub.info/forum/index.php?act=findpost&amp;pid=50"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ventrilo:<br />IP: 80.93.82.135<br />Port: 3793<br />Chan: r3<br />Sans mot de passe<!--QuoteEnd--></div><!--QuoteEEnd--><br />pass &quot;plop&quot;<br /><br />et derniere version du trilo, donc faut mettre a jours vos versions de trilo &#33;
+			<br />
+			<!--IBF.ATTACHMENT_52-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>silver</b>  12/02/2008 - 13:05</h4>
+			<p>mouahaha un serveur ou on va pouvoir grobiliser... remarque ca change pas e nfait<br />
+			<br />
+			<!--IBF.ATTACHMENT_55-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Eltha</b>  17/02/2008 - 14:01</h4>
+			<p>Game tribe a lancé la beta de Infinity.<br /><br />Personnelement je trouve ca assez drole, les batailles sont assez barbares généralement (du genre a 10 contre 1) et plein de perso avec des caractéristique (et des armes ) bien différente.<br /><br />Si vous voulez essayez, mon nom sur le jeu est Ochinva, faite moi signe (si je suis co xD)
+			<br />
+			<!--IBF.ATTACHMENT_88-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  17/02/2008 - 15:07</h4>
+			<p>dox, anthé, et moi sommes deja dessus, mais bon, bof bof ^^
+			<br />
+			<!--IBF.ATTACHMENT_89-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>pRudd</b>  03/03/2008 - 15:44</h4>
+			<p>Jme suis foutu sur mOo age aussi, c&#39;est  sous Kamael, c&#39;est plutot chouette, par contre amateurs de RP s&#39;abstenir, c&#39;est vraiment marginal sur ce serveur.
+			<br />
+			<!--IBF.ATTACHMENT_157-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  03/03/2008 - 16:59</h4>
+			<p>Ca tombre bien, le rp c&#39;est mal <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /><br /><br />/me suis toujours sur Rappelz avé le anthe...enfin....quand on se croise... <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_158-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  05/03/2008 - 01:50</h4>
+			<p>je suis dessus aussi mais j&#39;y vais que rarement.
+			<br />
+			<!--IBF.ATTACHMENT_160-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  05/03/2008 - 20:17</h4>
+			<p>j&#39;ai installé rappelz depuis3 semaine, mais je l&#39;ai toujours pas lancé <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /><br />
+			<br />
+			<!--IBF.ATTACHMENT_165-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  06/03/2008 - 11:42</h4>
+			<p><!--fonto:Verdana Arial Helvetica sans-serif--><span style="font-family:Verdana Arial Helvetica sans-serif"><!--/fonto--><!--sizeo:1--><span style="font-size:8pt;line-height:100%"><!--/sizeo--><!--coloro:#000000--><span style="color:#000000"><!--/coloro-->Oh   Bravo &#33; <img src="http://www.quantumwiki.co.uk/images/thumb/d/d9/Samandal.jpg/200px-Samandal.jpg" border="0" class="linked-image" /><!--colorc--></span><!--/colorc--><!--sizec--></span><!--/sizec--><!--fontc--></span><!--/fontc-->
+			<br />
+			<!--IBF.ATTACHMENT_169-->
+			</p>
+		</div><!--Copyright-->
+
+<p class="printcopy">Propuls&eacute; par Invision Power Board (http://www.invisionboard.com)<br />&copy; Invision Power Services (http://www.invisionpower.com)</p>
+
+	</div>
+</html>

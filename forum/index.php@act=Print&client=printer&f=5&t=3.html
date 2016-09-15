@@ -1,0 +1,4071 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<title>Rond Comme Un Ballon [Propuls&eacute; par Invision Power Board]</title>
+		<style type="text/css">
+	/*  
+ * Cascading Style Sheet(CSS 467), for Invision Power Board 2.2.0
+ * Author: James A. Mathias, admin@leihu.com, http://www.1lotus.com 
+ * Copyright: 2005 Invision Power Services, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+	
+body{ 
+	background: #F0F1F3 url(style_images/ambience11/back.gif) repeat-x top left;
+	color: #26353F;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 10px;
+	line-height: 135%;
+	margin: 0;
+	padding: 0; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #26353F;
+	font-size: 10px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+/* Safari... */
+th
+{
+	text-align: left;
+}
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+img{
+	border:0;
+}
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #26353F;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #4F5459;
+}
+
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+.tablebg{
+	width: 779px;
+	background: #F7F7F7;
+	border-left: 1px solid #26353F;
+	border-right: 1px solid #26353F;
+}
+
+#ipbwrapper{ 
+	margin: 0 auto 0 auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background:#F7F7F7;
+	width: 779px;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #F7F7F7;
+}
+
+
+.round{
+	background: #EDEDED;
+
+}
+
+.round2{
+	background: #EDEDED;
+	padding: 0px 25px 0px 25px;
+}
+
+
+.pagecurrent{
+	background: #C7CED3;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #181B16;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* fake button effect for some links */
+.fauxbutton{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #26353F !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #26353F;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	color: #26353F;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/ambience11/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #181B16;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F7F7F7;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #EFEFEF;
+	border: 0 !important;
+	border-bottom: 1px solid #4F5459 !important;
+	color: #4F5459; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #F7F7F7 !important;
+	border: 0 !important;
+	border-top: 1px solid #4F5459 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #F7F7F7 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #000 url(style_images/ambience11/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #181B16;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 10px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #26353F; 
+	font-size: 10px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #F7F7F7;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #26353F; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 10px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 11px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 11px;
+}
+
+.post1,
+.bg1{ 
+	background: #F7F7F7;
+	padding: 5px;
+}
+
+.post2,
+.bg3{ 
+	background: #F7F7F7;
+	padding: 5px;
+}
+
+.row2shaded,
+.post1shaded { background-color: #FDFDFD;padding: 5px; }
+.row4shaded,
+.post2shaded { background-color: #FDFDFD;padding: 5px; }
+
+.row3{ 
+	background: #F7F7F7; 
+}
+
+.row1{ 
+	background: #F7F7F7; 
+	padding: 5px;
+}
+.info {
+	padding-left: 3px;
+	padding-right: 0px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #F1F1F1;
+	border-top: 1px solid #505050;
+	border-right: 2px solid #505050;
+	border-left: 1px solid #505050;
+	border-bottom: 2px solid #505050;
+	margin-bottom: 3px;
+}
+.row2{ 
+	background: #FDFDFD; 
+	padding: 5px;
+}
+
+.rowhighlight{
+	background-color: #FFF9BA;
+}
+.darkrow1{ 
+	background: #F7F7F7;
+	color: #26353F; 
+	padding: 5px;
+}
+
+.darkrow3{ 
+	background: #FDFDFD; 
+	color: #26353F; 
+	padding: 5px;
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+}
+
+.tablefill,
+
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: .5em;
+	width: 25%;
+}
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 10px; 
+	color: #26353F;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #26353F;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FDFDFD;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	font-size: 10px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #F7F7F7;
+	color: #26353F;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #26353F;
+	font-size: 10px;
+	padding: 6px;
+	text-align: center;
+}
+
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #F7F7F7;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #FDFDFD;
+}
+
+.celltoday,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+celldateshaded{
+	vertical-align:middle;
+	background:#DBDBDB;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+.input-warn,
+.input-green,
+.input-checkbox,
+input,
+textarea,
+select{
+	background: #FDFDFD;
+	border: 1px solid #585C66;
+	color: #26353F;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+select
+{
+	margin: 0px;
+}
+
+.input-checkbox
+{
+	border: none;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+	cursor: hand;
+	cursor: pointer;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #FDFDFD;
+	border: 1px solid #475B6B;
+	color: #4F5459;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #F7F7F7;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #181B16;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+	background: transparent;
+}
+
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#F7F7F7;
+	border: 1px solid #181B16;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #26353F;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+
+
+
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	/*background: #E4EAF2 url(style_images/ambience11/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;*/
+	color: #26353F;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 2px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #EAEAEA;
+	border: 1px dotted #26353F;
+	color: #26353F;
+	padding: 4px;
+	margin: 0 auto 0 auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	/*background: #FDDBCC url(style_images/ambience11/css_img_code.gif) no-repeat right;*/
+	color: #26353F;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #EAEAEA;
+	border: 1px dotted #26353F;
+	color: #26353F;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+    background: #181B16; 
+    border: 1px solid #CCCCCC;
+    padding: 0; 
+    margin: 0; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: #FFF url(style_images/ambience11/tile_cat.gif) repeat-x 0 0;
+	border: 1px solid #F7F7F7;
+	color: #000; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 8px;
+}
+
+.maintitlecollapse{
+	border: 1px solid #181B16
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #000;
+	text-decoration: none; 
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #26353F;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	
+	color: #26353F; 
+	font-size: 9px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	border: 1px solid #FDFDFD;
+	
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover{ 
+	background: transparent;
+      	color: #26353F;
+	text-decoration: underline; 
+}
+
+.borderwrap h4{
+	background: #EFEFEF;
+
+	border: 1px solid #FDFDFD;
+	
+	border-top: 1px solid #585C66;
+	color: #4F5459; 
+	font-size: 9px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #181B16;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.pformstrip,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #FDFDFD !important; 
+	border: 1px solid #FDFDFD;
+	border-top: 1px solid #585C66;
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+td.formbuttonrow{
+	border-top:0;
+}
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #F7F7F7;
+	border: 1px solid #FDFDFD;
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	font-size: 10px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #F7F7F7;
+	color: #26353F;
+	font-size: 1px;
+	height: 5px;
+}
+.catend_3{
+	background:url(style_images/ambience11/catend.gif) repeat-x;
+	height:12px;
+	padding:0;
+	margin:0;
+}
+.catend_3_l{
+	background:url(style_images/ambience11/catend_l.gif) no-repeat 0 0;
+	height:100%;
+}
+.catend_3_r{
+	background:url(style_images/ambience11/catend_r.gif) no-repeat 100% 0;
+	height:100%;
+}
+.newslink{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #26353F;
+	font-size: 10px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #26353F;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #FDFDFD;
+	border: 1px solid #999;
+	color: #26353F;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #181B16;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #DEDEDE;
+	border: 1px solid #181B16;
+	border-left: 0;
+	border-right: 0;
+	color: #4F5459; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap,
+#pmnotewrap{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+#pmnotewrap{
+	line-height: 135%;
+	margin: 0 0 5px 0;
+}
+
+.errorwrap h4,
+#pmnotewrap h4{
+	background: #E5E5E5;
+	border: 1px solid #181B16;
+	border-left: 0;
+	border-right: 0;
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+.errorwrap p,
+#pmnotewrap p{
+	background: transparent;
+	border: 0;
+	color: #26353F;
+	margin: 0;
+	padding: 8px;
+}
+
+#pmnotewrap p.pmavatar{
+	float: left;
+}
+
+#pmnotewrap p.pmnotefoot{
+	background: #E5E5E5;
+	border-top: 1px solid #26353F;
+	text-align: right;
+}
+
+#pmnotewrap a:link, 
+#pmnotewrap  a:visited{ 
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: underline;
+}
+
+#pmnotewrap a:hover, 
+#pmnotewrap a:active{
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+.ruleswrap{
+	background: #FDFDFD;
+	border: 1px solid #181B16;
+	color: #26353F; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #EFEFEF;
+	border-bottom: 1px solid #181B16;
+	color: #26353F;
+	font-size: 10px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #F7F7F7;
+	border-top: 1px solid #181B16;
+	text-align: center;
+}
+
+#gfooter{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #000;
+	font-size: 10px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #000;
+}
+
+#logostrip{ 
+	background: #0D2B45 url(style_images/ambience11/banner.jpg) no-repeat 0 0;
+	height: 131px;
+	margin: 0;
+	padding: 0;
+}
+#banner_top{
+	height:6px;
+	background:url(style_images/ambience11/banner_top.gif) repeat-x;
+	font-size: 1px;
+	padding:0;
+}
+#banner_bottom{
+	background:url(style_images/ambience11/banner_bg.gif) repeat-x;
+	height:22px;
+	text-align:center;
+}
+#nav_bar{
+	height:25px;
+	background:url(style_images/ambience11/nav_bg.gif) repeat-x;
+	text-align:center;
+}
+#nav_bar img{
+	border:0;
+}
+#submenu{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border: 1px solid #FFF;
+	border-top: 0;
+	color: #26353F; 
+	margin: 0;
+	height: 28px;
+	text-align: right;
+}
+
+.ipb-top-left-link,
+.ipb-top-right-link
+{
+	background: transparent url(style_images/ambience11/tile_sub-lite.gif);
+	float: right;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 0.5px;
+	margin: 0px;
+	padding: 7px 0 7px 0;
+	width: auto;
+	border-left:  1px solid #dce3ee;
+}
+
+.ipb-top-left-link
+{
+	float: left;
+	border-left: 0px;
+	border-right: 1px solid #dce3ee;
+}
+
+.ipb-top-left-link a:link, 
+.ipb-top-left-link a:visited,
+.ipb-top-right-link a:link, 
+.ipb-top-right-link a:visited
+{ 
+	background: transparent; 
+	color: #26353F;
+	padding: 0 6px 0 6px;
+	text-decoration: none;
+}
+
+.ipb-top-left-link a:hover, 
+.ipb-top-left-link a:active,
+.ipb-top-right-link a:hover, 
+.ipb-top-right-link a:active
+{
+	background: transparent; 
+	color: #000; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #F7F7F7;
+	border: 1px solid #181B16;
+	margin: 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#navstrip{ 
+	background: transparent;
+	color: #999;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 8px 0 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	background: transparent; 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #4F5459; 
+}
+
+.toplinks{
+	background: transparent;
+	color: #26353F;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #26353F;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 5px;
+}
+
+.copyright{ 
+	font-size: 10px; 
+             color: #000;
+}
+
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+        color: #CCC;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+color: #CCC;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 10px;
+	font-weight: normal;
+color: #CCC;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+color: #CCC;
+}
+#print h4{
+	background: #F9F9F9;
+	font-size: 10px;
+color: #CCC;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+color: #CCC;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #CCC;
+	text-align: center;
+}
+.dny-edit-title
+{
+	padding:3px;
+	margin:0px;
+	background: #FBFBFB;
+	border: 1px solid #4F535B;
+	color: #61686E;
+}
+
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	background-color:#FFF;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff
+{
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	background-color: #B5C3D9;
+	color: #333;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+	color: #333;
+}
+
+.mya-back
+{
+	background: #EDEDED;
+	margin:1px;
+	padding: 1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin: 1px;
+	border: 1px solid #777;
+}
+
+.mya-content-tbl
+{
+   background: #F9F9F9;
+   border: 1px solid #777;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   margin:1px;
+}
+
+.mya-fieldwrap
+{
+	background: transparent;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 4px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+.popupmenu,
+.popupmenu-new
+{
+   background: #F9F9F9;
+   border: 1px solid #26353F;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #E4E4E4;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popmenubutton-new,
+.popmenubutton
+{
+	width:120px;
+	white-space:nowrap;
+	/*background-color: #E4E4E4;
+	border:1px solid #26353F;*/
+	color: #26353F;
+	font-weight:bold;
+	float:right;
+	height:18px;
+	text-align:center;
+	margin:0px;
+	padding:1px 3px;
+}
+
+.popmenubutton-new
+{
+	float:none;
+	width:auto;
+	text-align:left;
+	height:auto;
+	padding:3px;
+	font-weight:normal;
+	background-color:#F7F7F7;
+	background-image: url(style_images/ambience11/menu_action_down-padded.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.popmenubutton-new-out
+{
+	padding:3px;
+}
+
+.popupmenu-new
+{
+	background-color: #F7F7F7;
+}
+
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popmenubutton-new a:link, 
+.popmenubutton-new a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	color: #26353F; 
+	text-decoration: none;
+}
+
+.popmenubutton a:hover,
+.popmenubutton-new a:hover,
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{ 
+	color: #000; 
+	text-decoration: none;
+}
+
+.popupmenu-category
+{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+/* -------------------------------- */
+/* Loading box
+/* -------------------------------- */
+
+#loading-layer-inner
+{
+	width:220px;
+	height:28px;
+	padding:18px 10px 10px 10px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#CCC #666 #666 #CCC;
+	background-color: #FCF8C7;
+}
+
+/* -------------------------------- */
+/* Message in a bo(x|ttle)
+/* -------------------------------- */
+
+#ipd-msg-wrapper
+{
+	display: none;
+	width: 220px;
+}
+
+#ipd-msg-inner
+{
+	width:100%;
+	height:45px;
+	padding: 6px 4px 4px 4px;
+	margin: 0px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#ccc #666 #666 #ccc;
+	background-color: #FCF8C7;
+	filter:alpha(opacity=75);
+	opacity:.75
+}
+
+#ipd-msg-title
+{
+	width: 100%;
+	height:20px;
+	margin: 0px;
+	padding: 6px 4px 4px 4px;
+	background: transparent url(style_images/ambience11/css_pp_header.gif);
+	border: 1px solid #26353F;
+	border-bottom: 0px;
+	color: #FFF;
+}
+
+.linked-image
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.resized-linked-image
+{
+	margin: 4px 0px 0px 0px;
+	padding: 0px;
+	background-color: #000;
+	border: 0px;
+	color: #FFF;
+	width: auto;
+}
+
+.resized-linked-image-zoom
+{
+	width: 200px;
+	height: 30px;
+	filter:alpha(opacity=85);
+	opacity:.85;
+	background-color: #FFF;
+	padding-top: 6px;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	display: none;
+
+}
+
+/* -------------------------------- */
+/* Edit post reason
+/* -------------------------------- */
+
+.post-edit-reason
+{
+	background: #E7EAEF;
+	margin-top: 9px;
+	margin-bottom: 0px;
+	padding: 4px;
+	color: #333;
+	font-size: 10px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Personal Profile
+/* -------------------------------- */
+
+.pp-name
+{ 
+	background: #F7F7F7;
+	border: 1px solid #000;
+	margin: 0px;
+	padding: 10px;
+}
+
+.pp-name h3
+{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	font-size:24px;
+}
+
+.pp-header
+{ 
+	background: transparent url(style_images/ambience11/tile_sub.gif);
+	color: #26353F; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0px 0px 1px 0px; 
+	padding: 5px; 
+}
+
+.pp-title
+{
+	background: url(style_images/ambience11/css_pp_header.gif);
+	border-bottom: 1px solid #000;
+	color: #000; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-datebox
+{
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+	font-size:24px;
+	font-weight:bold;
+	line-height: 100%;
+	letter-spacing: -1px;
+	float:right;
+	width: 80px;
+}
+
+.pp-datebox em
+{
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pp-contentbox-back
+{
+	/*background-image: url(style_images/ambience11/folder_profile_portal/pp-css-contentblock.gif);
+	background-repeat: repeat-x;*/
+	background-color: #F7F7F7;
+	padding: 6px;
+}
+
+.pp-contentbox-entry,
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	background-color: #F7F7F7;
+	border: 1px solid #888888;
+	line-height: 140%;
+	padding: 12px;
+	margin-bottom: 6px;
+	height: 200px;
+	overflow: auto;
+	overflow-x: auto;
+}
+
+.pp-contentbox-entry-noheight-sel
+{
+	background-color:#FCECCD;
+}
+
+.pp-contentbox-entry-noheight-mod
+{
+	background-color:#FDF1DA;
+}
+
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	height: auto;
+	margin-bottom: 1px;
+}
+
+.pp-image-thumb-wrap,
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 27px;
+	height: 27px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap-floatright
+{
+	float:right;
+}
+
+.pp-tiny-text
+{
+	color: gray;
+	font-size: 10px;
+}
+
+.pp-mini-content-entry,
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #F7F7F7;
+	padding: 6px;
+	border-bottom: 1px dotted #555555;
+	clear:both;
+	width: auto;
+	height: 60px;
+}
+
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #E3DFE7;
+}
+
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	height: auto;
+}
+
+.pp-tabclear,
+.pp-maintitle
+{
+	background: url(style_images/ambience11/css_pp_header.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #000;
+	color: #000; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+
+.pp-tabclear
+{
+	border:0px;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+.pp-tabon
+{
+	border-top:1px solid #2A2A2A;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background-color:#C2CBD0;
+	color:#000;
+	padding:8px;
+	float:left;
+	width:auto;
+	background-image: url(style_images/ambience11/css_pp_tab_on.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-taboff,
+.pp-tabshaded
+{
+	border-top: 1px solid #6F6F6F;
+	border-left: 1px solid #6F6F6F;
+	border-right: 1px solid #6F6F6F;
+	background-color: #FFF;
+	color: #000;
+	padding:8px;
+	float: left;
+	width: auto;
+	background-image: url(style_images/ambience11/css_pp_tab_off.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-tabshaded
+{
+	background-image: url(style_images/ambience11/css_pp_tab_shaded.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #000;
+	border-top: 1px solid #6F6F6F;
+	border-left: 1px solid #6F6F6F;
+	border-right: 1px solid #6F6F6F;
+}
+
+.pp-tabon a:link, 
+.pp-tabon a:visited, 
+.pp-tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.pp-taboff a:link, 
+.pp-taboff a:visited, 
+.pp-taboff a:active,
+.pp-tabshaded a:link, 
+.pp-tabshaded a:visited, 
+.pp-tabshaded a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.pp-tabwrap
+{
+	height: 34px;
+	margin:0px;
+	padding:0px;
+}
+/* Left and right images */
+.left{
+	padding:0;
+	margin:0;
+	background: url(style_images/ambience11/cat_left.gif) 0 0 no-repeat;
+	height:26px;
+}
+.right{
+	padding:0;
+	margin:0;
+	background: url(style_images/ambience11/cat_right.gif) 100% 0 no-repeat;
+	height:26px;
+}
+/* Main title text class */
+.main_text{
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0px;
+	padding:8px 130px 8px 130px;
+	background:transparent;
+	border:0;
+	text-align:center;
+}
+/* Our new maintitle classes */
+.maintitle_3,
+.maintitlecollapse_3{
+	background: url(style_images/ambience11/cat_back.gif);
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0px;
+}
+.maintitle_3 p.expand,
+.maintitle_3 p.goto,
+.maintitlecollapse_3 p.expand{
+	float: right;
+	width: auto !important;
+}
+.maintitle_3 a:link,
+.maintitle_3 a:visited,
+.maintitlecollapse_3 a:link,
+.maintitlecollapse_3 a:visited{
+	background: transparent;
+	color: #000;
+	text-decoration: none;
+}
+
+.maintitle_3 a:hover,
+.maintitle_3 a:active,
+.maintitlecollapse_3 a:hover,
+.maintitlecollapse_3 a:active{
+	background: transparent;
+	color: #000;
+	text-decoration:underline;
+}
+.maintitle_3 p,
+.maintitlecollapse_3 p{
+	margin:0;
+	padding:0;
+	background:transparent;
+	border:0;
+	text-align:center;
+}
+.maintitle_3 td {
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+}
+#forum_table{
+	margin:10px;
+	background:#EDEDED;
+}
+#ft_tl{
+	background:url(style_images/ambience11/table_tl.gif) no-repeat 0 0;
+	height:100%;
+}
+#ft_tr{
+	background:url(style_images/ambience11/table_tr.gif) no-repeat 100% 0;
+	height:100%;
+}
+#ft_bl{
+	background:url(style_images/ambience11/table_bl.gif) no-repeat 0 100%;
+	height:100%;
+}
+#ft_br{
+	background:url(style_images/ambience11/table_br.gif) no-repeat 100% 100%;
+	height:100%;
+}
+#forum{
+	padding:12px 10px 12px 10px;
+}
+#copy_footer{
+	background:url(style_images/ambience11/footer_bg.gif) repeat-x;
+	height:49px;
+	padding:0;
+}
+legend{
+	color:#26353F;
+}
+</style>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Version imprimable du sujet</h1>
+		<h2><a href="index.php@showtopic=201&amp;view=new.html" title="Cliquez pour voir le sujet">Cliquez ici pour voir ce sujet dans son format original</a></h2>
+		<h3>Rond Comme Un Ballon _ VidÃ©os/Photos _ On rereprend les liens sympas?</h3><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  02/02/2008 - 14:33</h4>
+			<p><div><object width="420" height="352"><param name="movie" value="http://www.dailymotion.com/swf/x45w75"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x45w75" type="application/x-shockwave-flash" width="420" height="352" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x45w75_reinvente-ton-jeu_extreme</i></div><br /><br /><div><object width="420" height="193"><param name="movie" value="http://www.dailymotion.com/swf/x3v8lt"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x3v8lt" type="application/x-shockwave-flash" width="420" height="193" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x3v8lt_shout-it-out_fun</i></div><br /><br />http://www.lelombrik.net/videos/14213/musicien-de-verre.html
+			<br />
+			<!--IBF.ATTACHMENT_3-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  02/02/2008 - 18:04</h4>
+			<p>http://www.lelombrik.net/videos/14192/glissades-de-canards.html
+			<br />
+			<!--IBF.ATTACHMENT_4-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  05/02/2008 - 16:21</h4>
+			<p>http://www.abrutis.com/video.php?id=3676
+			<br />
+			<!--IBF.ATTACHMENT_10-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  13/02/2008 - 01:51</h4>
+			<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/4WoqHoB9DOc&rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/4WoqHoB9DOc&rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_63-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  13/02/2008 - 14:05</h4>
+			<p><b>|) i |° S µ . |&lt; </b><br /><br />Dipsyk forever <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_71-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  13/02/2008 - 22:03</h4>
+			<p>http://www.koreus.com/video/damien-walters-2007.html
+			<br />
+			<!--IBF.ATTACHMENT_75-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  14/02/2008 - 00:19</h4>
+			<p>j&#39;aime bien la pirouette pour s&#39;assoir sur le canapé, j&#39;imagine le truc chez des invités xD
+			<br />
+			<!--IBF.ATTACHMENT_76-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  14/02/2008 - 12:01</h4>
+			<p>Impressionnant. Quand je pense que je faisais des pirouettes étant nettement plus jeune, et qu&#39;aujourd&#39;hui je descends les escalier à l&#39;envers (fichus courbatures&#33;).
+			<br />
+			<!--IBF.ATTACHMENT_79-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  14/02/2008 - 20:08</h4>
+			<p>non bele, pas les courbatures, le bide <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_82-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  15/02/2008 - 16:08</h4>
+			<p>arf, découvert&#33; <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_85-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  16/02/2008 - 12:26</h4>
+			<p>http://www.supadump.com/v-102-eddie-mercury-rock.html
+			<br />
+			<!--IBF.ATTACHMENT_86-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  17/02/2008 - 15:09</h4>
+			<p>MDR, excellent, magnifique&#33; ENORME &#33; <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_90-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  17/02/2008 - 18:36</h4>
+			<p>y a un asile pas trés loin de chez moi s&#39;il faut ..... y&#39;a plein de rockers la bas, vu qu&#39;ils sont tous drogués au médocs ... <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_92-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  20/02/2008 - 09:43</h4>
+			<p>http://www.dailymotion.com/video/x3p6ou_nolifetvmangemongeeks03e02hdtvmedia_fun<br />Vu sur Enemy-Territory
+			<br />
+			<!--IBF.ATTACHMENT_94-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  20/02/2008 - 15:03</h4>
+			<p>Oo<br /><br /><br /><br />Mais oO
+			<br />
+			<!--IBF.ATTACHMENT_95-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  21/02/2008 - 01:19</h4>
+			<p>Si Jean Claude Van Damme n'était pas mort, j'aurais juré avoir trouvé sa résurection...<br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/xaerg&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/xaerg&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/xaerg_best-ouf-roi-heenok</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_99-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  22/02/2008 - 00:46</h4>
+			<p><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x15x2k&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x15x2k&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x15x2k_la-bande-a-fifi-mac-gyver_fun</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_102-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  22/02/2008 - 18:05</h4>
+			<p>xD
+			<br />
+			<!--IBF.ATTACHMENT_103-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  23/02/2008 - 19:25</h4>
+			<p>http://developer.valvesoftware.com/wiki/Valve_Time<br /><br /><br />je sais plus a qui j&#39;en avait parlé mais la voila&#33;
+			<br />
+			<!--IBF.ATTACHMENT_108-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  24/02/2008 - 04:19</h4>
+			<p>La fin du monde annoncée pour 2012 !! Ce qui me fait marrer c'est que ma promotion est la promotion 2012 xD<br />Partie 1:<br /><br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x3e53x&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x3e53x&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x3e53x_2012-la-fin-des-temps-12</i></div><br /><br />Partie 2:<br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x3e589&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x3e589&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x3e589_2012-la-fin-des-temps-22</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_112-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  25/02/2008 - 20:12</h4>
+			<p>Bof, encore un documentaire pour effrayer le peuple américain. C&#39;est connu, plus ils ont peur, mieux on les contrôle (ou &quot;vole&quot;). Pis merde, la fin du monde juste avant mon 36ème anniversaire, j&#39;accepte pas, d&#39;abord.
+			<br />
+			<!--IBF.ATTACHMENT_125-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/02/2008 - 23:06</h4>
+			<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/cH_E6YSQqTo&rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/cH_E6YSQqTo&rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_126-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  26/02/2008 - 00:36</h4>
+			<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/gvz4aY7nvNQ&rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/gvz4aY7nvNQ&rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_129-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  26/02/2008 - 12:40</h4>
+			<p>je passe sur la propagande a deux balles mais j&#39;aime bien la derniere.<br />Ca marche aussi pour les ggeeekkss??&#33;&#33;   <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_131-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Muche</b>  27/02/2008 - 22:33</h4>
+			<p>le lightpainting  <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> <br /><br />faut que j&#39;essaye ce genre de photo<br /><br />en attendant voici des gars qui maitrise, enfin là c&#39;est même plus de la maitrise  <img src="style_emoticons/default/blink.gif" style="vertical-align:middle" emoid=":blink:" border="0" alt="blink.gif" /> <br /><br />http://www.jiar.de/001_news/001_lightstrom/lightstrom_QT_hoch.mov<br /><br />http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=202935620<br /><br /> <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_133-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  28/02/2008 - 00:59</h4>
+			<p>excellent <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" /><br />c&#39;est dû à quoi ça oO
+			<br />
+			<!--IBF.ATTACHMENT_134-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  28/02/2008 - 01:27</h4>
+			<p>J'ai la bouche par terre :<br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x2rex6&v3=1&related=0"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x2rex6&v3=1&related=0" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x2rex6_poker-manipulation-de-cartes-impres_fun</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_135-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  28/02/2008 - 01:49</h4>
+			<p>Je viens de trouver chez qui je veux bosser. Regardez la vidéo^^<br />http://www.futura-sciences.com/fr/sinformer/actualites/news/t/technologie-1/d/en-video-dapres-nokia-le-telephone-du-futur-sera-elastique_14758/
+			<br />
+			<!--IBF.ATTACHMENT_136-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  28/02/2008 - 11:32</h4>
+			<p>C&#39;est bien tout ca mais il ne fait toujours pas le café&#33;
+			<br />
+			<!--IBF.ATTACHMENT_137-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  28/02/2008 - 12:38</h4>
+			<p>Dans combien de temps la nanotechnologie ?
+			<br />
+			<!--IBF.ATTACHMENT_138-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Muche</b>  28/02/2008 - 18:20</h4>
+			<p><br />pour l&#39;explication du light painting http://www.pixenjoy.com/light-painting<br /><br />par contre je sais pas comment il ont fait leur vidéo, ils ont du assemblé des photos en montage vidéo, ???<br /><br />faut que j&#39;essaye mais y&#39;a du taffe avant d&#39;en faire une potable  <img src="style_emoticons/default/mellow.gif" style="vertical-align:middle" emoid=":mellow:" border="0" alt="mellow.gif" /> <br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_139-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  28/02/2008 - 20:14</h4>
+			<p>http://fr.youtube.com/watch?v=9Fybwyw2-7s&amp;feature=related#<br /><br /><br />faudra me réexpliquer comment on mets les lien en direct <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_140-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  29/02/2008 - 00:35</h4>
+			<p>sur les sites comme dailymotion, googlevideo, youtube, ils mettent à droite ou sous la vidéo des balises html (sur youtube c&#39;est &quot;Code&quot; par exemple). Tu copies, tu colles ici, et tu actives (pas dans Réponse Rapide) le html avec retour à la ligne auto.<br />Voilà
+			<br />
+			<!--IBF.ATTACHMENT_141-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  29/02/2008 - 00:38</h4>
+			<p>Putain plus c'est naze, plus ça me fait rire :<br /><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ZPK5pLiY9oM"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/ZPK5pLiY9oM" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_142-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  29/02/2008 - 00:52</h4>
+			<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/vBaH2LGBAHI"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/vBaH2LGBAHI" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_143-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  29/02/2008 - 00:53</h4>
+			<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/n1yhRUzQsI4"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/n1yhRUzQsI4" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object><br /><br />allé j'arrête
+			<br />
+			<!--IBF.ATTACHMENT_144-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  29/02/2008 - 00:54</h4>
+			<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/qnBbJE-kXMo"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/qnBbJE-kXMo" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_145-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  29/02/2008 - 08:13</h4>
+			<p>ok merci neme <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_146-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  29/02/2008 - 20:09</h4>
+			<p>http://www.kamazutra.be/La-chastete-c-est-fou<br /><br />Je ne sais pas ce qu&#39;ils prennent mais j&#39;en veux un carton&#33;
+			<br />
+			<!--IBF.ATTACHMENT_147-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  01/03/2008 - 15:29</h4>
+			<p>oh my god &#33; <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_148-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  02/03/2008 - 03:10</h4>
+			<p>... mais... y&#39;a vraiment des gens comme ça en france .... [ pars s&#39;acheter un marteau pour se defendre &#33;&#33;&#33; ]
+			<br />
+			<!--IBF.ATTACHMENT_149-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  02/03/2008 - 11:24</h4>
+			<p><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x2ybsq&v3=1&related=0"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x2ybsq&v3=1&related=0" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x2ybsq_matrix-le-refaisage_fun</i></div><br /><br />Edit Neme: Magie <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_150-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  02/03/2008 - 11:30</h4>
+			<p>nan vraiment, j&#39;y arrrive pas :/ tu l&#39;active ou le html et le retour à la ligne auto ?
+			<br />
+			<!--IBF.ATTACHMENT_151-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  02/03/2008 - 15:12</h4>
+			<p>ouai ben avec daily ca a pas l&#39;air de marcher...
+			<br />
+			<!--IBF.ATTACHMENT_152-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  02/03/2008 - 15:36</h4>
+			<p>http://www.kamazutra.be/Vous-avez-dit-pingouin<br /><br />mais biensur
+			<br />
+			<!--IBF.ATTACHMENT_153-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  02/03/2008 - 16:13</h4>
+			<p>moi j&#39;ai mieux, mon obsession c&#39;est les vavaches <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_154-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  03/03/2008 - 00:32</h4>
+			<p>mais lol, énorme matrix.<br />Et l&#39;homme pingouin, je crois qu&#39;on a surpassé le ninja &#33;
+			<br />
+			<!--IBF.ATTACHMENT_156-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  07/03/2008 - 13:56</h4>
+			<p>http://fr.youtube.com/watch?v=uqtIpeUJkhc<br /><br /><br /><br /><br />http://fr.youtube.com/watch?v=-7XLY7lemXU
+			<br />
+			<!--IBF.ATTACHMENT_185-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  09/03/2008 - 05:13</h4>
+			<p>http://www.dailymotion.com/related/x3uwfj_le-clash-sarkozy-roi-heenok_fun/video/x3o1t8_clash-dans-le-queens-roi-heenok_news?from=rss<br />ce mec il me fait alluciner, mdr
+			<br />
+			<!--IBF.ATTACHMENT_193-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  09/03/2008 - 05:17</h4>
+			<p>une autre mdr<br />http://www.dailymotion.com/related/6160940/video/x2g4z_roi-heenok-entrvue-exclusive_fun<br />vive la coque
+			<br />
+			<!--IBF.ATTACHMENT_194-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  10/03/2008 - 09:55</h4>
+			<p>http://www.youtube.com/watch?v=NM0bY_IFoes&amp;feature=related
+			<br />
+			<!--IBF.ATTACHMENT_200-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  10/03/2008 - 11:32</h4>
+			<p>http://www.youtube.com/watch?v=e-yldqNkGfo<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_201-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  10/03/2008 - 14:21</h4>
+			<p>trop bien fait la bouffe, mais vraiment écoeurant
+			<br />
+			<!--IBF.ATTACHMENT_202-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  23/03/2008 - 17:45</h4>
+			<p>http://www.allocine.fr/video/player_gen_cmedia=18799208&amp;cfilm=125164.html
+			<br />
+			<!--IBF.ATTACHMENT_207-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  23/03/2008 - 18:30</h4>
+			<p>http://fr.youtube.com/watch?v=rZQQgvhn4jg<br /><br /><br />&lt;3 baleine
+			<br />
+			<!--IBF.ATTACHMENT_208-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  24/03/2008 - 23:00</h4>
+			<p>Anthe a d&#39;abord essayé la http://www.kamazutra.be/Je-n-oublierais-jamais avant de se mettre au http://www.kamazutra.be/Chien-heavy-metal
+			<br />
+			<!--IBF.ATTACHMENT_209-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  27/03/2008 - 15:18</h4>
+			<p>http://www.dailymotion.com/La_chaine_techno/video/x41095_bill-gates-cherche-un-job_news?from=rss
+			<br />
+			<!--IBF.ATTACHMENT_210-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  28/03/2008 - 08:37</h4>
+			<p>muarf
+			<br />
+			<!--IBF.ATTACHMENT_211-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  01/04/2008 - 15:47</h4>
+			<p>http://www.abrutis.com/video.php?id=5452
+			<br />
+			<!--IBF.ATTACHMENT_213-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  02/04/2008 - 00:23</h4>
+			<p>http://www.geektube.fr/video/delires/chtis-wars.html
+			<br />
+			<!--IBF.ATTACHMENT_214-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  02/04/2008 - 00:25</h4>
+			<p>http://www.geektube.fr/video/delires/le-demineur-un-jeu-dangereux.html
+			<br />
+			<!--IBF.ATTACHMENT_215-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  02/04/2008 - 11:41</h4>
+			<p>c&#39;est pas mal fait, j&#39;ai bien aime DB grandeur nature aussi un peu plus bas&#33;
+			<br />
+			<!--IBF.ATTACHMENT_216-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  02/04/2008 - 11:56</h4>
+			<p>http://fr.youtube.com/watch?v=kKkRk-fiFE0
+			<br />
+			<!--IBF.ATTACHMENT_217-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  06/04/2008 - 02:06</h4>
+			<p><div><object width="420" height="365"><param name="movie" value="http://www.dailymotion.com/swf/x1hjqe&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x1hjqe&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="365" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x1hjqe_hanouna-sans-aucune-hesitation_fun</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_218-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  06/04/2008 - 02:09</h4>
+			<p>ENORME : <br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/xujrw&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/xujrw&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/xujrw_cyril-hanouna-au-salon-du-chocolat_events</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_219-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  09/04/2008 - 01:13</h4>
+			<p>Deux secondes suffisent pour devenir stérile les mecs ! <br /><div><object width="420" height="271"><param name="movie" value="http://www.dailymotion.com/swf/x1tl7o&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x1tl7o&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="271" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x1tl7o_pascal-le-grand-frere</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_220-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  09/04/2008 - 10:48</h4>
+			<p>deja a 1&#39;27 j&#39;ai envie de lui foutre une grosse tarte bien appuyée dans la tete et au lit&#33;<br /><br />c&#39;est impressionné comment ils se laissent marcher sur les pieds... en plus elle vraiment conne, aucune répartie.... rien.<br /><br />Meme les pires élèves que je garde ils ne font pas ca et je peux les remettre a leur place plus facilement...
+			<br />
+			<!--IBF.ATTACHMENT_221-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  10/04/2008 - 19:50</h4>
+			<p>J&#39;ai 2 solutions &#33;&#33;&#33;&#33;   <br /><br />1-- la faire émanciper et la foutre à la porte... qu&#39;elle se rend compte que la vie c&#39;est pas ça...<br /><br />2-- la foutre en pension type année 1900.... j&#39;aimerai bien voir comment elle s&#39;en sortirai<br /><br /><br />J&#39;opte pour une mix &#33;&#33;&#33;
+			<br />
+			<!--IBF.ATTACHMENT_222-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  11/04/2008 - 17:54</h4>
+			<p>la faire en pension et la foutre année 1900 porte.... qu&#39;elle voir comment que la vie c&#39;est pas s&#39;en sortirai<br /><br /><br />yabon?
+			<br />
+			<!--IBF.ATTACHMENT_223-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  11/04/2008 - 21:14</h4>
+			<p>27 secondes déjà... c&#39;est dur XD
+			<br />
+			<!--IBF.ATTACHMENT_224-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  12/04/2008 - 09:43</h4>
+			<p>prepare toi car ca va durer entre 3 et 5 ans pour toi =)
+			<br />
+			<!--IBF.ATTACHMENT_225-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  12/04/2008 - 16:37</h4>
+			<p>halala rem rem za va pas ze pazer com&#39; za&#33;&#33;&#33;&#33; ach ya &#33;&#33;&#33;
+			<br />
+			<!--IBF.ATTACHMENT_226-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  13/04/2008 - 10:51</h4>
+			<p>mdr, allé une autre <br />http://www.aujourdhuilejapon.com/actualites-japon-kanamara-le-festival-de-la-fertilite-3738.asp?1=1&amp;IdVideo=3
+			<br />
+			<!--IBF.ATTACHMENT_228-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  13/04/2008 - 18:08</h4>
+			<p>la procession  s&#39;ébranle...xD<br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_229-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  13/04/2008 - 20:36</h4>
+			<p>... j&#39;en reste bouche Bé...^^
+			<br />
+			<!--IBF.ATTACHMENT_230-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  14/04/2008 - 01:36</h4>
+			<p><object width="480" height="360"><param name="movie" value="http://stream.sk-gaming.com/video/d13a17f5010f19ee/"></param><param name="wmode" value="transparent"></param><embed src="http://stream.sk-gaming.com/video/d13a17f5010f19ee/" type="application/x-shockwave-flash" wmode="transparent" width="480" height="360"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_231-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  14/04/2008 - 14:12</h4>
+			<p>http://www.tetesaclaques.tv/video.php?vid=481<br />http://www.tetesaclaques.tv/video.php?vid=491
+			<br />
+			<!--IBF.ATTACHMENT_232-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  14/04/2008 - 19:36</h4>
+			<p>le gars qui &quot;chante&quot; &gt;&gt;&gt; mais achevez le &#33; XD
+			<br />
+			<!--IBF.ATTACHMENT_233-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  16/04/2008 - 00:29</h4>
+			<p><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x2vddm&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x2vddm&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x2vddm_stade-de-foot-en-feu</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_239-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  16/04/2008 - 08:25</h4>
+			<p>les gens qui continuent a faire la faite alors que tout est en train de cramer.....<br />
+			<br />
+			<!--IBF.ATTACHMENT_240-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  16/04/2008 - 09:51</h4>
+			<p>ce qui m&#39;épate dans l&#39;histoire c&#39;est de voir qu&#39;en 5 minutes toute la tribune a pris feu... devait pas être au normes ...
+			<br />
+			<!--IBF.ATTACHMENT_241-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  16/04/2008 - 13:28</h4>
+			<p>http://www.dailymotion.com/playlist/xg76e_-Syfer__robots-sapiens/video/x53fir_robots-sapiens_tech<br /><br />3 parties, regardez la deuxieme si vous ne voulez pas tout regarder.<br />à voir!
+			<br />
+			<!--IBF.ATTACHMENT_243-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  16/04/2008 - 14:41</h4>
+			<p>http://www.koreus.com/video/grimaces.html
+			<br />
+			<!--IBF.ATTACHMENT_246-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  16/04/2008 - 20:02</h4>
+			<p>.....
+			<br />
+			<!--IBF.ATTACHMENT_249-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  16/04/2008 - 20:24</h4>
+			<p>Rem quand on lui parle sur msn &#33; XD
+			<br />
+			<!--IBF.ATTACHMENT_250-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  17/04/2008 - 09:34</h4>
+			<p>je conseille vivement de visionner les 3 volets de ce reportage sur les neuro technologies.<br /><br />il est évident que ce siècle verra la fusion de l&#39;homme et de la machine comme du réel et du virtuel. tout autant fascinante qu&#39;effrayante cette union résoudra un certain nombre de problèmes actuels voire séculaires tout en posant d&#39;autres questions qui dépassent l&#39;entendement.<br /><br />toutes les maladies liées aux cerveaux et aux senseurs de notre corps pourraient être analysées et comprises, donc aisément corrigées/guéries.<br />je pense notamment à l&#39;épilepsie, alzheimer, parkinson, toutes les paralysies... mais aussi les dépressions et même la démence.<br />Le progrès dans ces domaines seront sans précédent.<br /><br />Par la même les capacités de notre corps s&#39;en verront décuplées par la bionique et la nanotechnologie. Mais que feront nous de ces &quot;pouvoirs spéciaux&quot;?<br />Des JO où le cent mètres se courrait en 2 secondes? Des robots biomécaniques intelligents? ressusciteront nous les morts? sauront nous garder une frontière entre le réel et le virtuel? Quel impacts ces technologies auront sur nos modes de vie, notre santé ou notre longévité? Quel lien garderons nous avec le réel, avec la nature?<br />Les questions les plus absurdes peuvent se poser... sans que nous n&#39;ayons de réponse a fournir.<br /><br />Mais la notion même de ce que nous pouvons concevoir, imaginer s&#39;en trouverai repoussé à une limite infini.<br />Le cerveau humain possède une mémoire instantanée de 6 chiffre/idée/élément sensoriel.<br />C&#39;est ce que nous utilisons à chaque instant pour analyser,comprendre et réagir a notre monde extérieur ou pour effectuer une simple opération mathématiques.<br />Admettons que par ces technologie nous permettent de repousser cette limite à 10. Quelles en seront les conséquence sur nos facultés. analyserons nous plus vite? mieux, avec moins d&#39;erreur? nos réactions seront elles plus vives ou précises? est ce que notre corps s&#39;adaptera pour nous fournir des information sensorielles différentes car correspondant à des besoins différents?<br />et si nous repoussions cette limite à cent? à mille, un million...?<br />Pire, si chaque information se trouvai non plus traité par des impulsions électriques fixes mais de façons quantique, comme des potentiomètres.<br /><br />Nous avons grandi avec l&#39;informatique et somme bien plus a l&#39;aise que nos aïeux.<br />Quel type d&#39;humains seront nos enfants ayant grandis avec la capacités d&#39;analyse de milliards de supercalculateurs actuels? trouveront ils un intérêt quelconque à rester dans un corps aussi complexe mais si fragile? finiront ils par avoir un esprit identique,comme &quot;cloné&quot; car chacun aurai trouvé la même conclusion aux concepts les plus avancés en sciences, théologie, philosophie...<br />La notion même de l&#39;âme s&#39;en trouverai changée.<br /><br />bon je retourne me coucher je crois que j&#39;ai assez dit de conneries pour ce matin <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><br /><br /><br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_253-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  17/04/2008 - 09:38</h4>
+			<p>HoHo j&#39;ai cru voir un doxounet&#33;<br /><br /><br /><br /><br />merde jb m&#39;a demasqué...
+			<br />
+			<!--IBF.ATTACHMENT_254-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  17/04/2008 - 11:31</h4>
+			<p>dox, regarde le reportage sur les autistes de haut niveau dans les derniere pages, ca parle du cerveau, apres ca tu vois la vie autrement aussi.<br />Ca commence là : http://www.dailymotion.com/video/x423m7_les-virtuoses-de-la-memoire-13_tech<br />T&#39;as tous les liens de la suite en dessous. Tu vas voir que ce que tu dis : &quot;le cerveau humain possède une mémoire instantanée de 6 chiffre/idée/élément sensoriel&quot;, est en fait bien différent <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br /><br />-----------------------------------------------------------<br />Rien à voir cette fois.<br />Autre lien franchement INCROYABLE : http://www.akinator.com/aki_fr/index.html#<br />Vous cliquez sur jouer, mettez un nom, votre age, etc, et maintenant pensez a n&#39;importe quoi. A la fin il dira a qui vous pensz&#33;<br />Pour info j&#39;ai teste : lara fabian, moi, kenny et mon penis et ca a marche &#33;&#33;<br /><br />PS : dsl pour le qwerty&#33;
+			<br />
+			<!--IBF.ATTACHMENT_255-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  17/04/2008 - 23:44</h4>
+			<p>http://www.dailymotion.com/video/x15kg2_incroyable-mais-vrai-worm-in-head_extreme<br />ame sensibles s&#39;abstenir &gt;&lt;
+			<br />
+			<!--IBF.ATTACHMENT_256-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  18/04/2008 - 00:18</h4>
+			<p>J&#39;ai refait des testes sur le site, 100% de réussite avec : pere noel, mon coiffeur, polochon (poisson jaune dans la petit sirene), mon prof de droit, et d&#39;autres que j&#39;ai deja oublié.<br />Mais le pire, c&#39;est que ça répond en une 10ene de question <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_257-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  18/04/2008 - 00:52</h4>
+			<p>moi j&#39;ai testé avec ma femme.... il me sort le percepteur des impôts ... va falloir que je me méfie...
+			<br />
+			<!--IBF.ATTACHMENT_259-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  18/04/2008 - 03:25</h4>
+			<p>mdr
+			<br />
+			<!--IBF.ATTACHMENT_260-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  18/04/2008 - 09:52</h4>
+			<p>bah pour moi il a pas trouvé Batman le akinator &#33;&#33;&#33;&#33; poutred &#33;&#33;&#33;&#33; <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_261-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  18/04/2008 - 21:46</h4>
+			<p>http://www.tqs.ca/videos/infos/2008/04/rappeur-montrealais-arrete-27954.php
+			<br />
+			<!--IBF.ATTACHMENT_264-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  18/04/2008 - 23:37</h4>
+			<p>Lol &#33; Le gars a une armurerie chez lui mais... c&#39;est seulement du second degré hein ? XD
+			<br />
+			<!--IBF.ATTACHMENT_265-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  19/04/2008 - 02:01</h4>
+			<p>J&#39;suis concerné par tout ça, tout ces gens ne valent même pas &#036;100. A tous les gansters, sortez vos crougeur et vos berlines allemandes et venez nous aider à porter le roi sur sa montagne de cocaïne.<br />brrrraaaaa&#33;<br /><br />Sérieusement, l&#39;arrestation a du être comique, je l&#39;imagine bien en train d&#39;insulter les flics de putes nègres et de p&#39;tit pd.<br />A mon avis on le revera pas de si tôt, mais son retour sera ENORME xD
+			<br />
+			<!--IBF.ATTACHMENT_266-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  19/04/2008 - 08:45</h4>
+			<p><!--quoteo(post=261:date=18/04/2008 &#045; 09&#58;52:name=maynaard)--><div class='quotetop'>Citation (maynaard &#064; 18/04/2008 &#045; 09&#58;52) <a href="index.php@act=findpost&amp;pid=261.html"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->bah pour moi il a pas trouvé Batman le akinator &#33;&#33;&#33;&#33; poutred &#33;&#33;&#33;&#33; <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br />sisi il a trouvé pour moi&#33;
+			<br />
+			<!--IBF.ATTACHMENT_267-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  19/04/2008 - 23:30</h4>
+			<p>http://www.kamazutra.be/Jujitsu-violent<br /><br />Violente la 35&quot; facile a placer en plus
+			<br />
+			<!--IBF.ATTACHMENT_268-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  20/04/2008 - 01:57</h4>
+			<p>mdr, j&#39;aime bien les mecs qui tapent direct sur le tapis avec la main (ça veut dire qu&#39;il faut arrêter).
+			<br />
+			<!--IBF.ATTACHMENT_269-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  21/04/2008 - 02:24</h4>
+			<p>allé un peu de science encore:<br />- http://www.futura-sciences.com/fr/sinformer/actualites/news/t/biologie-1/d/toutes-les-uvres-originales-de-darwin-sur-le-web_15312/<br /><br />- http://www.futura-sciences.com/fr/comprendre/dossiers/doc/t/technologie/d/les-nanosciences-avancees-risques-problemes-societaux-ethique_790/c3/221/p1/ pour compléter la vidéo sur notre future avec les nouvelles technologies.
+			<br />
+			<!--IBF.ATTACHMENT_270-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  21/04/2008 - 03:51</h4>
+			<p>je m'en lasse pas !<br /><div><object width="420" height="357"><param name="movie" value="http://www.dailymotion.com/swf/xcy9z&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/xcy9z&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="357" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/xcy9z_montcuq-daniel-prevost</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_271-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  21/04/2008 - 09:53</h4>
+			<p>darwin ou comment casser les couilles aux créationnistes&#33;&#33;<br /><br />j&#39;avais vu il y a pas longtemps au EU qu&#39;il risquaient de supprimer (a l&#39;ecole) l&#39;evolution selon darwin au profit d&#39;une vision créationniste donc religieuse. Je ne sais pas ce qu&#39;il en est aujourd&#39;hui.
+			<br />
+			<!--IBF.ATTACHMENT_272-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  21/04/2008 - 11:58</h4>
+			<p>oui, c&#39;était aux Etat-Unis (ah, bah tu l&#39;as dit ^^), je crois que certaines écoles privées le font déjà. Pourquoi pas, on aura de beaux fanatiques après ^^
+			<br />
+			<!--IBF.ATTACHMENT_273-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  22/04/2008 - 03:33</h4>
+			<p>J'aime bien celui qui croit être un elfe noir!<br /><br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x6vax&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x6vax&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x6vax_tf1-les-jeux-en-reseaux_events</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_274-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  22/04/2008 - 07:03</h4>
+			<p>C&#39;est sur que TF1 préfèrerait avoir ces &quot;jeun&#39;s&quot; regardant la une plutôt que des jeux en ligne. Je suis sur qu&#39;aux final on deviendrait aussi absorbé et qu&#39;on aurait plus aucune notion du temps. Enfin si, la notion du temps cerveau disponible qu&#39;ils vendent à coca-cola... mais ça, c&#39;est une autre histoire.
+			<br />
+			<!--IBF.ATTACHMENT_275-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  22/04/2008 - 10:14</h4>
+			<p>c&#39;est vieux&#33; mais toujours aussi marrant de voir a quelle vitesse on généralise/stigmatise certaines activités/personnes
+			<br />
+			<!--IBF.ATTACHMENT_276-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  23/04/2008 - 01:40</h4>
+			<p>une vidéo pour vous, les clopeurs du clan : <br />cette personne dissoud la fumée de 400 cigarettes dans de l'eau, puis la fait bouillir pour enlever l'eau et récupérer les composants de la fumée de cigarettes.<br /><div><object width="420" height="336"><param name="movie" value="http://www.dailymotion.com/swf/x56byf&v3=1&related=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/x56byf&v3=1&related=1" type="application/x-shockwave-flash" width="420" height="336" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b>http://www.dailymotion.com/video/x56byf_tu-fumes-regarde-ca_tech</i></div>
+			<br />
+			<!--IBF.ATTACHMENT_277-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  24/04/2008 - 18:50</h4>
+			<p>Ben voilà &#33; On a retrouvé un moyen pratique de regoudronner à moindre frais nos chères autoroutes &#33; XD Sinon depuis que je joue à L2 je me prends pour une choucroute... Je devrais ptet consulter ?  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_285-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  24/04/2008 - 20:18</h4>
+			<p>Ben pourquoi faire je vois pas ce qu&#39;il y a d&#39;anormal a par peu être la compote?
+			<br />
+			<!--IBF.ATTACHMENT_286-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  25/04/2008 - 07:04</h4>
+			<p>a moindre frais ?&#33; Oo<br /><br />quoique d&#39;ici  2 ou 3 ans il sera plus rentable de fumer un paquet que de faire 20 bornes en voiture tout les jours <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_289-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/04/2008 - 09:35</h4>
+			<p>donc faut trouver un moyen de faire fumer la voiture?  <img src="style_emoticons/default/huh.gif" style="vertical-align:middle" emoid=":huh:" border="0" alt="huh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_291-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/04/2008 - 09:54</h4>
+			<p>http://www.kamazutra.be/La-theorie-de-l-evolution
+			<br />
+			<!--IBF.ATTACHMENT_292-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  25/04/2008 - 11:32</h4>
+			<p>déjà vu ^^
+			<br />
+			<!--IBF.ATTACHMENT_293-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  25/04/2008 - 11:49</h4>
+			<p>muarf bande d&#39;@#°°#@# <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_294-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  25/04/2008 - 18:16</h4>
+			<p>je dois avouer que vu comme ca elle fait pas envie la theorie de charles... a part de rire bien sur.  :/
+			<br />
+			<!--IBF.ATTACHMENT_296-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  28/04/2008 - 20:43</h4>
+			<p>http://www.theotokos.fr/
+			<br />
+			<!--IBF.ATTACHMENT_313-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  29/04/2008 - 03:36</h4>
+			<p>omg, je m&#39;inscris biensur...
+			<br />
+			<!--IBF.ATTACHMENT_316-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  29/04/2008 - 11:43</h4>
+			<p>http://www.lelombrik.net/videos/13591/pas-du-matin.html
+			<br />
+			<!--IBF.ATTACHMENT_319-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  29/04/2008 - 12:02</h4>
+			<p>http://www.koreus.com/video/chat-peloteur.html
+			<br />
+			<!--IBF.ATTACHMENT_320-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  29/04/2008 - 18:56</h4>
+			<p>mon chat fait la même sur ma femme ( ..; et sur mes fesses aussi ...) <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /> mais j&#39;en profite aussi <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_324-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  29/04/2008 - 20:57</h4>
+			<p>de tes fesses?  <img src="style_emoticons/default/huh.gif" style="vertical-align:middle" emoid=":huh:" border="0" alt="huh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_326-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>antheas</b>  30/04/2008 - 08:31</h4>
+			<p>mouais.......<br /><br />bun c&#39;est louche tout ça<br /><br />enfin je dit ça ...je dit rien hun .....<br />
+			<br />
+			<!--IBF.ATTACHMENT_330-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  30/04/2008 - 17:03</h4>
+			<p>http://www.koreus.com/video/test-visuel-compter-nombre-passes.html
+			<br />
+			<!--IBF.ATTACHMENT_331-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  01/05/2008 - 03:29</h4>
+			<p>http://www.futura-sciences.com/fr/sinformer/actualites/news/t/technologie-1/d/en-video-tenori-on-linstrument-de-musique-du-troisieme-type_15406/<br />regardez la vidéo <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_332-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  01/05/2008 - 08:32</h4>
+			<p>pas révolutionnaire pour qui a un peu touché a une beatbox mais le concept est intéressant avec une utilisation simplifié et intuitive.<br />volume pitch cutoff et filtre ADSR, l&#39;essentiel est présent.<br /><br />j&#39;émets quelques reserves toutefois quand à la synthèse sonore qui sonne bontempi, la présence d&#39;un scale pour descendre (au moins) au 1/16 de note et sur l&#39;edition de patterns. (1 seul utilisé dans l&#39;exemple)<br /><br />voila le genre de chose auquelles je m&#39;adonnais fut un temps.http://www.youtube.com/watch?v=EZKPkGJautA<br />Vendue depuis, ca fait quelques temps que ca me démange de m&#39;en payer une autre.<br />ce sera peut etre un machin tout luminescent... <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_334-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  01/05/2008 - 08:55</h4>
+			<p>oups<br />
+			<br />
+			<!--IBF.ATTACHMENT_335-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  01/05/2008 - 12:57</h4>
+			<p>ah c&#39;est pas la même chose ^^
+			<br />
+			<!--IBF.ATTACHMENT_337-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  02/05/2008 - 18:25</h4>
+			<p>http://www.gougoule.com/v-37-never-forget.html
+			<br />
+			<!--IBF.ATTACHMENT_338-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  03/05/2008 - 10:04</h4>
+			<p>déja postè plus tôt ça rem <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /> t&#39;es a la bourre mon chouchou
+			<br />
+			<!--IBF.ATTACHMENT_339-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  03/05/2008 - 11:49</h4>
+			<p>c&#39;est moi qui l&#39;avais posté<br />et non j&#39;ai vraiment pas oublié
+			<br />
+			<!--IBF.ATTACHMENT_340-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  04/05/2008 - 14:49</h4>
+			<p>ouais c&#39;est ça c&#39;est ça <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_341-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  04/05/2008 - 23:59</h4>
+			<p>http://fr.youtube.com/watch?v=nWPhXUpIgOM&amp;feature=related
+			<br />
+			<!--IBF.ATTACHMENT_342-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  05/05/2008 - 12:39</h4>
+			<p>http://fr.youtube.com/watch?v=ZPlxt_i42vs&amp;feature=related
+			<br />
+			<!--IBF.ATTACHMENT_343-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  06/05/2008 - 12:13</h4>
+			<p>http://www.kamazutra.be/Moment-of-truth-ou-pas
+			<br />
+			<!--IBF.ATTACHMENT_346-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  07/05/2008 - 17:48</h4>
+			<p>http://fr.youtube.com/watch?v=0JNSYSS9UBM&amp;feature=related
+			<br />
+			<!--IBF.ATTACHMENT_353-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  07/05/2008 - 18:35</h4>
+			<p>haaaaaaaaaaaaaaa j&#39;ai plus d&#39;oreilles &#33;&#33;&#33;&#33;&#33;&#33;
+			<br />
+			<!--IBF.ATTACHMENT_355-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  08/05/2008 - 18:32</h4>
+			<p>http://www.dailymotion.com/search/mozinor/video/x4vnxg_les-jouets-jeanmichel-cest-exceptio_fun
+			<br />
+			<!--IBF.ATTACHMENT_360-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  08/05/2008 - 23:50</h4>
+			<p>énorme putain <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_361-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  08/05/2008 - 23:51</h4>
+			<p>http://www.dailymotion.com/related/8195812/video/x217t2_point-exceptionnel-au-ping-pong_extreme<br />à voir, c&#39;est énooooorme xD
+			<br />
+			<!--IBF.ATTACHMENT_362-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  09/05/2008 - 09:55</h4>
+			<p>putain oui je l&#39;avais pas vu en aussi bonne qualité
+			<br />
+			<!--IBF.ATTACHMENT_363-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  13/05/2008 - 11:27</h4>
+			<p>Les Suisse-allemand jouent trop a GTA :s<br /><br />http://www.20min.ch/news/zuerich/story/12051041
+			<br />
+			<!--IBF.ATTACHMENT_369-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  13/05/2008 - 11:50</h4>
+			<p>bah bravo.... c&#39;est plus tellement rigolo là :s
+			<br />
+			<!--IBF.ATTACHMENT_370-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  13/05/2008 - 13:34</h4>
+			<p>quel fils de pute, ya une personne qui a été traînée tout le long. Ca me met hors de moi ces trucs.
+			<br />
+			<!--IBF.ATTACHMENT_371-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  13/05/2008 - 14:57</h4>
+			<p>C&#39;est malin d&#39;avoir rabaissé la voiture, il a perdu trop de temps avec le frottement.<br />(mais pas glop quand même)
+			<br />
+			<!--IBF.ATTACHMENT_372-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  13/05/2008 - 17:07</h4>
+			<p>Omg... j&#39;espère qu&#39;il est en taule le dos d&#39;âne humain...
+			<br />
+			<!--IBF.ATTACHMENT_373-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  14/05/2008 - 10:30</h4>
+			<p>http://www.desyeuxdesoreilles.com/lamachineacaca/
+			<br />
+			<!--IBF.ATTACHMENT_374-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/05/2008 - 18:39</h4>
+			<p>http://fr.youtube.com/watch?v=eBGIQ7ZuuiU
+			<br />
+			<!--IBF.ATTACHMENT_375-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/05/2008 - 18:42</h4>
+			<p>putin il en traine un sur 100M  <img src="style_emoticons/default/ohmy.gif" style="vertical-align:middle" emoid=":o" border="0" alt="ohmy.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_376-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  14/05/2008 - 23:03</h4>
+			<p>Lol c&#39;est d&#39;la merde &#33;  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_377-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/05/2008 - 23:16</h4>
+			<p>http://www.koreus.com/video/unimed-smoking-kill-more.html
+			<br />
+			<!--IBF.ATTACHMENT_378-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  01/06/2008 - 20:02</h4>
+			<p>omg http://www.dailymotion.com/fr/cluster/people/featured/video/x40tc7_vive-msn-la-fanfare-ajp_people <br />...
+			<br />
+			<!--IBF.ATTACHMENT_405-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  02/06/2008 - 02:04</h4>
+			<p>je viens de voir que le Collège de France a mis en ligne tous les cours séminaires de cette année.<br />Le tout constitue une sorte de grosse intro à l&#39;informatique et ses applications. <br />http://www.college-de-france.fr/default/EN/all/inn_tec/index.htm
+			<br />
+			<!--IBF.ATTACHMENT_408-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  03/06/2008 - 11:20</h4>
+			<p><!--quoteo(post=405:date=01/06/2008 &#045; 20&#58;02:name=Nemesis)--><div class='quotetop'>Citation (Nemesis &#064; 01/06/2008 &#045; 20&#58;02) <a href="index.php@act=findpost&amp;pid=405.html"><img src='style_images/ambience11/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->omg http://www.dailymotion.com/fr/cluster/people/featured/video/x40tc7_vive-msn-la-fanfare-ajp_people <br />...<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /> non mais t&#39;as pas le droit de faire ca c&#39;est pas bien
+			<br />
+			<!--IBF.ATTACHMENT_411-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  03/06/2008 - 18:42</h4>
+			<p>oui, c&#39;est dur.
+			<br />
+			<!--IBF.ATTACHMENT_412-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  04/06/2008 - 21:22</h4>
+			<p>http://www.addictinggames.com/theepilepsygame.html
+			<br />
+			<!--IBF.ATTACHMENT_413-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  04/06/2008 - 21:44</h4>
+			<p>Ecoutez moi cette voix de gros con.<br />http://www.dailymotion.com/related/9520215/video/x2fjga_teamspeak-spam_webcam
+			<br />
+			<!--IBF.ATTACHMENT_414-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  04/06/2008 - 23:56</h4>
+			<p>excellent xD =&gt; http://www.skullpat.com/index.php/2008/02/19/176-la-vraie-chanson-d-amour-des-geeks<br />Qui se reconnait ? <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /><br /><br />sisi je révise
+			<br />
+			<!--IBF.ATTACHMENT_415-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  05/06/2008 - 08:30</h4>
+			<p>muarf <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_416-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  05/06/2008 - 13:58</h4>
+			<p>http://www.20minutes.fr/diaporama/378-1-0-0-Ces-tatouages-qu-il-faudrait-eviter.php
+			<br />
+			<!--IBF.ATTACHMENT_417-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  11/06/2008 - 09:41</h4>
+			<p>http://www.dailymotion.com/related/x3rlbv_un-lemurien-eberlue_animals/video/x3r64q_25-animaux-les-plus-etranges_animals?from=rss
+			<br />
+			<!--IBF.ATTACHMENT_423-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  11/06/2008 - 09:48</h4>
+			<p>Il y en a on ne sait vraiment pas d&#39;où ils sortent.
+			<br />
+			<!--IBF.ATTACHMENT_424-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  13/06/2008 - 09:10</h4>
+			<p>http://fr.youtube.com/watch?v=s-rl3RPC_Mw
+			<br />
+			<!--IBF.ATTACHMENT_428-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  13/06/2008 - 09:14</h4>
+			<p>énorme lol
+			<br />
+			<!--IBF.ATTACHMENT_429-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  13/06/2008 - 09:28</h4>
+			<p>saloperie de nolife <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_430-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  13/06/2008 - 15:41</h4>
+			<p>http://www.youtube.com/v/Gy8-tcAQeSc&hl=en
+			<br />
+			<!--IBF.ATTACHMENT_440-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  13/06/2008 - 17:24</h4>
+			<p>waouh&#33; Elle est impressionante la vidéo. Le mec qui grimpe la falaise comme si rien j&#39;ai adoré <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_441-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  15/06/2008 - 10:32</h4>
+			<p>yep, y a quand même des gros givrés&#33; Mais la vidz est top&#33;&#33;&#33;<br /><br /><br />Neme, ta signature me prend la tête, j&#39;en ai marre de voir bouger ce moucheron&#33; Tu veux pas remettre les chiots <img src="style_emoticons/default/huh.gif" style="vertical-align:middle" emoid=":huh:" border="0" alt="huh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_449-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  15/06/2008 - 12:29</h4>
+			<p>NON&#33;
+			<br />
+			<!--IBF.ATTACHMENT_450-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  16/06/2008 - 07:56</h4>
+			<p>ou arrêter de poster...
+			<br />
+			<!--IBF.ATTACHMENT_452-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  18/06/2008 - 01:13</h4>
+			<p>Vidéo énorme où un chien se masturbe &#33;<br />Attention c&#39;est un site appremment porno à la base donc c&#39;est bourré d&#39;image de cul.<br />http://www.redtube.com/6303
+			<br />
+			<!--IBF.ATTACHMENT_454-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  18/06/2008 - 09:56</h4>
+			<p>Pour ceux qui ont quelques économies :<br /><br />http://www.nowhereelse.fr/?p=8756
+			<br />
+			<!--IBF.ATTACHMENT_455-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  18/06/2008 - 10:13</h4>
+			<p>pour dudu :<br /><br />http://www.nowhereelse.fr/?p=8715
+			<br />
+			<!--IBF.ATTACHMENT_456-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  18/06/2008 - 16:52</h4>
+			<p>http://www.youtube.com/watch?v=pVKnF26qFFM
+			<br />
+			<!--IBF.ATTACHMENT_457-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  19/06/2008 - 07:43</h4>
+			<p>http://www.arte.tv/fr/art-musique/one-shot-note/1494366.html<br /><br />http://www.youtube.com/watch?v=17O1EB6Y9Mg&amp;feature=related<br /><br />http://www.youtube.com/watch?v=f7SNKf1j5Uk&amp;feature=related<br /><br />http://www.youtube.com/watch?v=u6H56o3U8XQ&amp;feature=related<br /><br /><br />One Shot Not  tout les dernier samedi du mois vers 22h30.<br /><br />enjoy
+			<br />
+			<!--IBF.ATTACHMENT_458-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  20/06/2008 - 14:45</h4>
+			<p>enorme la scene au bureau, ca dionne des idées xD
+			<br />
+			<!--IBF.ATTACHMENT_459-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>raser</b>  21/06/2008 - 00:30</h4>
+			<p>si seulement on pouvait faire ça au taf <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /> la gros delire^^
+			<br />
+			<!--IBF.ATTACHMENT_461-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  01/07/2008 - 15:40</h4>
+			<p>Enorme ! "Ca c'est le 'stayle'"<br /><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/6yHWfy_UCRg&hl=en"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/6yHWfy_UCRg&hl=en" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+			<br />
+			<!--IBF.ATTACHMENT_472-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  02/07/2008 - 00:35</h4>
+			<p>http://www.dailymotion.com/video/x5zepu_3d-hologram-demonstration_tech
+			<br />
+			<!--IBF.ATTACHMENT_473-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  21/07/2008 - 23:04</h4>
+			<p>http://www.youtube.com/watch?v=HKGiOY72ru4
+			<br />
+			<!--IBF.ATTACHMENT_515-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  22/07/2008 - 03:38</h4>
+			<p>ça c&#39;est énorme xD<br />http://www.youtube.com/watch?v=0C5HnBFFmtg&amp;eurl=http://difool.skyrock.com/15.html
+			<br />
+			<!--IBF.ATTACHMENT_516-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  26/07/2008 - 01:18</h4>
+			<p>http://www.dailymotion.com/relevance/search/documentaire/video/x5lfte_la-fabuleuse-histoire-des-excrement_tech
+			<br />
+			<!--IBF.ATTACHMENT_526-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  28/07/2008 - 08:05</h4>
+			<p>erf tôt le matin ca donne  pas envie .... <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_528-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  03/08/2008 - 22:46</h4>
+			<p>http://www.dailymotion.com/video/x69rrl_le-rap-de-la-savane-mdr_fun
+			<br />
+			<!--IBF.ATTACHMENT_529-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  05/08/2008 - 09:18</h4>
+			<p><img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><br />
+			<br />
+			<!--IBF.ATTACHMENT_530-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  06/08/2008 - 10:13</h4>
+			<p>c&#39;est quand même de l&#39;utilisation d&#39;animaux pas forcément consentant dans le but de faire du pognon, je trouve ça scandaleux &#33;<br /><br /><br /><br />bon ok à droite, au fond... <br />
+			<br />
+			<!--IBF.ATTACHMENT_533-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  07/08/2008 - 19:09</h4>
+			<p>http://www.youtube.com/watch?v=W1czBcnX1Ww&amp;feature=related
+			<br />
+			<!--IBF.ATTACHMENT_535-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  08/08/2008 - 08:07</h4>
+			<p>Pas mal la gestion de l&#39;équilibre face aux obstacles. C&#39;est rassurant, Skynet et sa troupe c&#39;est pas pour demain xD
+			<br />
+			<!--IBF.ATTACHMENT_537-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  08/08/2008 - 08:27</h4>
+			<p>bah je dis pareil pour l&#39;utilisation de robots  non consentants...<br /><br />vala
+			<br />
+			<!--IBF.ATTACHMENT_538-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  11/08/2008 - 20:24</h4>
+			<p>http://www.metacafe.com/watch/1584703/pressure_point_knockout/<br /><br />j&#39;adore <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_546-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  12/08/2008 - 15:45</h4>
+			<p>si c&#39;est pas un fake je me cache devant chaque chinois que je croiserai
+			<br />
+			<!--IBF.ATTACHMENT_547-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  12/08/2008 - 23:45</h4>
+			<p>http://www.gougoule.com/v-45-eletronic-supersonik.html<br /><br /><br />http://www.gougoule.com/v-47-comment-bien-danser.html
+			<br />
+			<!--IBF.ATTACHMENT_548-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  13/08/2008 - 00:27</h4>
+			<p>pas mal la premiere lol
+			<br />
+			<!--IBF.ATTACHMENT_549-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  13/08/2008 - 09:29</h4>
+			<p>J&#39;en étais sûr. Staline n&#39;est pas mort &#33; Il planifie une offensive terrestre depuis sa retraite dans la constellation Ziploc &copy;.  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_550-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  14/08/2008 - 07:32</h4>
+			<p>cte moustaaaaaaaaaache &#33;&#33;&#33; énorme <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_551-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  15/08/2008 - 00:25</h4>
+			<p>vraiment strange http://z.about.com/d/urbanlegends/1/0/v/A/what_is_it.jpg :s
+			<br />
+			<!--IBF.ATTACHMENT_552-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  15/08/2008 - 01:26</h4>
+			<p>:s l&#39;art blablabla..... de la merde.....<br /><br /><br /><br /><br /><br />http://www.mondespersistants.com/news/11275/Et-l-oscar-du-jeu-le-plus-hardcore-revient-a-.html<br /><br /><br /><br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_553-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  15/08/2008 - 11:35</h4>
+			<p>18 heures non stop sur un rb oO &#39;faut en vouloir quand même  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_554-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  16/08/2008 - 18:29</h4>
+			<p>bah c&#39;est pareil que nos séances de farming L2 en fait...<br />sauf que la ils attendent pas le respawn <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_555-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  16/08/2008 - 19:29</h4>
+			<p>http://fr.youtube.com/watch?v=NCauq7LFOAQ <br /><br />je peux plus m&#39;arrêter de rire   <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" /> <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_556-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  16/08/2008 - 20:05</h4>
+			<p>je sais même pas quoi dire après le visionnage de ta vidz dox... mdr<br /><br />énorme ?
+			<br />
+			<!--IBF.ATTACHMENT_557-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  17/08/2008 - 10:02</h4>
+			<p>Dans le même genre. Ultime, j&#39;achète en DVD  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" /> <br /><br />http://fr.youtube.com/watch?v=8OXVUOsr_Oo&amp;NR=1<br /><br />http://fr.youtube.com/watch?v=a04dL3XXTyA&amp;NR=1<br /><br />Mwa, j&#39;rafol&#39; des cacahuet&#39; xD
+			<br />
+			<!--IBF.ATTACHMENT_558-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  24/08/2008 - 17:33</h4>
+			<p>Je suis retombé sur les vidéos de Neme concernant la fin du monde prévue le 21 décembre 2012 (page 1).<br /><br />Je suis tombé là dessus ensuite : http://www.211212.info/.<br /><br /> <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_562-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  25/08/2008 - 08:12</h4>
+			<p>mine de rien il y a du vrai la dedans...<br /><br />- Des astéroïdes, peut-être même une nouvelle planète (elle a déjà son nom : Nibiru) cachée pour l&#39;instant dans l&#39;orbite de la Terre,vont venir frapper notre planète ce jour là.<br />/hmm &quot;caché dans une orbite&quot; il va falloir m&#39;expliquer comment ça marche j&#39;ai du mal.<br /><br />- Système trinaire : Le système binaire arrivant à son terme (exemple : dvd blue-ray) le système trinaire sera apporté par des extra-terrestre et viendra révolutionner et remettre à jour toutes nos connaissances scientifiques et mathématiques acquises jusqu&#39;à aujourd&#39;hui.<br />c&#39;est encore un coup des http://www.computer-museum.ru/english/setun.htm&#33;&#33;&#33;<br /><br />- La Terre va changer d&#39;axe.<br />/ca c&#39;est pas faux, l&#39;axe de la terre oscille légèrement.<br /><br />- Le champs magnétique terrestre va s&#39;inverser.<br />/vrai aussi. il est prouvé que le champs magnétique de la terre s&#39;est déjà inversé au cours de l&#39;histoire et les mayas savaient le calculer.<br /><br />- Les treize crânes de cristal mayas (fabriqués au XIXème siècle) nous délivrerons un message le 21 décembre 2012 s&#39;ils sont tous réunis.<br />/VRAI le message, connu des scientifiques, est &quot;RUSH CP FFS&#33;&#33;&#33;&quot;<br /><br />quelques http://www.syti.net/Universe.html intéressants à connaître.
+			<br />
+			<!--IBF.ATTACHMENT_563-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  25/08/2008 - 08:29</h4>
+			<p>bah comme dis dox, reste que le rush cp ffs... <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_564-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/08/2008 - 10:23</h4>
+			<p>&quot;Il est maintenant minuit, samedi soir, et nous sommes entourés de gens qui croient que ce qu&#39;ils font depuis un quarantième de seconde peut continuer indéfiniment.&quot;
+			<br />
+			<!--IBF.ATTACHMENT_565-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  27/08/2008 - 14:24</h4>
+			<p>http://flabbergastedly.com/?p=96    &lt;== ceci est un lien
+			<br />
+			<!--IBF.ATTACHMENT_566-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  27/08/2008 - 16:50</h4>
+			<p>Vraiment excellent  <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_567-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  27/08/2008 - 20:16</h4>
+			<p>Ha oui, j&#39;oubliais... http://www.dailymotion.com/video/x6gv4w_la-meteo-du-futur_fun
+			<br />
+			<!--IBF.ATTACHMENT_568-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  03/09/2008 - 12:24</h4>
+			<p>Surtout ne pas s&#39;énerver... http://www.youtube.com/watch?v=r86NLwCYXfk&amp;NR=1
+			<br />
+			<!--IBF.ATTACHMENT_574-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  03/09/2008 - 13:45</h4>
+			<p>aahh la beauté du hard core gaming d&#39;antant... souvenir souvenir  ^^<br />
+			<br />
+			<!--IBF.ATTACHMENT_575-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  06/09/2008 - 09:13</h4>
+			<p>c&#39;est chaud mais c&#39;est quoi cette version?
+			<br />
+			<!--IBF.ATTACHMENT_583-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  14/09/2008 - 10:01</h4>
+			<p>Vous aimez jouer aux http://www.abrutis.com/video-impact+de+meteorite-13394.html ?
+			<br />
+			<!--IBF.ATTACHMENT_604-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  19/09/2008 - 23:22</h4>
+			<p>ha ouai quand même, ben faudra la botter en touche avant la caillasse
+			<br />
+			<!--IBF.ATTACHMENT_609-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nash</b>  09/10/2008 - 19:21</h4>
+			<p>des tites vidéos à consulter sans modération.<br /><br />Attention pas mal de private joke pour les locaux <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" /> <br /><br />http://www.valaisans.tv/videos/films
+			<br />
+			<!--IBF.ATTACHMENT_624-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  09/10/2008 - 20:47</h4>
+			<p>Raclette (et levrette), vin blanc, autotoutes rembourrées et raclonite... &#39;me suis bien poilé <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_625-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  11/10/2008 - 11:40</h4>
+			<p>mdr, super beaux les graphismes n&#39;empêche ^^
+			<br />
+			<!--IBF.ATTACHMENT_626-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  12/10/2008 - 15:00</h4>
+			<p>http://www.gougoule.com/v-58-experience-humaine.html
+			<br />
+			<!--IBF.ATTACHMENT_628-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  12/10/2008 - 21:04</h4>
+			<p>en effet, non...
+			<br />
+			<!--IBF.ATTACHMENT_629-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  12/10/2008 - 22:50</h4>
+			<p>http://www.dailymotion.com/relevance/search/mickael+moore/video/x29n1b_histoire-de-lamerique
+			<br />
+			<!--IBF.ATTACHMENT_630-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  17/10/2008 - 22:59</h4>
+			<p>C&#39;est dans bowling for columbine non?
+			<br />
+			<!--IBF.ATTACHMENT_631-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  18/10/2008 - 00:29</h4>
+			<p>je sais plus mais ça me disait quelque chose aussi.
+			<br />
+			<!--IBF.ATTACHMENT_632-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  23/10/2008 - 02:37</h4>
+			<p>http://tumourrasmoinsbete.blogspot.com/2008/10/mardi-cest-sexologie.html
+			<br />
+			<!--IBF.ATTACHMENT_633-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  27/10/2008 - 16:41</h4>
+			<p>http://www.qoqa.ch/<br /><br /><br />UNE POWER BALL &#33;&#33;&#33;&#33; <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_634-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  28/10/2008 - 09:00</h4>
+			<p>Ba nan, y a plus de powerball <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_635-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  01/11/2008 - 11:36</h4>
+			<p>http://www.abrutis.com/video-dormeur+bizute-15669.html
+			<br />
+			<!--IBF.ATTACHMENT_636-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  20/04/2009 - 09:07</h4>
+			<p>http://remedie.free.fr/alcotest.mp4<br /><br />faut la telecharger c&#39;est sur mon ftp<br />
+			<br />
+			<!--IBF.ATTACHMENT_811-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  20/04/2009 - 12:21</h4>
+			<p>mdr
+			<br />
+			<!--IBF.ATTACHMENT_812-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  07/05/2009 - 17:13</h4>
+			<p>http://www.youtube.com/watch?v=0aFKSvw4bjU&amp;eurl=http%3A%2F%2Fwww.frameflicker.com%2F3d%2Ftwo-shrews-engage-in-matrix-style-fight%2F&amp;feature=player_embedded (en HQ de préférence)
+			<br />
+			<!--IBF.ATTACHMENT_816-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  08/05/2009 - 07:54</h4>
+			<p>Si beau et si poétique xD
+			<br />
+			<!--IBF.ATTACHMENT_817-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  08/05/2009 - 18:34</h4>
+			<p>interessant... comme quoi l&#39;homme n&#39;a rien inventé....
+			<br />
+			<!--IBF.ATTACHMENT_818-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  11/05/2009 - 10:01</h4>
+			<p>Muarf, magnifique.
+			<br />
+			<!--IBF.ATTACHMENT_824-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  14/05/2009 - 21:16</h4>
+			<p>http://www.lepost.fr/article/2009/05/12/1532585_le-clip-ou-vous-faites-tout-sauf-ecouter-la-musique-baby.html xD
+			<br />
+			<!--IBF.ATTACHMENT_828-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  17/05/2009 - 12:59</h4>
+			<p>http://www.dailymotion.com/video/x94ta5_hadopi-le-pire-du-pire-de-lassemble_news
+			<br />
+			<!--IBF.ATTACHMENT_830-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  20/05/2009 - 10:35</h4>
+			<p>http://www.youtube.com/watch?v=UyjrkM_ZnF8
+			<br />
+			<!--IBF.ATTACHMENT_831-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  20/05/2009 - 13:58</h4>
+			<p>anéfé<br /><br />Annonce marrante au JT de ce midi<br />chiffre record 186M d&#39;entrées au cinema en 2008 soit +6% par rapport à 2007. <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_832-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  28/06/2009 - 17:06</h4>
+			<p>&#39;fait du bien de se les remater de temps en temps : http://www.blizzard.com/diablo3/media/#movies.
+			<br />
+			<!--IBF.ATTACHMENT_869-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  30/06/2009 - 21:42</h4>
+			<p>A voir <br />http://www.wat.tv/video/vexille-partie-01-vostfr-1f947_1f77u_.html<br /><br />un bon mélange de Dune et de cyberpunk.<br />J&#39;aime particulièrement la photographie malgré la qualité médiocre du lien.<br /><br />tips: utiliser la pause si l&#39;image deviens sombre.<br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_870-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  20/08/2009 - 10:41</h4>
+			<p>Pour tous les vieux cons qui disent &quot;http://www.youtube.com/watch?v=L03JVPaZpyc&quot;
+			<br />
+			<!--IBF.ATTACHMENT_959-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Muche</b>  03/09/2009 - 13:07</h4>
+			<p><br />vous connaissez Carglass mais est ce que vous connaissez<br /><br />http://www.youtube.com/watch?v=Im0BKEMK4zM  <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /> <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_998-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  12/09/2009 - 11:16</h4>
+			<p>On commence par ça :<br />http://www.dailymotion.com/video/xa21he_loose-change-2-francais-part-1_news<br /><br />Après on a ça :<br />http://www.dailymotion.com/video/xafjii_11sept-enquete-sur-la-theorie-du-co_news<br /><br />Et on finit avec ça :<br />http://www.dailymotion.com/video/xag646_11-septembre-un-jeudi-noir-de-linfo_news<br /><br />/me arrachage de cheveux...
+			<br />
+			<!--IBF.ATTACHMENT_1026-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  08/10/2009 - 21:55</h4>
+			<p>Impressionnant le démontage du démontage de Loose Change. Excellentes vidéos concernant la manipulation de l&#39;info&#39;. Au passage, j&#39;ai commandé le dvd de la version finale <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1046-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  09/10/2009 - 11:23</h4>
+			<p>Me relancez pas la dessus, diantre &#33; J&#39;avais réussi à me calmer...
+			<br />
+			<!--IBF.ATTACHMENT_1047-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>silver</b>  27/10/2009 - 16:29</h4>
+			<p>ayaaaaa comme elle est tendu la video loose change, puis e plus pendant que je la regfardé la NSA a hacké mon PC, ca a fait de la neige sur lecran (sur un ecran plas... mauh) j&#39;ai perdu l&#39;image, puis le son et mon pc s&#39;est arreté. Quoi, moi parano? noooon xD
+			<br />
+			<!--IBF.ATTACHMENT_1056-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  20/11/2009 - 18:58</h4>
+			<p>Trois videos rapides. Ultime pour les vieux routards du jeu video &#33; <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><br /><br />http://gagfilms.com/dkvsmk.html.<br />http://gagfilms.com/sonicpacman.html.<br />http://gagfilms.com/contraduck.html.
+			<br />
+			<!--IBF.ATTACHMENT_1059-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  17/12/2009 - 13:33</h4>
+			<p>Reportages interessants <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br />http://www.etanonline.fr/2009/video-la-fabuleuse-histoire-du-jeu-video-1-et-2/
+			<br />
+			<!--IBF.ATTACHMENT_1062-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  28/02/2010 - 13:31</h4>
+			<p>Enorme : http://www.abrutis.com/video-rammstein+dans+un+jouet+pour+enfants-26570.html.
+			<br />
+			<!--IBF.ATTACHMENT_1131-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  04/03/2010 - 11:37</h4>
+			<p>muarf, me fait du souci pour les gamins qui vont grandir avec des jouets de ce genre quand même ^^<br /><br /><br />tiens j&#39;ai vu ce truc aujourd&#39;hui, m&#39;a fait penser à toi dudu :<br /><br />http://www.youtube.com/watch?v=h9ELzwos9KQ<br /><br /><br /><br /><br /><br /><br />moralité : Arrêtes le red-bull et .....
+			<br />
+			<!--IBF.ATTACHMENT_1133-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  04/03/2010 - 20:19</h4>
+			<p>nictalope?
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-8-0-73383100-1473832938' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-8-0-73383100-1473832938'>
+		<div id='ipb-attach-ct-8-0-73383100-1473832938'></div>
+		<a id='ipb-attach-url-8-0-73383100-1473832938' href="index.php@act=attach&amp;type=post&amp;id=8.html" title="lotr.jpg -  37.65&nbsp;Ko,  12" target="_blank"><img src="uploads/monthly_03_2010/post-13-1267726779_thumb.jpg" id='ipb-attach-img-8-0-73383100-1473832938' style='width:41;height:100' class='attach' width="41" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-8-0-73383100-1473832938' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "8-0-73383100-1473832938", parseInt("282"), parseInt("700"), "37.65&nbsp;Ko" );
+//]]>
+</script> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  05/03/2010 - 09:16</h4>
+			<p>Excellent xD
+			<br />
+			<!--IBF.ATTACHMENT_1136-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  05/03/2010 - 13:00</h4>
+			<p>http://www.sp3ud.com/index.php?2010/02/26/4635-action-discrete-devenezvousmemecom
+			<br />
+			<!--IBF.ATTACHMENT_1138-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  05/03/2010 - 16:20</h4>
+			<p>&quot;J&#39;ai tué un spectre noir avec une boule de feu... Je peux traverser les murs... Dalsim je mets au tas...&quot;<br />Excellent&#33; 2x
+			<br />
+			<!--IBF.ATTACHMENT_1140-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  06/03/2010 - 09:00</h4>
+			<p>AVP4
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-9-0-73391900-1473832938' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-9-0-73391900-1473832938'>
+		<div id='ipb-attach-ct-9-0-73391900-1473832938'></div>
+		<a id='ipb-attach-url-9-0-73391900-1473832938' href="index.php@act=attach&amp;type=post&amp;id=9.html" title="avp.jpg -  65.7&nbsp;Ko,  8" target="_blank"><img src="uploads/monthly_03_2010/post-13-1267858846_thumb.jpg" id='ipb-attach-img-9-0-73391900-1473832938' style='width:80;height:100' class='attach' width="80" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-9-0-73391900-1473832938' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "9-0-73391900-1473832938", parseInt("500"), parseInt("624"), "65.7&nbsp;Ko" );
+//]]>
+</script> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  06/03/2010 - 13:48</h4>
+			<p>Je neeeed &#33; xD
+			<br />
+			<!--IBF.ATTACHMENT_1146-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  11/03/2010 - 23:23</h4>
+			<p>Leloo dallas....
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-10-0-73396800-1473832938' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-10-0-73396800-1473832938'>
+		<div id='ipb-attach-ct-10-0-73396800-1473832938'></div>
+		<a id='ipb-attach-url-10-0-73396800-1473832938' href="index.php@act=attach&amp;type=post&amp;id=10.html" title="multipass.jpg -  41.48&nbsp;Ko,  10" target="_blank"><img src="uploads/monthly_03_2010/post-13-1268342582_thumb.jpg" id='ipb-attach-img-10-0-73396800-1473832938' style='width:58;height:100' class='attach' width="58" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-10-0-73396800-1473832938' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "10-0-73396800-1473832938", parseInt("320"), parseInt("560"), "41.48&nbsp;Ko" );
+//]]>
+</script> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  12/03/2010 - 17:20</h4>
+			<p>DTC &#33; xD
+			<br />
+			<!--IBF.ATTACHMENT_1158-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/03/2010 - 15:44</h4>
+			<p>style
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-13-0-73401500-1473832938' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-13-0-73401500-1473832938'>
+		<div id='ipb-attach-ct-13-0-73401500-1473832938'></div>
+		<a id='ipb-attach-url-13-0-73401500-1473832938' href="index.php@act=attach&amp;type=post&amp;id=13.html" title="129115793545040623.jpg -  64&nbsp;Ko,  7" target="_blank"><img src="uploads/monthly_03_2010/post-13-1268575161_thumb.jpg" id='ipb-attach-img-13-0-73401500-1473832938' style='width:30;height:100' class='attach' width="30" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-13-0-73401500-1473832938' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "13-0-73401500-1473832938", parseInt("450"), parseInt("1500"), "64&nbsp;Ko" );
+//]]>
+</script>
+<br />
+ 
+<table style='width:auto;display:inline;' id='ipb-attach-table-12-0-73406000-1473832938' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-12-0-73406000-1473832938'>
+		<div id='ipb-attach-ct-12-0-73406000-1473832938'></div>
+		<a id='ipb-attach-url-12-0-73406000-1473832938' href="index.php@act=attach&amp;type=post&amp;id=12.html" title="brisco.jpg -  90.94&nbsp;Ko,  6" target="_blank"><img src="uploads/monthly_03_2010/post-13-1268575066_thumb.jpg" id='ipb-attach-img-12-0-73406000-1473832938' style='width:28;height:100' class='attach' width="28" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-12-0-73406000-1473832938' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "12-0-73406000-1473832938", parseInt("450"), parseInt("1634"), "90.94&nbsp;Ko" );
+//]]>
+</script> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/03/2010 - 15:58</h4>
+			<p>Kouiiilllèèèèèèrrr
+			<br />
+			<!--IBF.ATTACHMENT_1163-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  15/03/2010 - 00:27</h4>
+			<p>omg, l&#39;action discrète m&#39;a fait mourir de rire&#33;
+			<br />
+			<!--IBF.ATTACHMENT_1165-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>belegorod</b>  15/03/2010 - 09:16</h4>
+			<p>J&#39;adore&#33;
+			<br />
+			<!--IBF.ATTACHMENT_1167-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  20/03/2010 - 16:31</h4>
+			<p>Ses bi1 lé http://www.youtube.com/watch?v=HXstRfE9AVU&amp;feature=player_embedded<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_1175-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dumak</b>  20/03/2010 - 18:51</h4>
+			<p>MMPORPG&#33; xD
+			<br />
+			<!--IBF.ATTACHMENT_1176-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  21/03/2010 - 11:46</h4>
+			<p>mdr, c&#39;est pas mal.
+			<br />
+			<!--IBF.ATTACHMENT_1177-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  21/03/2010 - 13:21</h4>
+			<p>Ca c&#39;est du journalisme &#33;  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1178-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  23/03/2010 - 19:15</h4>
+			<p>C&#39;est pas lui &quot;mister windows sur iphone&quot; ?<br />Ne rigolons tout de même pas trop, les meuphorgues sont dangereux, on le sait bien.
+			<br />
+			<!--IBF.ATTACHMENT_1181-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  26/03/2010 - 08:09</h4>
+			<p>les mpmpogrpg j&#39;ai cru qu&#39;il s&#39;en sortirai pas <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1189-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  28/03/2010 - 11:47</h4>
+			<p>meuh
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-14-0-73410800-1473832938' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-14-0-73410800-1473832938'>
+		<div id='ipb-attach-ct-14-0-73410800-1473832938'></div>
+		<a id='ipb-attach-url-14-0-73410800-1473832938' href="index.php@act=attach&amp;type=post&amp;id=14.html" title="tino.jpg -  86.73&nbsp;Ko,  11" target="_blank"><img src="uploads/monthly_03_2010/post-13-1269769633_thumb.jpg" id='ipb-attach-img-14-0-73410800-1473832938' style='width:67;height:100' class='attach' width="67" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-14-0-73410800-1473832938' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "14-0-73410800-1473832938", parseInt("464"), parseInt("700"), "86.73&nbsp;Ko" );
+//]]>
+</script> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  30/03/2010 - 18:17</h4>
+			<p>meuh p&#39;orgue
+			<br />
+			<!--IBF.ATTACHMENT_1199-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  13/04/2010 - 20:51</h4>
+			<p>http://www.youtube.com/watch?v=nzakCwZUYHg&amp;feature=player_embedded#. Faites gaffes aux paroles. J&#39;adore le Vicking &#33; <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1206-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  14/04/2010 - 17:27</h4>
+			<p>j&#39;avais vu c&#39;est pas mal du tout
+			<br />
+			<!--IBF.ATTACHMENT_1207-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  19/04/2010 - 14:26</h4>
+			<p>http://www.youtube.com/watch?v=_fnFpJLRDFE<br />et pour finir : <br />http://www.youtube.com/watch?v=6-vhCCUBoCM<br /><br />j&#39;adore xD &#33;
+			<br />
+			<!--IBF.ATTACHMENT_1214-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  19/04/2010 - 19:43</h4>
+			<p>Gunther is backkkkkk &#33;<br /><br /><br /><img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br />
+			<br />
+			<!--IBF.ATTACHMENT_1215-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  21/04/2010 - 19:52</h4>
+			<p>http://www.koreus.com/video/alerte-babylone.html qui fait réfléchir.
+			<br />
+			<!--IBF.ATTACHMENT_1220-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Nemesis</b>  22/04/2010 - 02:33</h4>
+			<p>tu l&#39;as dit...<br />Je sais pas si je l&#39;ai deja mise ici cette video, mais elle est VRAIMENT (j&#39;insiste sur le VRAIMENT) a voir :<br />http://video.google.fr/videoplay?docid=1643050067177891440#
+			<br />
+			<!--IBF.ATTACHMENT_1221-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  24/04/2010 - 22:50</h4>
+			<p>Un grand merci pour ce reportage Neme&#39;. Personnellement, avec Lau&#39;, on a décidé de remettre beaucoup de chose d&#39;aplomb dans notre façon de vivre, consommer et percevoir notre environnement. Et malgré bien de la bonne volonté, ce n&#39;est pas aisé. Ce film, bien que over flippant (et malgré la touche d&#39;espoir à la fin), nous conforte dans cette voie. Vraiment un documentaire à voir.
+			<br />
+			<!--IBF.ATTACHMENT_1222-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/04/2010 - 09:11</h4>
+			<p><img src="http://remedie.free.fr/bach.jpg" border="0" class="linked-image" />
+			<br />
+			<!--IBF.ATTACHMENT_1223-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  25/04/2010 - 10:24</h4>
+			<p>Putain &#33; Enorme Rem&#39; &#33;  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1224-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  26/04/2010 - 13:01</h4>
+			<p>muarf
+			<br />
+			<!--IBF.ATTACHMENT_1225-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  30/04/2010 - 17:28</h4>
+			<p>http://www.trilulilu.ro/crist1nel/2c0a119176b7e0 et http://www.trilulilu.ro/giulesti17/a19b695d69fcd8.  <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><br /><br />Et http://www.trilulilu.ro/Liviug/06813de5e8d76e et http://www.trilulilu.ro/Liviug/6b3c7248a58066.
+			<br />
+			<!--IBF.ATTACHMENT_1227-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  01/05/2010 - 14:22</h4>
+			<p>j&#39;avais vu celui de la nouvelle star en live c&#39;était pas mal.<br /><br />mais le dernier est vraiment impressionant, la guimbarde marrante
+			<br />
+			<!--IBF.ATTACHMENT_1230-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  01/05/2010 - 14:28</h4>
+			<p>Et tu n&#39;as rien http://www.dailymotion.com/video/x2cuw3_dj-beertrand_creation.  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1231-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  01/05/2010 - 14:37</h4>
+			<p><img src="http://remedie.free.fr/mast.jpg" border="0" class="linked-image" />
+			<br />
+			<!--IBF.ATTACHMENT_1232-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  05/05/2010 - 19:03</h4>
+			<p><img src="http://remedie.free.fr/lordofcoca.jpg" border="0" class="linked-image" /><br /><br />Quelqu&#39;un peut verifier?
+			<br />
+			<!--IBF.ATTACHMENT_1237-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  10/05/2010 - 08:45</h4>
+			<p>yop,<br /><br />ça ressemble à du fake<br /><br />http://fr.wikipedia.org/wiki/Anneau_unique
+			<br />
+			<!--IBF.ATTACHMENT_1245-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  14/05/2010 - 13:43</h4>
+			<p>Hier, j&#39;ai appris à faire un http://www.youtube.com/watch?gl=FR&amp;hl=fr&amp;v=PQF57w9qAZw.  <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1250-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  15/05/2010 - 22:15</h4>
+			<p>Des le debut ca sentait la connerie
+			<br />
+			<!--IBF.ATTACHMENT_1251-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  19/05/2010 - 20:11</h4>
+			<p>http://croustination.com/2010/05/19/la-crise/
+			<br />
+			<!--IBF.ATTACHMENT_1257-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  22/05/2010 - 09:02</h4>
+			<p>http://croustination.com/2010/05/21/generation-linternet/
+			<br />
+			<!--IBF.ATTACHMENT_1263-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  29/05/2010 - 09:28</h4>
+			<p>Excellent le site de Croustination Rem&#39;  <img src="style_emoticons/default/wink.gif" style="vertical-align:middle" emoid=";)" border="0" alt="wink.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1277-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  02/06/2010 - 19:05</h4>
+			<p>Quelques perles <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" /> http://bonjourlesgeeks.com/
+			<br />
+			<!--IBF.ATTACHMENT_1294-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  02/06/2010 - 20:56</h4>
+			<p>copy and paste ENORME <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1295-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  04/06/2010 - 22:58</h4>
+			<p>D&#39;autres http://www.esprit68.org/liensvideo.html.
+			<br />
+			<!--IBF.ATTACHMENT_1298-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  05/07/2010 - 06:29</h4>
+			<p>http://www.dailymotion.com/video/xdspy5_vuvuzela-hero_fun mais ça me fait rire ^^
+			<br />
+			<!--IBF.ATTACHMENT_1314-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  05/07/2010 - 09:01</h4>
+			<p>rofl <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":P" border="0" alt="tongue.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_1315-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  06/07/2010 - 18:00</h4>
+			<p>xD
+			<br />
+			<!--IBF.ATTACHMENT_1319-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>djibee</b>  09/07/2010 - 12:15</h4>
+			<p>Enorme Dox &#33;  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":lol:" border="0" alt="laugh.gif" /><br /><br />http://www.collegehumor.com/video:1938370.
+			<br />
+			<!--IBF.ATTACHMENT_1323-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  10/07/2010 - 11:17</h4>
+			<p>we come in peace ^^
+			<br />
+			<!--IBF.ATTACHMENT_1325-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  11/07/2010 - 09:28</h4>
+			<p>moyen le dernier mais excelent tout de meme<br />
+			<br />
+			<!--IBF.ATTACHMENT_1327-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>dox</b>  25/07/2010 - 07:01</h4>
+			<p>http://www.visualeconomics.com/what-bp-could-have-bought-with-all-the-money-they-lost/<br /><br />parfois, l&#39;économie de marché, ça fait chier...
+			<br />
+			<!--IBF.ATTACHMENT_1341-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>maynaard</b>  25/07/2010 - 09:24</h4>
+			<p>vi tant que nous n&#39;auront pas réussi à leurs coller un peu d&#39;éthique à cette équipe...
+			<br />
+			<!--IBF.ATTACHMENT_1342-->
+			</p>
+		</div><div class="printpost">
+			<h4>&Eacute;crit par&nbsp;: <b>Remedie</b>  25/07/2010 - 09:29</h4>
+			<p>:s
+			<br />
+			<!--IBF.ATTACHMENT_1343-->
+			</p>
+		</div><!--Copyright-->
+
+<p class="printcopy">Propuls&eacute; par Invision Power Board (http://www.invisionboard.com)<br />&copy; Invision Power Services (http://www.invisionpower.com)</p>
+
+	</div>
+</html>
